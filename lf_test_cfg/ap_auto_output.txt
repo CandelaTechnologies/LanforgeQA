@@ -1,0 +1,1029 @@
+ERROR:  Invalid log level requested: dubug
+1739306599.599538 INFO     Validating suite: ct_ap_auto_2g_5g_001 json_test: ./ct_tests_json/ct_us_001/ct_ap_auto/ct_ap_auto_001.json lf_check.py 2225
+1739306599.599722 INFO     Validating test suite ct_ap_auto_2g_5g_001 found in {'ct_ap_auto_2g_5g_001': {'CC_AP_AUTO_DUT_2G_5G': {'enabled': 'TRUE', 'load_db': 'skip', 'command': 'create_chamberview_dut.py', 'args': '', 'args_list': [' --lfmgr LF_MGR_IP --port LF_MGR_PORT --dut_name USE_DUT_NAME', " --ssid 'ssid_idx=0 ssid=SSID_USED security=SECURITY_USED password=SSID_PW_USED bssid=BSSID_TO_USE'", " --ssid 'ssid_idx=1 ssid=SSID_USED security=SECURITY_USED password=SSID_PW_USED bssid=BSSID_TO_USE'", ' --sw_version DUT_SW --hw_version DUT_HW --serial_num DUT_SERIAL --model_num USE_DUT_NAME']}, 'CC_AP_AUTO_2G_5G': {'enabled': 'TRUE', 'load_db': 'skip', 'command': 'create_chamberview.py', 'args': '', 'args_list': [' --lfmgr LF_MGR_IP --port LF_MGR_PORT --delete_scenario', ' --create_scenario WC_ATH10K_9984_2G_W0 ', ' --raw_line "profile_link 1.1 STA-AUTO 6 \'DUT: axe16000 Radio-1\' NA AUTO,AUTO -1 NA" ', ' --raw_line "profile_link 1.1 STA-AUTO 6 \'DUT: axe16000 Radio-2\' NA AUTO,AUTO -1 NA" ', ' --raw_line "profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA" ']}, 'AP_AUTO_2G_5G': {'enabled': 'TRUE', 'timeout': '600', 'iterations': '1', 'load_db': 'skip', 'command': 'lf_ap_auto_test.py', 'args': '', 'args_list': [' --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge', ' --instance_name AP_AUTO_2G_5G', ' --lf_user lanforge', ' --lf_password lanforge', ' --config_name test_con', ' --upstream UPSTREAM_PORT', " --dut2_0 'axe16000 lanforge C8:7F:54:14:42:2C (1)'", " --dut5_0 'axe16000 lanforge C8:7F:54:14:42:30 (2)'", ' --max_stations_2 6', ' --max_stations_5 6', ' --max_stations_6 0', ' --max_stations_dual 1', " --radio2 '1.1.4 wiphy0' --radio2 '1.1.6 wiphy2' --radio2 '1.1.7 wiphy4' --radio2 '1.1.8 wiphy5' --radio2 '1.1.9 wiphy6' --radio2 '1.1.10 wiphy7'", " --radio5 '1.1.6 wiphy2' --radio5 '1.1.7 wiphy4' --radio5 1.1.wiphy5 --radio5 1.1.wiphy6 --radio5 1.1.wiphy7", " --set 'basic_cx' 1", " --set 'band_steering' 0", " --set 'capacity' 0", " --set 'channel_switch' 0", " --set 'long_term' 0", " --set 'mix_stability' 0", " --set 'tput_single_sta' 0", " --set 'tput_multi_sta' 0", " --set 'tput_multi_band' 0", " --set 'skip_2' 0", " --set 'skip_5' 0", " --set 'skip_5b' 1", " --set 'skip_6' 1", ' --verbosity 11', " --raw_line 'cx_psk_thresh: 500'", ' --pull_report', ' --local_lf_report_dir /home/lanforge/html-results/ct_us_001/', " --test_tag 'AP_AUTO_001'", ' --test_rig LANforge', ' --set DUT_NAME axe16000']}, 'lf_qa': {'enabled': 'TRUE', 'timeout': '600', 'load_db': 'skip', 'command': './tools/lf_qa.py', 'args': '', 'args_list': [' --server TEST_SERVER --path REPORT_PATH --store --png --database DATABASE_SQLITE']}, 'lf_inspect': {'enabled': 'TRUE', 'timeout': '600', 'load_db': 'skip', 'command': './tools/lf_inspect.py', 'args': '', 'args_list': [' --path REPORT_PATH --database DATABASE_SQLITE --db_index 0,1']}}} lf_check.py 2239
+1739306599.599758 INFO     reading json_rig: ./ct_rig_json/ct_us_001_rig.json lf_check.py 2282
+1739306599.599841 INFO     reading json_test:  ./ct_tests_json/ct_us_001/ct_ap_auto/ct_ap_auto_001.json lf_check.py 2292
+1739306599.599919 INFO     reading json_dut: ./ct_dut_json/ct_001_AXE16000_dut.json lf_check.py 2302
+1739306599.600014 INFO     Email to email list lf_check.py 2347
+1739306599.600040 INFO     path set: /home/lanforge/html-results/ct_us_001/ lf_report.py 89
+1739306599.600097 INFO     path_date_time /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 245
+1739306599.600166 INFO     report path : /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 254
+1739306599.600682 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001.csv lf_report.py 356
+1739306599.600709 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001 lf_report.py 356
+1739306599.601011 INFO     logfile: lf_check lf_check.py 2422
+1739306599.601038 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/lf_check-2025-02-11-13-43-19.log lf_report.py 356
+1739306599.601057 INFO     logfile /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/lf_check-2025-02-11-13-43-19.log lf_check.py 2425
+1739306599.601073 INFO     json: read test_rig_parameters lf_check.py 949
+1739306599.601089 INFO     TEST_WINDOW_DAYS not in test_rig_parameters json setting to 2 lf_check.py 1036
+1739306599.601106 INFO     ATTENUATOR_1 not in test_rig_parameters json lf_check.py 1074
+1739306599.601120 INFO     ATTENUATOR_2 not in test_rig_parameters json lf_check.py 1078
+1739306599.601132 INFO     ATTENUATOR_3 not in test_rig_parameters json lf_check.py 1082
+1739306599.601145 INFO     tricia.smiley@candelatech.com,chuck.rekiere@candelatech.com lf_check.py 1091
+1739306599.601159 INFO     json: read test_dut lf_check.py 967
+1739306599.601196 INFO     DUT_PROMPT not in test_dut json lf_check.py 1139
+1739306599.601228 INFO     DUT_MODEL not in test_dut json lf_check.py 1153
+1739306599.601291 INFO     self.wireless_network_dict {'ssid_idx=0': {'ssid_idx': '0', 'SSID_USED': 'ASUS_2C', 'SSID_PW_USED': 'hello123', 'BSSID_TO_USE': 'c8:7f:54:14:42:2c', 'SECURITY_USED': 'wpa2'}, 'ssid_idx=1': {'ssid_idx': '1', 'SSID_USED': 'ASUS_2C_5G-1', 'SSID_PW_USED': 'hello123', 'BSSID_TO_USE': 'c8:7f:54:14:42:30', 'SECURITY_USED': 'wpa2'}, 'ssid_idx=2': {'ssid_idx': '2', 'SSID_USED': 'ASUS_2C_5G-2', 'SSID_PW_USED': 'hello123', 'BSSID_TO_USE': 'c8:7f:54:14:42:34', 'SECURITY_USED': 'wpa2'}, 'ssid_idx=3': {'ssid_idx': '3', 'SSID_USED': 'ASUS_2C_6G', 'SSID_PW_USED': 'hello123', 'BSSID_TO_USE': 'c8:7f:54:14:42:38', 'SECURITY_USED': 'wpa2'}} lf_check.py 1162
+1739306599.601326 INFO     json: read test_suites looking for: ct_ap_auto_2g_5g_001 lf_check.py 983
+1739306599.604543 INFO     get_scripts_get_sha exit_code: 0 lf_check.py 398
+1739306599.604628 INFO     git_sha 2639363ad5333515760616e8be514f921c3cbaf7 lf_check.py 2436
+1739306599.727150 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306600.152057 INFO     Authentication (password) successful! transport.py 1819
+1739306601.411988 INFO     lanforge_system_node_version ['ct523c-3b7b'] lf_check.py 2443
+1739306601.526633 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306601.966067 INFO     Authentication (password) successful! transport.py 1819
+1739306603.230566 INFO     lanforge_fedora_version ['Fedora release 36 (Thirty Six)'] lf_check.py 2455
+1739306603.357174 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306603.789061 INFO     Authentication (password) successful! transport.py 1819
+1739306605.063172 INFO     lanforge_kernel_version ['Linux ct523c-3b7b 6.11.11+ #34 SMP PREEMPT_DYNAMIC Wed Jan 29 15:06:33 PST 2025 x86_64 x86_64 x86_64 GNU/Linux'] lf_check.py 2466
+1739306605.218101 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306605.662005 INFO     Authentication (password) successful! transport.py 1819
+1739306605.949163 INFO     lanforge_server_version_full: ['Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025'] lf_check.py 498
+1739306605.949389 INFO     lanforge_server_version: 5.4.9 lf_check.py 503
+1739306606.951038 INFO     lanforge_server_version_full ['Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025'] lf_check.py 2477
+1739306607.076118 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306607.522187 INFO     Authentication (password) successful! transport.py 1819
+1739306607.813512 INFO     lanforge_server_build_info: ['Welcome to the LANforge server.', 'Copyright 1999-2024 Candela Technologies.', '', 'Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025', 'By: greearb  On machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64', 'This product includes software developed by the OpenSSL Project', 'for use in the OpenSSL Toolkit. (http://www.openssl.org/)', 'LANforge version: 5.4.9 built on: Sun Feb  9 10:31:11 PM PST 2025', 'by: greearb on machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64'] lf_check.py 523
+1739306607.813569 INFO     lanforge_server_build_info: ['Welcome to the LANforge server.', 'Copyright 1999-2024 Candela Technologies.', '', 'Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025', 'By: greearb  On machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64', 'This product includes software developed by the OpenSSL Project', 'for use in the OpenSSL Toolkit. (http://www.openssl.org/)', 'LANforge version: 5.4.9 built on: Sun Feb  9 10:31:11 PM PST 2025', 'by: greearb on machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64'] lf_check.py 526
+1739306608.815027 INFO     lanforge_server_build_info ['Welcome to the LANforge server.', 'Copyright 1999-2024 Candela Technologies.', '', 'Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025', 'By: greearb  On machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64', 'This product includes software developed by the OpenSSL Project', 'for use in the OpenSSL Toolkit. (http://www.openssl.org/)', 'LANforge version: 5.4.9 built on: Sun Feb  9 10:31:11 PM PST 2025', 'by: greearb on machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64'] lf_check.py 2488
+1739306608.953760 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306609.401247 INFO     Authentication (password) successful! transport.py 1819
+1739306609.683307 INFO     BuildDate  "Sun 09 Feb 2025 10:34:42 PM PST" lf_check.py 558
+1739306609.683514 INFO     BuildVersion 5.4.9 lf_check.py 552
+1739306609.683638 INFO     GitVersion  "19b916a3a81ae036d9e4df3a65d106a00b6c5e33" lf_check.py 564
+1739306610.685636 INFO     lanforge_gui_version_full ['   "VersionInfo" : {', '      "BuildDate" : "Sun 09 Feb 2025 10:34:42 PM PST",', '      "BuildMachine" : "vb-f30-64",', '      "BuildVersion" : "5.4.9",', '      "Builder" : "greearb",', '      "GitVersion" : "19b916a3a81ae036d9e4df3a65d106a00b6c5e33",', '      "JsonVersion" : "1.0.34169",', '      "Realm" : 255'] lf_check.py 2499
+1739306610.866106 INFO     radio request command: http://192.168.100.116:8080/radiostatus/all lf_check.py 423
+1739306610.866236 INFO     radio request status_code 200 lf_check.py 426
+1739306610.866611 INFO     radio request.json: {'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'radiostatus/:eid', '1.1.wiphy0': {'_links': '/radiostatus/1/1/wiphy0', 'antenna': '0', 'ap': '840', 'capabilities': '802.11bgn-AC', 'channel': '0', 'country': '840', 'driver': 'WIFI-Radio Driver: ath10k (9984) Bus: 0000:06:00.0', 'entity id': '1.1.wiphy0', 'firmware version': '10.4b-ct-9984-xtH-14-fcb240f048', 'frag': '2346', 'frequency': '0', 'max_sta': '64', 'max_vap': '24', 'max_vifs': '64', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '4', 'resource': '1', 'rts': '', 'stations_down': '12', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, '1.1.wiphy1': {'_links': '/radiostatus/1/1/wiphy1', 'antenna': '0', 'ap': '840', 'capabilities': '802.11an-AC', 'channel': '-1', 'country': '840', 'driver': 'WIFI-Radio Driver: ath10k (9984) Bus: 0000:07:00.0', 'entity id': '1.1.wiphy1', 'firmware version': '10.4b-ct-9984-xtH-14-fcb240f048', 'frag': '2346', 'frequency': '-1', 'max_sta': '64', 'max_vap': '24', 'max_vifs': '64', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '5', 'resource': '1', 'rts': '', 'stations_down': '0', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, '1.1.wiphy2': {'_links': '/radiostatus/1/1/wiphy2', 'antenna': '0', 'ap': '840', 'capabilities': '802.11abgn', 'channel': '-1', 'country': '840', 'driver': 'WIFI-Radio Driver: ath9k', 'entity id': '1.1.wiphy2', 'firmware version': '<ath9k radios lack firmware>', 'frag': '2346', 'frequency': '-1', 'max_sta': '2048', 'max_vap': '32', 'max_vifs': '2048', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '6', 'resource': '1', 'rts': '', 'stations_down': '0', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, '1.1.wiphy4': {'_links': '/radiostatus/1/1/wiphy4', 'antenna': '0', 'ap': '65535', 'capabilities': '802.11abgn-AX', 'channel': '-1', 'country': '65535', 'driver': 'WIFI-Radio Driver: iwlwifi (AX200) Bus: 0000:18:00.0', 'entity id': '1.1.wiphy4', 'firmware version': '77.0b4c06ad.0 cc-a0-77.ucode', 'frag': '2346', 'frequency': '-1', 'max_sta': '1', 'max_vap': '0', 'max_vifs': '1', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '7', 'resource': '1', 'rts': '', 'stations_down': '0', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, '1.1.wiphy5': {'_links': '/radiostatus/1/1/wiphy5', 'antenna': '0', 'ap': '65535', 'capabilities': '802.11abgn-AX', 'channel': '-1', 'country': '65535', 'driver': 'WIFI-Radio Driver: mt7921e (7921) Bus: 0000:11:00.0', 'entity id': '1.1.wiphy5', 'firmware version': '20240826150948a', 'frag': '2346', 'frequency': '-1', 'max_sta': '4', 'max_vap': '1', 'max_vifs': '4', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '8', 'resource': '1', 'rts': '', 'stations_down': '0', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, '1.1.wiphy6': {'_links': '/radiostatus/1/1/wiphy6', 'antenna': '0', 'ap': '65535', 'capabilities': '802.11abgn-AX', 'channel': '-1', 'country': '65535', 'driver': 'WIFI-Radio Driver: iwlwifi (AX210) Bus: 0000:0c:00.0', 'entity id': '1.1.wiphy6', 'firmware version': '89.6b44fa0b.0 ty-a0-gf-a0-89.uc', 'frag': '2346', 'frequency': '-1', 'max_sta': '1', 'max_vap': '0', 'max_vifs': '1', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '9', 'resource': '1', 'rts': '', 'stations_down': '0', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, '1.1.wiphy7': {'_links': '/radiostatus/1/1/wiphy7', 'antenna': '0', 'ap': '840', 'capabilities': '802.11abgn-AX', 'channel': '-1', 'country': '840', 'driver': 'WIFI-Radio Driver: mt7915e (7915) Bus: 0000:0b:00.0', 'entity id': '1.1.wiphy7', 'firmware version': '20220929104113a', 'frag': '2346', 'frequency': '-1', 'max_sta': '19', 'max_vap': '16', 'max_vifs': '19', 'monitors_down': '0', 'monitors_up': '0', 'phantom': False, 'port': '10', 'resource': '1', 'rts': '', 'stations_down': '0', 'stations_up': '0', 'tx-power': '255', 'vaps_down': '0', 'vaps_up': '0', 'verbose debug': False}, 'warnings': ['1.1.wiphy0: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy0: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy1: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy1: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy2: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy2: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy4: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy4: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy5: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy5: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy6: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy6: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy7: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels', '1.1.wiphy7: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels']} lf_check.py 430
+1739306610.866709 INFO     radio request.test: {"handler":"candela.lanforge.GenericJsonResponder","uri":"radiostatus/:eid","1.1.wiphy0":{"_links":"/radiostatus/1/1/wiphy0","antenna":"0","ap":"840","capabilities":"802.11bgn-AC","channel":"0","country":"840","driver":"WIFI-Radio Driver: ath10k (9984) Bus: 0000:06:00.0","entity id":"1.1.wiphy0","firmware version":"10.4b-ct-9984-xtH-14-fcb240f048","frag":"2346","frequency":"0","max_sta":"64","max_vap":"24","max_vifs":"64","monitors_down":"0","monitors_up":"0","phantom":false,"port":"4","resource":"1","rts":"","stations_down":"12","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"1.1.wiphy1":{"_links":"/radiostatus/1/1/wiphy1","antenna":"0","ap":"840","capabilities":"802.11an-AC","channel":"-1","country":"840","driver":"WIFI-Radio Driver: ath10k (9984) Bus: 0000:07:00.0","entity id":"1.1.wiphy1","firmware version":"10.4b-ct-9984-xtH-14-fcb240f048","frag":"2346","frequency":"-1","max_sta":"64","max_vap":"24","max_vifs":"64","monitors_down":"0","monitors_up":"0","phantom":false,"port":"5","resource":"1","rts":"","stations_down":"0","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"1.1.wiphy2":{"_links":"/radiostatus/1/1/wiphy2","antenna":"0","ap":"840","capabilities":"802.11abgn","channel":"-1","country":"840","driver":"WIFI-Radio Driver: ath9k","entity id":"1.1.wiphy2","firmware version":"<ath9k radios lack firmware>","frag":"2346","frequency":"-1","max_sta":"2048","max_vap":"32","max_vifs":"2048","monitors_down":"0","monitors_up":"0","phantom":false,"port":"6","resource":"1","rts":"","stations_down":"0","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"1.1.wiphy4":{"_links":"/radiostatus/1/1/wiphy4","antenna":"0","ap":"65535","capabilities":"802.11abgn-AX","channel":"-1","country":"65535","driver":"WIFI-Radio Driver: iwlwifi (AX200) Bus: 0000:18:00.0","entity id":"1.1.wiphy4","firmware version":"77.0b4c06ad.0 cc-a0-77.ucode","frag":"2346","frequency":"-1","max_sta":"1","max_vap":"0","max_vifs":"1","monitors_down":"0","monitors_up":"0","phantom":false,"port":"7","resource":"1","rts":"","stations_down":"0","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"1.1.wiphy5":{"_links":"/radiostatus/1/1/wiphy5","antenna":"0","ap":"65535","capabilities":"802.11abgn-AX","channel":"-1","country":"65535","driver":"WIFI-Radio Driver: mt7921e (7921) Bus: 0000:11:00.0","entity id":"1.1.wiphy5","firmware version":"20240826150948a","frag":"2346","frequency":"-1","max_sta":"4","max_vap":"1","max_vifs":"4","monitors_down":"0","monitors_up":"0","phantom":false,"port":"8","resource":"1","rts":"","stations_down":"0","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"1.1.wiphy6":{"_links":"/radiostatus/1/1/wiphy6","antenna":"0","ap":"65535","capabilities":"802.11abgn-AX","channel":"-1","country":"65535","driver":"WIFI-Radio Driver: iwlwifi (AX210) Bus: 0000:0c:00.0","entity id":"1.1.wiphy6","firmware version":"89.6b44fa0b.0 ty-a0-gf-a0-89.uc","frag":"2346","frequency":"-1","max_sta":"1","max_vap":"0","max_vifs":"1","monitors_down":"0","monitors_up":"0","phantom":false,"port":"9","resource":"1","rts":"","stations_down":"0","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"1.1.wiphy7":{"_links":"/radiostatus/1/1/wiphy7","antenna":"0","ap":"840","capabilities":"802.11abgn-AX","channel":"-1","country":"840","driver":"WIFI-Radio Driver: mt7915e (7915) Bus: 0000:0b:00.0","entity id":"1.1.wiphy7","firmware version":"20220929104113a","frag":"2346","frequency":"-1","max_sta":"19","max_vap":"16","max_vifs":"19","monitors_down":"0","monitors_up":"0","phantom":false,"port":"10","resource":"1","rts":"","stations_down":"0","stations_up":"0","tx-power":"255","vaps_down":"0","vaps_up":"0","verbose debug":false},"warnings":["1.1.wiphy0: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy0: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy1: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy1: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy2: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy2: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy4: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy4: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy5: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy5: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy6: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy6: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy7: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels","1.1.wiphy7: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels"]} lf_check.py 433
+1739306610.867242 INFO     lanforge_radio_json: {
+  "handler": "candela.lanforge.GenericJsonResponder",
+  "uri": "radiostatus/:eid",
+  "1.1.wiphy0": {
+    "_links": "/radiostatus/1/1/wiphy0",
+    "antenna": "0",
+    "ap": "840",
+    "capabilities": "802.11bgn-AC",
+    "channel": "0",
+    "country": "840",
+    "driver": "WIFI-Radio Driver: ath10k (9984) Bus: 0000:06:00.0",
+    "entity id": "1.1.wiphy0",
+    "firmware version": "10.4b-ct-9984-xtH-14-fcb240f048",
+    "frag": "2346",
+    "frequency": "0",
+    "max_sta": "64",
+    "max_vap": "24",
+    "max_vifs": "64",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "4",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "12",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "1.1.wiphy1": {
+    "_links": "/radiostatus/1/1/wiphy1",
+    "antenna": "0",
+    "ap": "840",
+    "capabilities": "802.11an-AC",
+    "channel": "-1",
+    "country": "840",
+    "driver": "WIFI-Radio Driver: ath10k (9984) Bus: 0000:07:00.0",
+    "entity id": "1.1.wiphy1",
+    "firmware version": "10.4b-ct-9984-xtH-14-fcb240f048",
+    "frag": "2346",
+    "frequency": "-1",
+    "max_sta": "64",
+    "max_vap": "24",
+    "max_vifs": "64",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "5",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "0",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "1.1.wiphy2": {
+    "_links": "/radiostatus/1/1/wiphy2",
+    "antenna": "0",
+    "ap": "840",
+    "capabilities": "802.11abgn",
+    "channel": "-1",
+    "country": "840",
+    "driver": "WIFI-Radio Driver: ath9k",
+    "entity id": "1.1.wiphy2",
+    "firmware version": "<ath9k radios lack firmware>",
+    "frag": "2346",
+    "frequency": "-1",
+    "max_sta": "2048",
+    "max_vap": "32",
+    "max_vifs": "2048",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "6",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "0",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "1.1.wiphy4": {
+    "_links": "/radiostatus/1/1/wiphy4",
+    "antenna": "0",
+    "ap": "65535",
+    "capabilities": "802.11abgn-AX",
+    "channel": "-1",
+    "country": "65535",
+    "driver": "WIFI-Radio Driver: iwlwifi (AX200) Bus: 0000:18:00.0",
+    "entity id": "1.1.wiphy4",
+    "firmware version": "77.0b4c06ad.0 cc-a0-77.ucode",
+    "frag": "2346",
+    "frequency": "-1",
+    "max_sta": "1",
+    "max_vap": "0",
+    "max_vifs": "1",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "7",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "0",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "1.1.wiphy5": {
+    "_links": "/radiostatus/1/1/wiphy5",
+    "antenna": "0",
+    "ap": "65535",
+    "capabilities": "802.11abgn-AX",
+    "channel": "-1",
+    "country": "65535",
+    "driver": "WIFI-Radio Driver: mt7921e (7921) Bus: 0000:11:00.0",
+    "entity id": "1.1.wiphy5",
+    "firmware version": "20240826150948a",
+    "frag": "2346",
+    "frequency": "-1",
+    "max_sta": "4",
+    "max_vap": "1",
+    "max_vifs": "4",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "8",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "0",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "1.1.wiphy6": {
+    "_links": "/radiostatus/1/1/wiphy6",
+    "antenna": "0",
+    "ap": "65535",
+    "capabilities": "802.11abgn-AX",
+    "channel": "-1",
+    "country": "65535",
+    "driver": "WIFI-Radio Driver: iwlwifi (AX210) Bus: 0000:0c:00.0",
+    "entity id": "1.1.wiphy6",
+    "firmware version": "89.6b44fa0b.0 ty-a0-gf-a0-89.uc",
+    "frag": "2346",
+    "frequency": "-1",
+    "max_sta": "1",
+    "max_vap": "0",
+    "max_vifs": "1",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "9",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "0",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "1.1.wiphy7": {
+    "_links": "/radiostatus/1/1/wiphy7",
+    "antenna": "0",
+    "ap": "840",
+    "capabilities": "802.11abgn-AX",
+    "channel": "-1",
+    "country": "840",
+    "driver": "WIFI-Radio Driver: mt7915e (7915) Bus: 0000:0b:00.0",
+    "entity id": "1.1.wiphy7",
+    "firmware version": "20220929104113a",
+    "frag": "2346",
+    "frequency": "-1",
+    "max_sta": "19",
+    "max_vap": "16",
+    "max_vifs": "19",
+    "monitors_down": "0",
+    "monitors_up": "0",
+    "phantom": false,
+    "port": "10",
+    "resource": "1",
+    "rts": "",
+    "stations_down": "0",
+    "stations_up": "0",
+    "tx-power": "255",
+    "vaps_down": "0",
+    "vaps_up": "0",
+    "verbose debug": false
+  },
+  "warnings": [
+    "1.1.wiphy0: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy0: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy1: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy1: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy2: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy2: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy4: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy4: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy5: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy5: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy6: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy6: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy7: channel: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels",
+    "1.1.wiphy7: freq: -1 := AUTO; 0:= UNKNOWN. Inspect sub interface for real frequency as [staX,vapX,monoX,wlanX] can set channels"
+  ]
+} lf_check.py 2518
+1739306610.899382 INFO     lf_radio_df::         Radio  WIFI-Radio Driver Radio Capabilities  ... max_clients max_vap max_sta
+0  1.1.wiphy0     ath10k (9984)        802.11bgn-AC  ...          64      24      64
+0  1.1.wiphy1     ath10k (9984)         802.11an-AC  ...          64      24      64
+0  1.1.wiphy2              ath9k         802.11abgn  ...        2048      32    2048
+0  1.1.wiphy4   iwlwifi (AX200)       802.11abgn-AX  ...           1       0       1
+0  1.1.wiphy5    mt7921e (7921)       802.11abgn-AX  ...           4       1       4
+0  1.1.wiphy6   iwlwifi (AX210)       802.11abgn-AX  ...           1       0       1
+0  1.1.wiphy7    mt7915e (7915)       802.11abgn-AX  ...          19      16      19
+
+[7 rows x 7 columns] lf_check.py 2567
+1739306610.899468 INFO     radio_fw_dict:: {'1.1.wiphy0': '10.4b-ct-9984-xtH-14-fcb240f048', '1.1.wiphy1': '10.4b-ct-9984-xtH-14-fcb240f048', '1.1.wiphy2': '<ath9k radios lack firmware>', '1.1.wiphy4': '77.0b4c06ad.0 cc-a0-77.ucode', '1.1.wiphy5': '20240826150948a', '1.1.wiphy6': '89.6b44fa0b.0 ty-a0-gf-a0-89.uc', '1.1.wiphy7': '20220929104113a'} lf_check.py 2569
+1739306610.904157 INFO     self.csv_results lf_check.py 873
+1739306610.904346 INFO     Suite Start Time 2025-02-11 13-43-30 lf_check.py 1886
+1739306610.904407 INFO     ssid_idx_number: 0 lf_check.py 1213
+1739306610.904437 INFO     idx: ssid_idx=0 lf_check.py 1216
+1739306610.904475 INFO     self.test_dict[self.test]['args_list']: [' --lfmgr LF_MGR_IP --port LF_MGR_PORT --dut_name USE_DUT_NAME', " --ssid 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c'", " --ssid 'ssid_idx=1 ssid=SSID_USED security=SECURITY_USED password=SSID_PW_USED bssid=BSSID_TO_USE'", ' --sw_version DUT_SW --hw_version DUT_HW --serial_num DUT_SERIAL --model_num USE_DUT_NAME'] lf_check.py 1240
+1739306610.904502 INFO     ssid_idx_number: 1 lf_check.py 1213
+1739306610.904524 INFO     idx: ssid_idx=1 lf_check.py 1216
+1739306610.904553 INFO     self.test_dict[self.test]['args_list']: [' --lfmgr LF_MGR_IP --port LF_MGR_PORT --dut_name USE_DUT_NAME', " --ssid 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c'", " --ssid 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30'", ' --sw_version DUT_SW --hw_version DUT_HW --serial_num DUT_SERIAL --model_num USE_DUT_NAME'] lf_check.py 1240
+1739306610.904599 INFO     self.test_dict[self.test]['args']:  --lfmgr 192.168.100.116 --port 8080 --dut_name ASUS_GT-AXE16000 --ssid 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c' --ssid 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30' --sw_version 3.0.0.4.388_24374 --hw_version 1.0 --serial_num DUT_SERIAL --model_num ASUS_GT-AXE16000 lf_check.py 1345
+1739306610.904624 INFO     load_db : skip lf_check.py 1362
+1739306610.904655 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1377
+1739306610.904678 INFO     command: ./create_chamberview_dut.py  --lfmgr 192.168.100.116 --port 8080 --dut_name ASUS_GT-AXE16000 --ssid 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c' --ssid 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30' --sw_version 3.0.0.4.388_24374 --hw_version 1.0 --serial_num DUT_SERIAL --model_num ASUS_GT-AXE16000 lf_check.py 1392
+1739306610.904701 INFO     cmd_args  --lfmgr 192.168.100.116 --port 8080 --dut_name ASUS_GT-AXE16000 --ssid 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c' --ssid 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30' --sw_version 3.0.0.4.388_24374 --hw_version 1.0 --serial_num DUT_SERIAL --model_num ASUS_GT-AXE16000 lf_check.py 1393
+1739306610.904728 INFO     stdout_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-CC_AP_AUTO_DUT_2G_5G-stdout.txt lf_check.py 1406
+1739306610.904799 INFO     stderr_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-CC_AP_AUTO_DUT_2G_5G-stderr.txt lf_check.py 1411
+1739306610.904829 INFO     command : ./create_chamberview_dut.py  --lfmgr 192.168.100.116 --port 8080 --dut_name ASUS_GT-AXE16000 --ssid 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c' --ssid 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30' --sw_version 3.0.0.4.388_24374 --hw_version 1.0 --serial_num DUT_SERIAL --model_num ASUS_GT-AXE16000 lf_check.py 1420
+1739306610.905202 INFO     running ['./create_chamberview_dut.py', '--lfmgr', '192.168.100.116', '--port', '8080', '--dut_name', 'ASUS_GT-AXE16000', '--ssid', 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c', '--ssid', 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30', '--sw_version', '3.0.0.4.388_24374', '--hw_version', '1.0', '--serial_num', 'DUT_SERIAL', '--model_num', 'ASUS_GT-AXE16000'] lf_check.py 1423
+1739306610.905252 INFO     Test start: 2025-02-11-13-43-30 Timeout: 600 lf_check.py 1428
+1739306611.519444 INFO     1739306611.518908 INFO     DUT profile add-ssid: name: ASUS_GT-AXE16000 ssid_idx: 0 ssid: ASUS_2C passwd: hello123 bssid: c8:7f:54:14:42:2c ssid_flags: 32 ssid_flags_mask: 4294967295 cv_dut_profile.py 135
+ lf_check.py 1458
+1739306611.676546 INFO     1739306611.676370 INFO     DUT profile add-ssid: name: ASUS_GT-AXE16000 ssid_idx: 1 ssid: ASUS_2C_5G-1 passwd: hello123 bssid: c8:7f:54:14:42:30 ssid_flags: 32 ssid_flags_mask: 4294967295 cv_dut_profile.py 135
+ lf_check.py 1458
+1739306612.182380 INFO     1739306612.182046 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+ lf_check.py 1458
+1739306614.330590 INFO     1739306614.330245 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+ lf_check.py 1458
+1739306614.330838 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+ lf_check.py 1458
+1739306614.330950 INFO       "cipher": algorithms.TripleDES,
+ lf_check.py 1458
+1739306614.331041 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+ lf_check.py 1458
+1739306614.331124 INFO       "class": algorithms.Blowfish,
+ lf_check.py 1458
+1739306614.331203 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+ lf_check.py 1458
+1739306614.331278 INFO       "class": algorithms.TripleDES,
+ lf_check.py 1458
+1739306614.377669 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1471
+1739306614.377737 INFO     Script returned pass return code: 0 for test: ['./create_chamberview_dut.py', '--lfmgr', '192.168.100.116', '--port', '8080', '--dut_name', 'ASUS_GT-AXE16000', '--ssid', 'ssid_idx=0 ssid=ASUS_2C security=wpa2 password=hello123 bssid=c8:7f:54:14:42:2c', '--ssid', 'ssid_idx=1 ssid=ASUS_2C_5G-1 security=wpa2 password=hello123 bssid=c8:7f:54:14:42:30', '--sw_version', '3.0.0.4.388_24374', '--hw_version', '1.0', '--serial_num', 'DUT_SERIAL', '--model_num', 'ASUS_GT-AXE16000'] lf_check.py 1477
+1739306614.377758 INFO     1739306611.518908 INFO     DUT profile add-ssid: name: ASUS_GT-AXE16000 ssid_idx: 0 ssid: ASUS_2C passwd: hello123 bssid: c8:7f:54:14:42:2c ssid_flags: 32 ssid_flags_mask: 4294967295 cv_dut_profile.py 135
+1739306611.676370 INFO     DUT profile add-ssid: name: ASUS_GT-AXE16000 ssid_idx: 1 ssid: ASUS_2C_5G-1 passwd: hello123 bssid: c8:7f:54:14:42:30 ssid_flags: 32 ssid_flags_mask: 4294967295 cv_dut_profile.py 135
+1739306612.182046 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+1739306614.330245 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+/home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+  "class": algorithms.Blowfish,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "class": algorithms.TripleDES,
+ lf_check.py 1487
+1739306614.377829 INFO     Test end time 2025-02-11-13-43-34 lf_check.py 1493
+1739306614.378062 INFO     test: CC_AP_AUTO_DUT_2G_5G executed lf_check.py 1875
+1739306614.378134 INFO     self.test_dict[self.test]['args']:  --lfmgr 192.168.100.116 --port 8080 --delete_scenario --create_scenario WC_ATH10K_9984_2G_W0  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-1' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-2' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA"  lf_check.py 1345
+1739306614.378157 INFO     load_db : skip lf_check.py 1362
+1739306614.378177 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1377
+1739306614.378194 INFO     command: ./create_chamberview.py  --lfmgr 192.168.100.116 --port 8080 --delete_scenario --create_scenario WC_ATH10K_9984_2G_W0  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-1' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-2' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA"  lf_check.py 1392
+1739306614.378208 INFO     cmd_args  --lfmgr 192.168.100.116 --port 8080 --delete_scenario --create_scenario WC_ATH10K_9984_2G_W0  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-1' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-2' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA"  lf_check.py 1393
+1739306614.378227 INFO     stdout_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-CC_AP_AUTO_2G_5G-stdout.txt lf_check.py 1406
+1739306614.378279 INFO     stderr_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-CC_AP_AUTO_2G_5G-stderr.txt lf_check.py 1411
+1739306614.378297 INFO     command : ./create_chamberview.py  --lfmgr 192.168.100.116 --port 8080 --delete_scenario --create_scenario WC_ATH10K_9984_2G_W0  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-1' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-2' NA AUTO,AUTO -1 NA"  --raw_line "profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA"  lf_check.py 1420
+1739306614.378534 INFO     running ['./create_chamberview.py', '--lfmgr', '192.168.100.116', '--port', '8080', '--delete_scenario', '--create_scenario', 'WC_ATH10K_9984_2G_W0', '--raw_line', "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-1' NA AUTO,AUTO -1 NA", '--raw_line', "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-2' NA AUTO,AUTO -1 NA", '--raw_line', 'profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA'] lf_check.py 1423
+1739306614.378564 INFO     Test start: 2025-02-11-13-43-34 Timeout: 600 lf_check.py 1428
+1739306615.000218 INFO     1739306614.999521 INFO     creating WC_ATH10K_9984_2G_W0 scenario using raw lines create_chamberview.py 99
+ lf_check.py 1458
+1739306615.675452 INFO     1739306615.675122 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+ lf_check.py 1458
+1739306617.842008 INFO     1739306617.841714 INFO     Applying WC_ATH10K_9984_2G_W0 scenario cv_test_manager.py 522
+ lf_check.py 1458
+1739306618.187264 INFO     1739306618.187145 INFO     Applying WC_ATH10K_9984_2G_W0 scenario cv_test_manager.py 522
+ lf_check.py 1458
+1739306618.324442 INFO     1739306618.324322 INFO     Building scenario cv_test_manager.py 527
+ lf_check.py 1458
+1739306618.616909 INFO     1739306618.616609 INFO     is-built: False  cv_test_manager.py 220
+ lf_check.py 1458
+1739306618.617115 INFO     1739306618.616800 INFO     Waiting 0/300 for Chamber-View to be built. create_chamberview.py 190
+ lf_check.py 1458
+1739306619.887824 INFO     1739306619.887524 INFO     is-built: False  cv_test_manager.py 220
+ lf_check.py 1458
+1739306619.888058 INFO     1739306619.887722 INFO     Waiting 1/300 for Chamber-View to be built. create_chamberview.py 190
+ lf_check.py 1458
+1739306621.172750 INFO     1739306621.172445 INFO     is-built: True  cv_test_manager.py 220
+ lf_check.py 1458
+1739306621.173000 INFO     1739306621.172691 INFO     ------------ PASSING TESTS -------------- lfcli_base.py 546
+ lf_check.py 1458
+1739306621.173116 INFO     1739306621.172810 INFO     PASSED: completed building WC_ATH10K_9984_2G_W0 scenario lfcli_base.py 548
+ lf_check.py 1458
+1739306621.173309 INFO     1 out of 1 tests passed successfully. Exiting script with script success.
+ lf_check.py 1458
+1739306621.173407 INFO     1739306621.172942 INFO     1 out of 1 tests passed successfully. Exiting script with script success. lfcli_base.py 583
+ lf_check.py 1458
+1739306621.173486 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+ lf_check.py 1458
+1739306621.173562 INFO       "cipher": algorithms.TripleDES,
+ lf_check.py 1458
+1739306621.173634 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+ lf_check.py 1458
+1739306621.173707 INFO       "class": algorithms.Blowfish,
+ lf_check.py 1458
+1739306621.173778 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+ lf_check.py 1458
+1739306621.173850 INFO       "class": algorithms.TripleDES,
+ lf_check.py 1458
+1739306621.250748 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1471
+1739306621.250826 INFO     Script returned pass return code: 0 for test: ['./create_chamberview.py', '--lfmgr', '192.168.100.116', '--port', '8080', '--delete_scenario', '--create_scenario', 'WC_ATH10K_9984_2G_W0', '--raw_line', "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-1' NA AUTO,AUTO -1 NA", '--raw_line', "profile_link 1.1 STA-AUTO 6 'DUT: axe16000 Radio-2' NA AUTO,AUTO -1 NA", '--raw_line', 'profile_link 1.1 upstream-dhcp 1 NA NA eth2,AUTO -1 NA'] lf_check.py 1477
+1739306621.250851 INFO     1739306614.999521 INFO     creating WC_ATH10K_9984_2G_W0 scenario using raw lines create_chamberview.py 99
+1739306615.675122 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+1739306617.841714 INFO     Applying WC_ATH10K_9984_2G_W0 scenario cv_test_manager.py 522
+1739306618.187145 INFO     Applying WC_ATH10K_9984_2G_W0 scenario cv_test_manager.py 522
+1739306618.324322 INFO     Building scenario cv_test_manager.py 527
+1739306618.616609 INFO     is-built: False  cv_test_manager.py 220
+1739306618.616800 INFO     Waiting 0/300 for Chamber-View to be built. create_chamberview.py 190
+1739306619.887524 INFO     is-built: False  cv_test_manager.py 220
+1739306619.887722 INFO     Waiting 1/300 for Chamber-View to be built. create_chamberview.py 190
+1739306621.172445 INFO     is-built: True  cv_test_manager.py 220
+1739306621.172691 INFO     ------------ PASSING TESTS -------------- lfcli_base.py 546
+1739306621.172810 INFO     PASSED: completed building WC_ATH10K_9984_2G_W0 scenario lfcli_base.py 548
+1 out of 1 tests passed successfully. Exiting script with script success.
+1739306621.172942 INFO     1 out of 1 tests passed successfully. Exiting script with script success. lfcli_base.py 583
+/home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+  "class": algorithms.Blowfish,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "class": algorithms.TripleDES,
+ lf_check.py 1487
+1739306621.250925 INFO     Test end time 2025-02-11-13-43-41 lf_check.py 1493
+1739306621.251158 INFO     test: CC_AP_AUTO_2G_5G executed lf_check.py 1875
+1739306621.251208 INFO     iterations : 1 lf_check.py 1918
+1739306621.251256 INFO     self.test_dict[self.test]['args']:  --mgr 192.168.100.116 --port 8080 --lf_user lanforge --lf_password lanforge --instance_name AP_AUTO_2G_5G --lf_user lanforge --lf_password lanforge --config_name test_con --upstream 1.1.eth2 --dut2_0 'axe16000 lanforge C8:7F:54:14:42:2C (1)' --dut5_0 'axe16000 lanforge C8:7F:54:14:42:30 (2)' --max_stations_2 6 --max_stations_5 6 --max_stations_6 0 --max_stations_dual 1 --radio2 '1.1.4 wiphy0' --radio2 '1.1.6 wiphy2' --radio2 '1.1.7 wiphy4' --radio2 '1.1.8 wiphy5' --radio2 '1.1.9 wiphy6' --radio2 '1.1.10 wiphy7' --radio5 '1.1.6 wiphy2' --radio5 '1.1.7 wiphy4' --radio5 1.1.wiphy5 --radio5 1.1.wiphy6 --radio5 1.1.wiphy7 --set 'basic_cx' 1 --set 'band_steering' 0 --set 'capacity' 0 --set 'channel_switch' 0 --set 'long_term' 0 --set 'mix_stability' 0 --set 'tput_single_sta' 0 --set 'tput_multi_sta' 0 --set 'tput_multi_band' 0 --set 'skip_2' 0 --set 'skip_5' 0 --set 'skip_5b' 1 --set 'skip_6' 1 --verbosity 11 --raw_line 'cx_psk_thresh: 500' --pull_report --local_lf_report_dir /home/lanforge/html-results/ct_us_001/ --test_tag 'AP_AUTO_001' --test_rig LANforge --set DUT_NAME axe16000 lf_check.py 1345
+1739306621.251275 INFO     timeout : 600 lf_check.py 1354
+1739306621.251291 INFO     load_db : skip lf_check.py 1362
+1739306621.251310 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1377
+1739306621.251327 INFO     command: ./lf_ap_auto_test.py  --mgr 192.168.100.116 --port 8080 --lf_user lanforge --lf_password lanforge --instance_name AP_AUTO_2G_5G --lf_user lanforge --lf_password lanforge --config_name test_con --upstream 1.1.eth2 --dut2_0 'axe16000 lanforge C8:7F:54:14:42:2C (1)' --dut5_0 'axe16000 lanforge C8:7F:54:14:42:30 (2)' --max_stations_2 6 --max_stations_5 6 --max_stations_6 0 --max_stations_dual 1 --radio2 '1.1.4 wiphy0' --radio2 '1.1.6 wiphy2' --radio2 '1.1.7 wiphy4' --radio2 '1.1.8 wiphy5' --radio2 '1.1.9 wiphy6' --radio2 '1.1.10 wiphy7' --radio5 '1.1.6 wiphy2' --radio5 '1.1.7 wiphy4' --radio5 1.1.wiphy5 --radio5 1.1.wiphy6 --radio5 1.1.wiphy7 --set 'basic_cx' 1 --set 'band_steering' 0 --set 'capacity' 0 --set 'channel_switch' 0 --set 'long_term' 0 --set 'mix_stability' 0 --set 'tput_single_sta' 0 --set 'tput_multi_sta' 0 --set 'tput_multi_band' 0 --set 'skip_2' 0 --set 'skip_5' 0 --set 'skip_5b' 1 --set 'skip_6' 1 --verbosity 11 --raw_line 'cx_psk_thresh: 500' --pull_report --local_lf_report_dir /home/lanforge/html-results/ct_us_001/ --test_tag 'AP_AUTO_001' --test_rig LANforge --set DUT_NAME axe16000 lf_check.py 1392
+1739306621.251365 INFO     cmd_args  --mgr 192.168.100.116 --port 8080 --lf_user lanforge --lf_password lanforge --instance_name AP_AUTO_2G_5G --lf_user lanforge --lf_password lanforge --config_name test_con --upstream 1.1.eth2 --dut2_0 'axe16000 lanforge C8:7F:54:14:42:2C (1)' --dut5_0 'axe16000 lanforge C8:7F:54:14:42:30 (2)' --max_stations_2 6 --max_stations_5 6 --max_stations_6 0 --max_stations_dual 1 --radio2 '1.1.4 wiphy0' --radio2 '1.1.6 wiphy2' --radio2 '1.1.7 wiphy4' --radio2 '1.1.8 wiphy5' --radio2 '1.1.9 wiphy6' --radio2 '1.1.10 wiphy7' --radio5 '1.1.6 wiphy2' --radio5 '1.1.7 wiphy4' --radio5 1.1.wiphy5 --radio5 1.1.wiphy6 --radio5 1.1.wiphy7 --set 'basic_cx' 1 --set 'band_steering' 0 --set 'capacity' 0 --set 'channel_switch' 0 --set 'long_term' 0 --set 'mix_stability' 0 --set 'tput_single_sta' 0 --set 'tput_multi_sta' 0 --set 'tput_multi_band' 0 --set 'skip_2' 0 --set 'skip_5' 0 --set 'skip_5b' 1 --set 'skip_6' 1 --verbosity 11 --raw_line 'cx_psk_thresh: 500' --pull_report --local_lf_report_dir /home/lanforge/html-results/ct_us_001/ --test_tag 'AP_AUTO_001' --test_rig LANforge --set DUT_NAME axe16000 lf_check.py 1393
+1739306621.251386 INFO     stdout_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-AP_AUTO_2G_5G-stdout.txt lf_check.py 1406
+1739306621.251457 INFO     stderr_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-AP_AUTO_2G_5G-stderr.txt lf_check.py 1411
+1739306621.251476 INFO     command : ./lf_ap_auto_test.py  --mgr 192.168.100.116 --port 8080 --lf_user lanforge --lf_password lanforge --instance_name AP_AUTO_2G_5G --lf_user lanforge --lf_password lanforge --config_name test_con --upstream 1.1.eth2 --dut2_0 'axe16000 lanforge C8:7F:54:14:42:2C (1)' --dut5_0 'axe16000 lanforge C8:7F:54:14:42:30 (2)' --max_stations_2 6 --max_stations_5 6 --max_stations_6 0 --max_stations_dual 1 --radio2 '1.1.4 wiphy0' --radio2 '1.1.6 wiphy2' --radio2 '1.1.7 wiphy4' --radio2 '1.1.8 wiphy5' --radio2 '1.1.9 wiphy6' --radio2 '1.1.10 wiphy7' --radio5 '1.1.6 wiphy2' --radio5 '1.1.7 wiphy4' --radio5 1.1.wiphy5 --radio5 1.1.wiphy6 --radio5 1.1.wiphy7 --set 'basic_cx' 1 --set 'band_steering' 0 --set 'capacity' 0 --set 'channel_switch' 0 --set 'long_term' 0 --set 'mix_stability' 0 --set 'tput_single_sta' 0 --set 'tput_multi_sta' 0 --set 'tput_multi_band' 0 --set 'skip_2' 0 --set 'skip_5' 0 --set 'skip_5b' 1 --set 'skip_6' 1 --verbosity 11 --raw_line 'cx_psk_thresh: 500' --pull_report --local_lf_report_dir /home/lanforge/html-results/ct_us_001/ --test_tag 'AP_AUTO_001' --test_rig LANforge --set DUT_NAME axe16000 lf_check.py 1420
+1739306621.252216 INFO     running ['./lf_ap_auto_test.py', '--mgr', '192.168.100.116', '--port', '8080', '--lf_user', 'lanforge', '--lf_password', 'lanforge', '--instance_name', 'AP_AUTO_2G_5G', '--lf_user', 'lanforge', '--lf_password', 'lanforge', '--config_name', 'test_con', '--upstream', '1.1.eth2', '--dut2_0', 'axe16000 lanforge C8:7F:54:14:42:2C (1)', '--dut5_0', 'axe16000 lanforge C8:7F:54:14:42:30 (2)', '--max_stations_2', '6', '--max_stations_5', '6', '--max_stations_6', '0', '--max_stations_dual', '1', '--radio2', '1.1.4 wiphy0', '--radio2', '1.1.6 wiphy2', '--radio2', '1.1.7 wiphy4', '--radio2', '1.1.8 wiphy5', '--radio2', '1.1.9 wiphy6', '--radio2', '1.1.10 wiphy7', '--radio5', '1.1.6 wiphy2', '--radio5', '1.1.7 wiphy4', '--radio5', '1.1.wiphy5', '--radio5', '1.1.wiphy6', '--radio5', '1.1.wiphy7', '--set', 'basic_cx', '1', '--set', 'band_steering', '0', '--set', 'capacity', '0', '--set', 'channel_switch', '0', '--set', 'long_term', '0', '--set', 'mix_stability', '0', '--set', 'tput_single_sta', '0', '--set', 'tput_multi_sta', '0', '--set', 'tput_multi_band', '0', '--set', 'skip_2', '0', '--set', 'skip_5', '0', '--set', 'skip_5b', '1', '--set', 'skip_6', '1', '--verbosity', '11', '--raw_line', 'cx_psk_thresh: 500', '--pull_report', '--local_lf_report_dir', '/home/lanforge/html-results/ct_us_001/', '--test_tag', 'AP_AUTO_001', '--test_rig', 'LANforge', '--set', 'DUT_NAME', 'axe16000'] lf_check.py 1423
+1739306621.252253 INFO     Test start: 2025-02-11-13-43-41 Timeout: 600 lf_check.py 1428
+1739306621.854164 INFO     1739306621.853550 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+ lf_check.py 1458
+1739306623.975856 INFO     1739306623.975757 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+ lf_check.py 1458
+1739306624.361968 INFO     1739306624.361674 INFO     adding -:radio2-0: 1.1.4 wiphy0:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306624.563673 INFO     1739306624.563424 INFO     adding -:radio2-1: 1.1.6 wiphy2:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306624.727318 INFO     1739306624.726955 INFO     adding -:radio2-2: 1.1.7 wiphy4:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306624.897199 INFO     1739306624.897015 INFO     adding -:radio2-3: 1.1.8 wiphy5:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306625.051771 INFO     1739306625.051465 INFO     adding -:radio2-4: 1.1.9 wiphy6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306625.218006 INFO     1739306625.217766 INFO     adding -:radio2-5: 1.1.10 wiphy7:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306625.382959 INFO     1739306625.382722 INFO     adding -:radio5-0: 1.1.6 wiphy2:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306625.538679 INFO     1739306625.538364 INFO     adding -:radio5-1: 1.1.7 wiphy4:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306625.697733 INFO     1739306625.697456 INFO     adding -:radio5-2: 1.1.wiphy5:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306625.854804 INFO     1739306625.854502 INFO     adding -:radio5-3: 1.1.wiphy6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306626.026198 INFO     1739306626.025703 INFO     adding -:radio5-4: 1.1.wiphy7:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306626.197511 INFO     1739306626.197391 INFO     adding -:cx_psk_thresh: 500:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306626.367411 INFO     1739306626.367098 INFO     adding -:upstream_port: 1.1.eth2:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306626.549997 INFO     1739306626.549808 INFO     adding -:dut2-0: axe16000 lanforge C8:7F:54:14:42:2C (1):- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306626.732896 INFO     1739306626.732570 INFO     adding -:dut5-0: axe16000 lanforge C8:7F:54:14:42:30 (2):- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306626.897527 INFO     1739306626.897312 INFO     adding -:max_stations_2: 6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306627.047276 INFO     1739306627.046973 INFO     adding -:max_stations_5: 6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306627.221910 INFO     1739306627.221792 INFO     adding -:max_stations_5b: 0:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306627.391838 INFO     1739306627.391701 INFO     adding -:max_stations_6: 0:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306627.574363 INFO     1739306627.574062 INFO     adding -:max_stations_dual: 1:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+ lf_check.py 1458
+1739306632.912164 INFO     1739306632.911834 INFO     verbosity is : 11 lf_ap_auto_test.py 344
+ lf_check.py 1458
+1739306633.347057 INFO     1739306633.346749 ERROR    
+ lf_check.py 1458
+1739306633.347248 INFO      = = LANforge Error Messages = =
+ lf_check.py 1458
+1739306633.347348 INFO      = = URL: http://192.168.100.116:8080/gui-json/cmd
+ lf_check.py 1458
+1739306633.347435 INFO       X-Error-00: ERROR: Component has invalid tool-tip: <html>Select the maximum number of Tri-Band-5B stations to be used in the following tests.<br>Configuration key: </html>
+ lf_check.py 1458
+1739306633.347523 INFO      = = = = = = = = = = = = = = = = LFRequest.py 396
+ lf_check.py 1458
+1739306633.562392 INFO     1739306633.562101 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'basic_cx' '1' cv_test_manager.py 365
+ lf_check.py 1458
+1739306633.712352 INFO     1739306633.712065 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'band_steering' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306633.849473 INFO     1739306633.849164 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'capacity' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306633.989477 INFO     1739306633.989196 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'channel_switch' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.116497 INFO     1739306634.116355 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'long_term' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.256984 INFO     1739306634.256712 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'mix_stability' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.391562 INFO     1739306634.391332 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'tput_single_sta' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.524294 INFO     1739306634.524027 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'tput_multi_sta' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.671743 INFO     1739306634.671456 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'tput_multi_band' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.803514 INFO     1739306634.803218 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_2' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306634.962688 INFO     1739306634.962363 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_5' '0' cv_test_manager.py 365
+ lf_check.py 1458
+1739306635.102963 INFO     1739306635.102651 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_5b' '1' cv_test_manager.py 365
+ lf_check.py 1458
+1739306635.231951 INFO     1739306635.231636 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_6' '1' cv_test_manager.py 365
+ lf_check.py 1458
+1739306635.379200 INFO     1739306635.378895 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'DUT_NAME' 'axe16000' cv_test_manager.py 365
+ lf_check.py 1458
+1739306635.511227 INFO     1739306635.511051 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'Test Rig ID:' 'LANforge' cv_test_manager.py 365
+ lf_check.py 1458
+1739306635.652953 INFO     1739306635.652646 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'TestTag' 'AP_AUTO_001' cv_test_manager.py 365
+ lf_check.py 1458
+1739306635.791885 INFO     1739306635.791576 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'VERBOSITY' '11' cv_test_manager.py 369
+ lf_check.py 1458
+1739306636.274737 INFO     1739306636.274426 INFO     Popup Dialog:
+ lf_check.py 1458
+1739306636.274929 INFO      cv_test_manager.py 384
+ lf_check.py 1458
+1739306636.275065 INFO     1739306636.274620 INFO     DIALOG: <html>An exception follows. You may copy and paste it into an email. Please email <tt>support@candelatech.com</tt>. <p style='color:#404040;font-size:x-small;'>Git Version: 19b916a3a81ae036d9e4df3a65d106a00b6c5e33; Build Date: Sun 09 Feb 2025 10:34:42 PM PST</p><hr>
+ lf_check.py 1458
+1739306636.275171 INFO     <br>
+ lf_check.py 1458
+1739306636.275267 INFO     <br><br>Component has invalid tool-tip: &lt;html>Select the maximum number of Tri-Band-5B stations to be used in the following tests.&lt;br>Configuration key: &lt;/html><p style='color:#404040;font-size:small;'>LFVer 5.4.9 commit: 19b916a3a81ae036d9e4df3a65d106a00b6c5e33; Exception Class: <tt>java.lang.RuntimeException</tt></p><p style='color:#404040;font-size:small;'><b>Stack Trace</b>:</p><pre style='color:#404040;font-size:x-small;'>candela.lib.LFJPanel.getTttKey(LFJPanel.java:210)
+ lf_check.py 1458
+1739306636.275366 INFO     candela.lanforge.WiFiGroovyPlugin.putConfigurable(WiFiGroovyPlugin.java:4241)
+ lf_check.py 1458
+1739306636.275444 INFO     candela.lanforge.WiFiGroovyPlugin.putConfigurable(WiFiGroovyPlugin.java:4208)
+ lf_check.py 1458
+1739306636.275518 INFO     candela.lanforge.CVShortAP.getTestConfig(CVShortAP.java:11516)
+ lf_check.py 1458
+1739306636.275590 INFO     candela.lanforge.WiFiGroovyPlugin.saveTestConfig(WiFiGroovyPlugin.java:2414)
+ lf_check.py 1458
+1739306636.275661 INFO     candela.lanforge.CVShortAP.myRun(CVShortAP.java:3103)
+ lf_check.py 1458
+1739306636.275732 INFO     candela.lanforge.BaseGroovyPlugin.run(BaseGroovyPlugin.java:1533)
+ lf_check.py 1458
+1739306636.275802 INFO     java.lang.Thread.run(Thread.java:748)
+ lf_check.py 1458
+1739306636.275870 INFO     </pre></html> cv_test_manager.py 385
+ lf_check.py 1458
+1739306636.432732 INFO     1739306636.432559 INFO     Status:
+ lf_check.py 1458
+1739306636.432827 INFO      cv_test_manager.py 395
+ lf_check.py 1458
+1739306636.432880 INFO     1739306636.432652 INFO     STATUS1: Waiting a bit for radio probe to complete.
+ lf_check.py 1458
+1739306636.432920 INFO     PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+ lf_check.py 1458
+1739306636.572794 INFO     1739306636.572477 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+ lf_check.py 1458
+1739306638.010705 INFO     1739306638.010383 INFO     Status:
+ lf_check.py 1458
+1739306638.010910 INFO      cv_test_manager.py 395
+ lf_check.py 1458
+1739306638.011040 INFO     1739306638.010596 INFO     STATUS1: Waiting a bit for radio probe to complete.
+ lf_check.py 1458
+1739306638.011140 INFO     PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+ lf_check.py 1458
+1739306638.152994 INFO     1739306638.152800 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+ lf_check.py 1458
+1739306639.554308 INFO     1739306639.554013 INFO     Status:
+ lf_check.py 1458
+1739306639.554498 INFO      cv_test_manager.py 395
+ lf_check.py 1458
+1739306639.554627 INFO     1739306639.554201 INFO     STATUS1: Waiting a bit for radio probe to complete.
+ lf_check.py 1458
+1739306639.554720 INFO     PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+ lf_check.py 1458
+1739306639.688849 INFO     1739306639.688659 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+ lf_check.py 1458
+1739306641.112532 INFO     1739306641.112201 INFO     Status:
+ lf_check.py 1458
+1739306641.112733 INFO      cv_test_manager.py 395
+ lf_check.py 1458
+1739306641.112870 INFO     1739306641.112406 INFO     STATUS1: Waiting a bit for radio probe to complete.
+ lf_check.py 1458
+1739306641.112962 INFO     PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+ lf_check.py 1458
+1739306641.238678 INFO     1739306641.238511 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+ lf_check.py 1458
+1739306642.561977 INFO     1739306642.561717 INFO     Popup Dialog:
+ lf_check.py 1458
+1739306642.562135 INFO      cv_test_manager.py 384
+ lf_check.py 1458
+1739306642.562235 INFO     1739306642.561874 INFO     DIALOG: Cannot find upstream port: 
+ lf_check.py 1458
+1739306642.562304 INFO      cv_test_manager.py 385
+ lf_check.py 1458
+1739306642.691472 INFO     1739306642.691283 INFO     Status:
+ lf_check.py 1458
+1739306642.691589 INFO      cv_test_manager.py 395
+ lf_check.py 1458
+1739306642.691673 INFO     1739306642.691395 INFO     STATUS1: Cleanup: Waiting for Chamber-View build to complete.
+ lf_check.py 1458
+1739306642.691724 INFO     STATUS2: 1 / 240
+ lf_check.py 1458
+1739306642.691767 INFO     PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+ lf_check.py 1458
+1739306642.818310 INFO     1739306642.817974 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+ lf_check.py 1458
+1739306644.217009 INFO     1739306644.216709 INFO     Status:
+ lf_check.py 1458
+1739306644.217205 INFO      cv_test_manager.py 395
+ lf_check.py 1458
+1739306644.217332 INFO     1739306644.216900 INFO     STATUS1: Cleanup: Waiting for Chamber-View build to complete.
+ lf_check.py 1458
+1739306644.217424 INFO     STATUS2: 2 / 240
+ lf_check.py 1458
+1739306644.217504 INFO     PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+ lf_check.py 1458
+1739306644.762531 INFO     1739306644.762398 INFO     "Report Location:::/home/lanforge/html-reports/ap-auto-2025-02-11-12-44-04" cv_test_manager.py 403
+ lf_check.py 1458
+1739306644.762603 INFO     1739306644.762467 INFO     None cv_test_manager.py 407
+ lf_check.py 1458
+1739306644.762642 INFO     1739306644.762498 INFO     Waiting on test completion for kpi cv_test_manager.py 416
+ lf_check.py 1458
+1739306644.762669 INFO     1739306644.762524 INFO     Pulling report to directory: /home/lanforge/html-results/ct_us_001/ from lanforge@192.168.100.116//home/lanforge/html-reports/ap-auto-2025-02-11-12-44-04 cv_test_manager.py 420
+ lf_check.py 1458
+1739306645.001206 INFO     1739306645.000853 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+ lf_check.py 1458
+1739306645.424971 INFO     1739306645.424618 INFO     Authentication (password) successful! transport.py 1819
+ lf_check.py 1458
+1739306648.331861 INFO     1739306648.331555 INFO     is-built: True  cv_test_manager.py 220
+ lf_check.py 1458
+1739306648.621945 INFO     1739306648.621634 INFO     FAILED: lf_ap_auto_test did not generate kpi.csv) lf_ap_auto_test.py 488
+ lf_check.py 1458
+1739306648.622179 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+ lf_check.py 1458
+1739306648.622295 INFO       "cipher": algorithms.TripleDES,
+ lf_check.py 1458
+1739306648.622387 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+ lf_check.py 1458
+1739306648.622470 INFO       "class": algorithms.Blowfish,
+ lf_check.py 1458
+1739306648.622545 INFO     /home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+ lf_check.py 1458
+1739306648.622623 INFO       "class": algorithms.TripleDES,
+ lf_check.py 1458
+1739306648.700119 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1471
+1739306648.700198 INFO     Script returned non-zero return code: 1 for test: ['./lf_ap_auto_test.py', '--mgr', '192.168.100.116', '--port', '8080', '--lf_user', 'lanforge', '--lf_password', 'lanforge', '--instance_name', 'AP_AUTO_2G_5G', '--lf_user', 'lanforge', '--lf_password', 'lanforge', '--config_name', 'test_con', '--upstream', '1.1.eth2', '--dut2_0', 'axe16000 lanforge C8:7F:54:14:42:2C (1)', '--dut5_0', 'axe16000 lanforge C8:7F:54:14:42:30 (2)', '--max_stations_2', '6', '--max_stations_5', '6', '--max_stations_6', '0', '--max_stations_dual', '1', '--radio2', '1.1.4 wiphy0', '--radio2', '1.1.6 wiphy2', '--radio2', '1.1.7 wiphy4', '--radio2', '1.1.8 wiphy5', '--radio2', '1.1.9 wiphy6', '--radio2', '1.1.10 wiphy7', '--radio5', '1.1.6 wiphy2', '--radio5', '1.1.7 wiphy4', '--radio5', '1.1.wiphy5', '--radio5', '1.1.wiphy6', '--radio5', '1.1.wiphy7', '--set', 'basic_cx', '1', '--set', 'band_steering', '0', '--set', 'capacity', '0', '--set', 'channel_switch', '0', '--set', 'long_term', '0', '--set', 'mix_stability', '0', '--set', 'tput_single_sta', '0', '--set', 'tput_multi_sta', '0', '--set', 'tput_multi_band', '0', '--set', 'skip_2', '0', '--set', 'skip_5', '0', '--set', 'skip_5b', '1', '--set', 'skip_6', '1', '--verbosity', '11', '--raw_line', 'cx_psk_thresh: 500', '--pull_report', '--local_lf_report_dir', '/home/lanforge/html-results/ct_us_001/', '--test_tag', 'AP_AUTO_001', '--test_rig', 'LANforge', '--set', 'DUT_NAME', 'axe16000'] lf_check.py 1480
+1739306648.700221 INFO     1739306621.853550 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+1739306623.975757 INFO     [{'handler': 'candela.lanforge.GenericJsonResponder', 'uri': 'gui-json/:cmd', 'LAST': {'cmd': 'NA', 'command': 'cv sync', 'duration': 11, 'response': 'YES'}, 'warnings': ['YES']}] cv_test_manager.py 536
+1739306624.361674 INFO     adding -:radio2-0: 1.1.4 wiphy0:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306624.563424 INFO     adding -:radio2-1: 1.1.6 wiphy2:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306624.726955 INFO     adding -:radio2-2: 1.1.7 wiphy4:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306624.897015 INFO     adding -:radio2-3: 1.1.8 wiphy5:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306625.051465 INFO     adding -:radio2-4: 1.1.9 wiphy6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306625.217766 INFO     adding -:radio2-5: 1.1.10 wiphy7:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306625.382722 INFO     adding -:radio5-0: 1.1.6 wiphy2:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306625.538364 INFO     adding -:radio5-1: 1.1.7 wiphy4:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306625.697456 INFO     adding -:radio5-2: 1.1.wiphy5:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306625.854502 INFO     adding -:radio5-3: 1.1.wiphy6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306626.025703 INFO     adding -:radio5-4: 1.1.wiphy7:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306626.197391 INFO     adding -:cx_psk_thresh: 500:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306626.367098 INFO     adding -:upstream_port: 1.1.eth2:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306626.549808 INFO     adding -:dut2-0: axe16000 lanforge C8:7F:54:14:42:2C (1):- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306626.732570 INFO     adding -:dut5-0: axe16000 lanforge C8:7F:54:14:42:30 (2):- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306626.897312 INFO     adding -:max_stations_2: 6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306627.046973 INFO     adding -:max_stations_5: 6:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306627.221792 INFO     adding -:max_stations_5b: 0:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306627.391701 INFO     adding -:max_stations_6: 0:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306627.574062 INFO     adding -:max_stations_dual: 1:- to test config: test_con  blob-name: AP-Auto- cv_test_manager.py 150
+1739306632.911834 INFO     verbosity is : 11 lf_ap_auto_test.py 344
+1739306633.346749 ERROR    
+ = = LANforge Error Messages = =
+ = = URL: http://192.168.100.116:8080/gui-json/cmd
+  X-Error-00: ERROR: Component has invalid tool-tip: <html>Select the maximum number of Tri-Band-5B stations to be used in the following tests.<br>Configuration key: </html>
+ = = = = = = = = = = = = = = = = LFRequest.py 396
+1739306633.562101 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'basic_cx' '1' cv_test_manager.py 365
+1739306633.712065 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'band_steering' '0' cv_test_manager.py 365
+1739306633.849164 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'capacity' '0' cv_test_manager.py 365
+1739306633.989196 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'channel_switch' '0' cv_test_manager.py 365
+1739306634.116355 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'long_term' '0' cv_test_manager.py 365
+1739306634.256712 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'mix_stability' '0' cv_test_manager.py 365
+1739306634.391332 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'tput_single_sta' '0' cv_test_manager.py 365
+1739306634.524027 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'tput_multi_sta' '0' cv_test_manager.py 365
+1739306634.671456 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'tput_multi_band' '0' cv_test_manager.py 365
+1739306634.803218 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_2' '0' cv_test_manager.py 365
+1739306634.962363 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_5' '0' cv_test_manager.py 365
+1739306635.102651 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_5b' '1' cv_test_manager.py 365
+1739306635.231636 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'skip_6' '1' cv_test_manager.py 365
+1739306635.378895 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'DUT_NAME' 'axe16000' cv_test_manager.py 365
+1739306635.511051 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'Test Rig ID:' 'LANforge' cv_test_manager.py 365
+1739306635.652646 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'TestTag' 'AP_AUTO_001' cv_test_manager.py 365
+1739306635.791576 INFO     Running CV set command:cv set 'AP_AUTO_2G_5G' 'VERBOSITY' '11' cv_test_manager.py 369
+1739306636.274426 INFO     Popup Dialog:
+ cv_test_manager.py 384
+1739306636.274620 INFO     DIALOG: <html>An exception follows. You may copy and paste it into an email. Please email <tt>support@candelatech.com</tt>. <p style='color:#404040;font-size:x-small;'>Git Version: 19b916a3a81ae036d9e4df3a65d106a00b6c5e33; Build Date: Sun 09 Feb 2025 10:34:42 PM PST</p><hr>
+<br>
+<br><br>Component has invalid tool-tip: &lt;html>Select the maximum number of Tri-Band-5B stations to be used in the following tests.&lt;br>Configuration key: &lt;/html><p style='color:#404040;font-size:small;'>LFVer 5.4.9 commit: 19b916a3a81ae036d9e4df3a65d106a00b6c5e33; Exception Class: <tt>java.lang.RuntimeException</tt></p><p style='color:#404040;font-size:small;'><b>Stack Trace</b>:</p><pre style='color:#404040;font-size:x-small;'>candela.lib.LFJPanel.getTttKey(LFJPanel.java:210)
+candela.lanforge.WiFiGroovyPlugin.putConfigurable(WiFiGroovyPlugin.java:4241)
+candela.lanforge.WiFiGroovyPlugin.putConfigurable(WiFiGroovyPlugin.java:4208)
+candela.lanforge.CVShortAP.getTestConfig(CVShortAP.java:11516)
+candela.lanforge.WiFiGroovyPlugin.saveTestConfig(WiFiGroovyPlugin.java:2414)
+candela.lanforge.CVShortAP.myRun(CVShortAP.java:3103)
+candela.lanforge.BaseGroovyPlugin.run(BaseGroovyPlugin.java:1533)
+java.lang.Thread.run(Thread.java:748)
+</pre></html> cv_test_manager.py 385
+1739306636.432559 INFO     Status:
+ cv_test_manager.py 395
+1739306636.432652 INFO     STATUS1: Waiting a bit for radio probe to complete.
+PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+1739306636.572477 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+1739306638.010383 INFO     Status:
+ cv_test_manager.py 395
+1739306638.010596 INFO     STATUS1: Waiting a bit for radio probe to complete.
+PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+1739306638.152800 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+1739306639.554013 INFO     Status:
+ cv_test_manager.py 395
+1739306639.554201 INFO     STATUS1: Waiting a bit for radio probe to complete.
+PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+1739306639.688659 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+1739306641.112201 INFO     Status:
+ cv_test_manager.py 395
+1739306641.112406 INFO     STATUS1: Waiting a bit for radio probe to complete.
+PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+1739306641.238511 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+1739306642.561717 INFO     Popup Dialog:
+ cv_test_manager.py 384
+1739306642.561874 INFO     DIALOG: Cannot find upstream port: 
+ cv_test_manager.py 385
+1739306642.691283 INFO     Status:
+ cv_test_manager.py 395
+1739306642.691395 INFO     STATUS1: Cleanup: Waiting for Chamber-View build to complete.
+STATUS2: 1 / 240
+PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+1739306642.817974 INFO     Waiting on test completion for kpi cv_test_manager.py 430
+1739306644.216709 INFO     Status:
+ cv_test_manager.py 395
+1739306644.216900 INFO     STATUS1: Cleanup: Waiting for Chamber-View build to complete.
+STATUS2: 2 / 240
+PROGRESS: Loop: 0/0 Iterations per Loop: 0/0 Total: 0/0 cv_test_manager.py 396
+1739306644.762398 INFO     "Report Location:::/home/lanforge/html-reports/ap-auto-2025-02-11-12-44-04" cv_test_manager.py 403
+1739306644.762467 INFO     None cv_test_manager.py 407
+1739306644.762498 INFO     Waiting on test completion for kpi cv_test_manager.py 416
+1739306644.762524 INFO     Pulling report to directory: /home/lanforge/html-results/ct_us_001/ from lanforge@192.168.100.116//home/lanforge/html-reports/ap-auto-2025-02-11-12-44-04 cv_test_manager.py 420
+1739306645.000853 INFO     Connected (version 2.0, client OpenSSH_8.8) transport.py 1819
+1739306645.424618 INFO     Authentication (password) successful! transport.py 1819
+1739306648.331555 INFO     is-built: True  cv_test_manager.py 220
+1739306648.621634 INFO     FAILED: lf_ap_auto_test did not generate kpi.csv) lf_ap_auto_test.py 488
+/home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+  "class": algorithms.Blowfish,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "class": algorithms.TripleDES,
+ lf_check.py 1487
+1739306648.700307 INFO     Test end time 2025-02-11-13-44-08 lf_check.py 1493
+1739306648.700460 CRITICAL BaseException unable to write meta /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/ap-auto-2025-02-11-12-44-04/meta.txt : [Errno 2] No such file or directory: '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/ap-auto-2025-02-11-12-44-04/meta.txt' lf_check.py 1605
+1739306648.700500 ERROR    Test returne fail  return code 1 for test: ['./lf_ap_auto_test.py', '--mgr', '192.168.100.116', '--port', '8080', '--lf_user', 'lanforge', '--lf_password', 'lanforge', '--instance_name', 'AP_AUTO_2G_5G', '--lf_user', 'lanforge', '--lf_password', 'lanforge', '--config_name', 'test_con', '--upstream', '1.1.eth2', '--dut2_0', 'axe16000 lanforge C8:7F:54:14:42:2C (1)', '--dut5_0', 'axe16000 lanforge C8:7F:54:14:42:30 (2)', '--max_stations_2', '6', '--max_stations_5', '6', '--max_stations_6', '0', '--max_stations_dual', '1', '--radio2', '1.1.4 wiphy0', '--radio2', '1.1.6 wiphy2', '--radio2', '1.1.7 wiphy4', '--radio2', '1.1.8 wiphy5', '--radio2', '1.1.9 wiphy6', '--radio2', '1.1.10 wiphy7', '--radio5', '1.1.6 wiphy2', '--radio5', '1.1.7 wiphy4', '--radio5', '1.1.wiphy5', '--radio5', '1.1.wiphy6', '--radio5', '1.1.wiphy7', '--set', 'basic_cx', '1', '--set', 'band_steering', '0', '--set', 'capacity', '0', '--set', 'channel_switch', '0', '--set', 'long_term', '0', '--set', 'mix_stability', '0', '--set', 'tput_single_sta', '0', '--set', 'tput_multi_sta', '0', '--set', 'tput_multi_band', '0', '--set', 'skip_2', '0', '--set', 'skip_5', '0', '--set', 'skip_5b', '1', '--set', 'skip_6', '1', '--verbosity', '11', '--raw_line', 'cx_psk_thresh: 500', '--pull_report', '--local_lf_report_dir', '/home/lanforge/html-results/ct_us_001/', '--test_tag', 'AP_AUTO_001', '--test_rig', 'LANforge', '--set', 'DUT_NAME', 'axe16000'] lf_check.py 1617
+1739306648.700624 INFO     test: AP_AUTO_2G_5G executed lf_check.py 1875
+1739306648.700705 INFO     self.test_dict[self.test]['args']:  --server http://192.168.100.184/ --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --store --png --database ./tools/CT_001_AXE16000.db lf_check.py 1345
+1739306648.700726 INFO     timeout : 600 lf_check.py 1354
+1739306648.700743 INFO     load_db : skip lf_check.py 1362
+1739306648.700762 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1377
+1739306648.700778 INFO     command: ././tools/lf_qa.py  --server http://192.168.100.184/ --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --store --png --database ./tools/CT_001_AXE16000.db lf_check.py 1392
+1739306648.700793 INFO     cmd_args  --server http://192.168.100.184/ --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --store --png --database ./tools/CT_001_AXE16000.db lf_check.py 1393
+1739306648.700811 INFO     stdout_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-lf_qa-stdout.txt lf_check.py 1406
+1739306648.700865 INFO     stderr_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-lf_qa-stderr.txt lf_check.py 1411
+1739306648.700884 INFO     command : ././tools/lf_qa.py  --server http://192.168.100.184/ --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --store --png --database ./tools/CT_001_AXE16000.db lf_check.py 1420
+1739306648.701065 INFO     running ['././tools/lf_qa.py', '--server', 'http://192.168.100.184/', '--path', '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001', '--store', '--png', '--database', './tools/CT_001_AXE16000.db'] lf_check.py 1423
+1739306648.701095 INFO     Test start: 2025-02-11-13-44-08 Timeout: 600 lf_check.py 1428
+1739306649.412990 INFO     1739306649.412827 INFO     config:            path:/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 file:kpi.csv            database:./tools/CT_001_AXE16000.db table:qa_table             store:True png:True lf_qa.py 1138
+ lf_check.py 1458
+1739306649.413116 INFO     1739306649.412894 INFO     path set: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 89
+ lf_check.py 1458
+1739306649.413145 INFO     1739306649.412967 INFO     path_date_time /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-09_lf_qa lf_report.py 245
+ lf_check.py 1458
+1739306649.413167 INFO     1739306649.413068 INFO     report path : /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-09_lf_qa lf_report.py 254
+ lf_check.py 1458
+1739306649.413954 INFO     1739306649.413878 INFO     reading kpi and storing in db ./tools/CT_001_AXE16000.db lf_qa.py 583
+ lf_check.py 1458
+1739306649.413992 INFO     1739306649.413937 INFO     store path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_qa.py 585
+ lf_check.py 1458
+1739306649.414012 INFO     1739306649.413959 INFO     self.path  /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_qa.py 586
+ lf_check.py 1458
+1739306649.414179 INFO     1739306649.414114 INFO     WARNING: used --store , no new kpi.csv found, check input path or remove --store from command line lf_qa.py 590
+ lf_check.py 1458
+1739306649.415237 INFO     1739306649.415171 INFO     generate table and graph from subtest data per run: 1739306649.415162 lf_qa.py 760
+ lf_check.py 1458
+1739306649.417996 INFO     1739306649.417908 INFO     Database empty reading subtest: KeyError(key) when sorting by Date for db: ./tools/CT_001_AXE16000.db, check Database name, path to kpi, typo in path, exiting lf_qa.py 773
+ lf_check.py 1458
+1739306649.418049 INFO     Traceback (most recent call last):
+ lf_check.py 1458
+1739306649.418069 INFO       File "././tools/lf_qa.py", line 769, in sub_test_information
+ lf_check.py 1458
+1739306649.418087 INFO         df3 = df3.sort_values(by='Date')
+ lf_check.py 1458
+1739306649.418102 INFO       File "/home/user/.local/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+ lf_check.py 1458
+1739306649.418169 INFO         return func(*args, **kwargs)
+ lf_check.py 1458
+1739306649.418221 INFO       File "/home/user/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 6259, in sort_values
+ lf_check.py 1458
+1739306649.418254 INFO         k = self._get_label_or_level_values(by, axis=axis)
+ lf_check.py 1458
+1739306649.418289 INFO       File "/home/user/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 1779, in _get_label_or_level_values
+ lf_check.py 1458
+1739306649.418321 INFO         raise KeyError(key)
+ lf_check.py 1458
+1739306649.418335 INFO     KeyError: 'Date'
+ lf_check.py 1458
+1739306649.494989 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1471
+1739306649.495080 INFO     Script returned non-zero return code: 1 for test: ['././tools/lf_qa.py', '--server', 'http://192.168.100.184/', '--path', '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001', '--store', '--png', '--database', './tools/CT_001_AXE16000.db'] lf_check.py 1480
+1739306649.495104 INFO     1739306649.412827 INFO     config:            path:/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 file:kpi.csv            database:./tools/CT_001_AXE16000.db table:qa_table             store:True png:True lf_qa.py 1138
+1739306649.412894 INFO     path set: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 89
+1739306649.412967 INFO     path_date_time /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-09_lf_qa lf_report.py 245
+1739306649.413068 INFO     report path : /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-09_lf_qa lf_report.py 254
+1739306649.413878 INFO     reading kpi and storing in db ./tools/CT_001_AXE16000.db lf_qa.py 583
+1739306649.413937 INFO     store path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_qa.py 585
+1739306649.413959 INFO     self.path  /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_qa.py 586
+1739306649.414114 INFO     WARNING: used --store , no new kpi.csv found, check input path or remove --store from command line lf_qa.py 590
+1739306649.415171 INFO     generate table and graph from subtest data per run: 1739306649.415162 lf_qa.py 760
+1739306649.417908 INFO     Database empty reading subtest: KeyError(key) when sorting by Date for db: ./tools/CT_001_AXE16000.db, check Database name, path to kpi, typo in path, exiting lf_qa.py 773
+Traceback (most recent call last):
+  File "././tools/lf_qa.py", line 769, in sub_test_information
+    df3 = df3.sort_values(by='Date')
+  File "/home/user/.local/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/user/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 6259, in sort_values
+    k = self._get_label_or_level_values(by, axis=axis)
+  File "/home/user/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 1779, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'Date'
+ lf_check.py 1487
+1739306649.495270 INFO     Test end time 2025-02-11-13-44-09 lf_check.py 1493
+1739306649.495496 ERROR    Test returne fail  return code 1 for test: ['././tools/lf_qa.py', '--server', 'http://192.168.100.184/', '--path', '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001', '--store', '--png', '--database', './tools/CT_001_AXE16000.db'] lf_check.py 1617
+1739306649.495818 INFO     test: lf_qa executed lf_check.py 1875
+1739306649.495906 INFO     self.test_dict[self.test]['args']:  --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --database ./tools/CT_001_AXE16000.db --db_index 0,1 lf_check.py 1345
+1739306649.495937 INFO     timeout : 600 lf_check.py 1354
+1739306649.495974 INFO     load_db : skip lf_check.py 1362
+1739306649.495996 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1377
+1739306649.496013 INFO     command: ././tools/lf_inspect.py  --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --database ./tools/CT_001_AXE16000.db --db_index 0,1 lf_check.py 1392
+1739306649.496028 INFO     cmd_args  --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --database ./tools/CT_001_AXE16000.db --db_index 0,1 lf_check.py 1393
+1739306649.496046 INFO     stdout_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-lf_inspect-stdout.txt lf_check.py 1406
+1739306649.496106 INFO     stderr_log_txt: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/log/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001-lf_inspect-stderr.txt lf_check.py 1411
+1739306649.496125 INFO     command : ././tools/lf_inspect.py  --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --database ./tools/CT_001_AXE16000.db --db_index 0,1 lf_check.py 1420
+1739306649.496299 INFO     running ['././tools/lf_inspect.py', '--path', '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001', '--database', './tools/CT_001_AXE16000.db', '--db_index', '0,1'] lf_check.py 1423
+1739306649.496356 INFO     Test start: 2025-02-11-13-44-09 Timeout: 600 lf_check.py 1428
+1739306650.165859 INFO     1739306650.165710 INFO     path set: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 89
+ lf_check.py 1458
+1739306650.165961 INFO     1739306650.165808 INFO     path_date_time /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect lf_report.py 245
+ lf_check.py 1458
+1739306650.165983 INFO     1739306650.165888 INFO     report path : /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect lf_report.py 254
+ lf_check.py 1458
+1739306650.166420 INFO     1739306650.166349 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect/lf_inspect-lf_inspect-2025-02-11-13-44-10.csv lf_report.py 356
+ lf_check.py 1458
+1739306650.166451 INFO     1739306650.166380 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect/lf_inspect-lf_inspect-2025-02-11-13-44-10 lf_report.py 356
+ lf_check.py 1458
+1739306650.167392 INFO     1739306650.167327 INFO     self.csv_results lf_inspect.py 196
+ lf_check.py 1458
+1739306650.167434 INFO     1739306650.167407 INFO     compare the data in single db: ['./tools/CT_001_AXE16000.db'] lf_inspect.py 592
+ lf_check.py 1458
+1739306650.170821 INFO     1739306650.170743 INFO     Database empty: KeyError(key) when sorting by Date, check Database name, path to kpi, typo in path, exiting lf_inspect.py 613
+ lf_check.py 1458
+1739306650.170864 INFO     Traceback (most recent call last):
+ lf_check.py 1458
+1739306650.170884 INFO       File "././tools/lf_inspect.py", line 610, in compare_single_db_info
+ lf_check.py 1458
+1739306650.170900 INFO         df3.sort_values(by='Date', ascending=False, inplace=True)
+ lf_check.py 1458
+1739306650.170915 INFO       File "/home/user/.local/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+ lf_check.py 1458
+1739306650.170928 INFO         return func(*args, **kwargs)
+ lf_check.py 1458
+1739306650.170941 INFO       File "/home/user/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 6259, in sort_values
+ lf_check.py 1458
+1739306650.170954 INFO         k = self._get_label_or_level_values(by, axis=axis)
+ lf_check.py 1458
+1739306650.170967 INFO       File "/home/user/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 1779, in _get_label_or_level_values
+ lf_check.py 1458
+1739306650.170981 INFO         raise KeyError(key)
+ lf_check.py 1458
+1739306650.170994 INFO     KeyError: 'Date'
+ lf_check.py 1458
+1739306650.243845 INFO     Current Working Directory /home/user/git/lanforge-scripts/py-scripts lf_check.py 1471
+1739306650.243927 INFO     Script returned non-zero return code: 1 for test: ['././tools/lf_inspect.py', '--path', '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001', '--database', './tools/CT_001_AXE16000.db', '--db_index', '0,1'] lf_check.py 1480
+1739306650.243970 INFO     1739306650.165710 INFO     path set: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 89
+1739306650.165808 INFO     path_date_time /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect lf_report.py 245
+1739306650.165888 INFO     report path : /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect lf_report.py 254
+1739306650.166349 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect/lf_inspect-lf_inspect-2025-02-11-13-44-10.csv lf_report.py 356
+1739306650.166380 INFO     output file /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-44-10_lf_inspect/lf_inspect-lf_inspect-2025-02-11-13-44-10 lf_report.py 356
+1739306650.167327 INFO     self.csv_results lf_inspect.py 196
+1739306650.167407 INFO     compare the data in single db: ['./tools/CT_001_AXE16000.db'] lf_inspect.py 592
+1739306650.170743 INFO     Database empty: KeyError(key) when sorting by Date, check Database name, path to kpi, typo in path, exiting lf_inspect.py 613
+Traceback (most recent call last):
+  File "././tools/lf_inspect.py", line 610, in compare_single_db_info
+    df3.sort_values(by='Date', ascending=False, inplace=True)
+  File "/home/user/.local/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/user/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 6259, in sort_values
+    k = self._get_label_or_level_values(by, axis=axis)
+  File "/home/user/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 1779, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'Date'
+ lf_check.py 1487
+1739306650.244130 INFO     Test end time 2025-02-11-13-44-10 lf_check.py 1493
+1739306650.244277 ERROR    Test returne fail  return code 1 for test: ['././tools/lf_inspect.py', '--path', '/home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001', '--database', './tools/CT_001_AXE16000.db', '--db_index', '0,1'] lf_check.py 1617
+1739306650.244481 INFO     test: lf_inspect executed lf_check.py 1875
+1739306650.244552 INFO     Suite End Time: 2025-02-11-13-44-10 lf_check.py 2044
+1739306650.244583 INFO     Suite Duration:  0d 0h 0m 39s 340224 ms lf_check.py 2051
+1739306650.265940 INFO     write_output_html: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001.html lf_report.py 408
+1739306650.266092 INFO     html report: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001.html lf_check.py 2738
+Loading pages (1/6)
+[>                                                           ] 0%[======>                                                     ] 10%[==========>                                                 ] 18%[=============>                                              ] 22%[===============>                                            ] 26%[===================>                                        ] 33%[============================>                               ] 47%[=================================================>          ] 82%[============================================================] 100%Counting pages (2/6)                                               
+[============================================================] Object 1 of 1Resolving links (4/6)                                                       
+[============================================================] Object 1 of 1Loading headers and footers (5/6)                                           
+Printing pages (6/6)
+[>                                                           ] Preparing[==============================>                             ] Page 1 of 2[============================================================] Page 2 of 2Done                                                                      
+1739306650.593556 INFO     lf_check_html_report: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001.html lf_check.py 2746
+1739306650.593675 INFO     write_output_html: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001.html lf_report.py 469
+1739306650.593698 INFO     junit_dir: /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_report.py 470
+1739306650.594141 INFO     running:[echo "CT-US-001 (192.168.100.116) lanforge target 192.168.100.116
+Results from 127.0.0.1:
+Suite: ct_ap_auto_2g_5g_001
+Database: ./tools/CT_001_AXE16000.db
+Dut Model: ASUS_GT-AXE16000
+Dut HW: 1.0
+Dut SW: 3.0.0.4.388_24374
+Dut SN: 12345678
+
+allure-report-latest:
+http://127.0.0.1/html-results/ct_us_001/allure-report-latest
+
+lf_check Test Suite Report:
+http://127.0.0.1/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/2025-02-11-13-43-19-lf_check_ct_ap_auto_2g_5g_001.html
+
+QA Report Dashboard: lf_qa.py was not run as last script of test suite
+QA Report Dashboard: lf_inspect.py was not run as last script of test suite
+
+Summary:
+========
+Rig: CT-US-001 (192.168.100.116)
+Suite: ct_ap_auto_2g_5g_001
+
+Server: localhost
+Server IP: 127.0.0.1
+
+Results:
+========
+Tests: 5
+Fail:3
+Timeout:0
+Partial Fail:0
+
+Duration:
+=========
+Duration: 0d 0h 0m 39s 340224 ms
+Start: 2025-02-11 13-43-30
+Stop: 2025-02-11-13-44-10
+
+Test Script Input Files:
+========================
+json_dut: ./ct_dut_json/ct_001_AXE16000_dut.json
+json_rig: ./ct_rig_json/ct_us_001_rig.json
+json_test: ./ct_tests_json/ct_us_001/ct_ap_auto/ct_ap_auto_001.json:ct_ap_auto_2g_5g_001
+json_test_name : ./ct_tests_json/ct_us_001/ct_ap_auto/ct_ap_auto_001.json
+
+
+Server / DB Infomation
+======================
+Server Ver: Linux-5.15.0-107-generic-x86_64-with-glibc2.29
+Server IP: localhost
+DB: ./tools/CT_001_AXE16000.db
+Date: 2025-02-11 13:44:10.594091
+
+
+LANforge Versions:
+==================
+LANforge:['ct523c-3b7b']
+LANforge:[192.168.100.116]
+Fedora:['Fedora release 36 (Thirty Six)']
+Kernel:['Linux ct523c-3b7b 6.11.11+ #34 SMP PREEMPT_DYNAMIC Wed Jan 29 15:06:33 PST 2025 x86_64 x86_64 x86_64 GNU/Linux']
+Server:['Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025']
+GUI:5.4.9  "Sun 09 Feb 2025 10:34:42 PM PST"
+Platform:Linux-5.15.0-107-generic-x86_64-with-glibc2.29
+
+Server_Build_Info:['Welcome to the LANforge server.', 'Copyright 1999-2024 Candela Technologies.', '', 'Version: 5.4.9  Compiled on:  Sun Feb  9 10:31:11 PM PST 2025', 'By: greearb  On machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64', 'This product includes software developed by the OpenSSL Project', 'for use in the OpenSSL Toolkit. (http://www.openssl.org/)', 'LANforge version: 5.4.9 built on: Sun Feb  9 10:31:11 PM PST 2025', 'by: greearb on machine: Linux vb-f36-64 6.2.15-100.fc36.x86_64 x86_64 x86_64']
+
+
+                        
+Tests Failed:
+=============
+
+./lf_ap_auto_test.py  --mgr 192.168.100.116 --port 8080 --lf_user lanforge --lf_password lanforge --instance_name AP_AUTO_2G_5G --lf_user lanforge --lf_password lanforge --config_name test_con --upstream 1.1.eth2 --dut2_0 'axe16000 lanforge C8:7F:54:14:42:2C (1)' --dut5_0 'axe16000 lanforge C8:7F:54:14:42:30 (2)' --max_stations_2 6 --max_stations_5 6 --max_stations_6 0 --max_stations_dual 1 --radio2 '1.1.4 wiphy0' --radio2 '1.1.6 wiphy2' --radio2 '1.1.7 wiphy4' --radio2 '1.1.8 wiphy5' --radio2 '1.1.9 wiphy6' --radio2 '1.1.10 wiphy7' --radio5 '1.1.6 wiphy2' --radio5 '1.1.7 wiphy4' --radio5 1.1.wiphy5 --radio5 1.1.wiphy6 --radio5 1.1.wiphy7 --set 'basic_cx' 1 --set 'band_steering' 0 --set 'capacity' 0 --set 'channel_switch' 0 --set 'long_term' 0 --set 'mix_stability' 0 --set 'tput_single_sta' 0 --set 'tput_multi_sta' 0 --set 'tput_multi_band' 0 --set 'skip_2' 0 --set 'skip_5' 0 --set 'skip_5b' 1 --set 'skip_6' 1 --verbosity 11 --raw_line 'cx_psk_thresh: 500' --pull_report --local_lf_report_dir /home/lanforge/html-results/ct_us_001/ --test_tag 'AP_AUTO_001' --test_rig LANforge --set DUT_NAME axe16000
+
+                
+././tools/lf_qa.py  --server http://192.168.100.184/ --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --store --png --database ./tools/CT_001_AXE16000.db
+
+                
+././tools/lf_inspect.py  --path /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 --database ./tools/CT_001_AXE16000.db --db_index 0,1
+
+                
+
+Tests Timed Out:
+===============
+
+
+
+
+Allure Report Junit :
+=====================
+
+
+junit.xml: allure serve /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/ct_ap_auto_2g_5g_001_junit.xml
+junit.xml path: allure serve /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001
+" | mail -s "1 of 1 QA Server IP: 127.0.0.1  Rig: CT-US-001 (192.168.100.116) Finished:2 Fail:3 Timeout:0 Partial Fail:0 Suite: ct_ap_auto_2g_5g_001 Duration: 0d 0h 0m 39s 340224 ms  Tests:5  DB: ./tools/CT_001_AXE16000.db Server Ver:Linux-5.15.0-107-generic-x86_64-with-glibc2.29 Date: 2025-02-11 13:44:10.594071" tricia.smiley@candelatech.com,chuck.rekiere@candelatech.com] lf_check.py 863
+1739306710.778289 INFO     junit.xml: allure serve /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001/ct_ap_auto_2g_5g_001_junit.xml lf_check.py 2791
+1739306710.778659 INFO     junit.xml path: allure serve /home/lanforge/html-results/ct_us_001/2025-02-11-13-43-19_lf_check_ct_ap_auto_2g_5g_001 lf_check.py 2792
+1739306710.779559 INFO     write_out_allure_environment_properties: /home/lanforge/html-results/ct_us_001//allure-results/environment.properties lf_report.py 429
+1739306710.779689 INFO     allure_environment_properties_dir: /home/lanforge/html-results/ct_us_001//allure-results lf_report.py 430
+1739306710.780878 INFO     write_out_allure_executor: /home/lanforge/html-results/ct_us_001//allure-results/executor.json lf_report.py 449
+1739306710.781008 INFO     allure_executor_dir: /home/lanforge/html-results/ct_us_001//allure-results lf_report.py 450
+1739306710.781461 INFO     copying history from /home/lanforge/html-results/ct_us_001/allure-report/history to /home/lanforge/html-results/ct_us_001//allure-results/history lf_report.py 496
+1739306710.782785 INFO     Either no allure report present or the copy of history failed. lf_report.py 512
+1739306710.782948 INFO     allure command: allure generate /home/lanforge/html-results/ct_us_001//allure-results --report-dir /home/lanforge/html-results/ct_us_001/allure-report --clean lf_report.py 553
+1739306712.387522 INFO     allure out: Report successfully generated to /home/lanforge/html-results/ct_us_001/allure-report
+ errcode: 0 err:  lf_report.py 559
+/home/user/.local/lib/python3.8/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.Blowfish and will be removed from this module in 45.0.0.
+  "class": algorithms.Blowfish,
+/home/user/.local/lib/python3.8/site-packages/paramiko/transport.py:243: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+  "class": algorithms.TripleDES,
+Traceback (most recent call last):
+  File "/home/user/git/lanforge-scripts/py-scripts/lf_report.py", line 504, in update_allure_results_history
+    files = os.listdir(self.allure_report_history)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lanforge/html-results/ct_us_001/allure-report/history'

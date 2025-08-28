@@ -1,0 +1,185 @@
+{
+    "ct_tests_create_001_scripts":{
+        "Notes":[
+            "This json file describes tests to be run by LANforge system",
+            "has no correlation to the --instance_name , instance name is used ",
+            "as a unique identifier for tha chamber-view test run"
+        ]  
+    },
+    "test_suites":{
+        "create_tests":{
+            "LF_CHECK_HELP":{
+                "enabled":"TRUE",
+                "load_db":"skip",
+                "command":"lf_help_check.bash",
+                "args":"",
+                "args_list":[
+                    " "
+                ]
+            },
+            "LF_HELP_SUMMARY_CHECK":{
+                "enabled":"TRUE",
+                "load_db":"skip",
+                "command":"lf_help_summary_check.bash",
+                "args":"",
+                "args_list":[
+                    " "
+                ]
+            },
+            "CREATE_STATION_5G_MT7915_W7": {
+                "enabled": "FALSE",
+                "load_db": "skip",
+                "command": "create_station.py",
+                "args": "",
+                "args_list": [
+                    "--mgr LF_MGR_IP --radio 1.1.wiphy7",
+                    " start_id 2 --num_stations 1",
+                    " --ssid 'ssid_idx=1 ssid=SSID_USED security=SECURITY_USED password=SSID_PW_USED bssid=BSSID_TO_USE'"
+                ]
+            },
+
+            "STA_CONNECT2_5G_MT7915_W7": {
+                "enabled": "FALSE",
+                "load_db": "skip",
+                "command": "sta_connect2.py",
+                "args": "",
+                "args_list": ["--mgr LF_MGR_IP --upstream_port UPSTREAM_PORT --local_lf_report_dir REPORT_PATH",
+                    " use_ssid_idx=1 --radio 1.1.wiphy7 --dut_ssid SSID_USED --dut_security SECURITY_USED --dut_passwd SSID_PW_USED",
+                    " --csv_outfile FTP_CSV.csv --test_rig TEST_RIG --test_tag LF_FTP --dut_hw_version DUT_HW",
+                    " --dut_model_num USE_DUT_NAME --dut_sw_version DUT_SW --dut_serial_num DUT_SN"
+                ]
+            },
+            "CREATE_BRIDGE_ATH10K_W1":{
+                "enabled":"FALSE",
+                "command":"create_bridge.py",
+    
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=0 --radio 'radio==wiphy0,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " use_ssid_idx=0 --radio 'radio==wiphy2,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " use_ssid_idx=0 --radio 'radio==wiphy4,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " use_ssid_idx=0 --radio 'radio==wiphy5,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " use_ssid_idx=0 --radio 'radio==wiphy6,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " use_ssid_idx=0 --radio 'radio==wiphy7,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_ENABLE_FLAGS_2G_W1_W4_W5_W6_W7'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "CREATE_BRIDGE_ATH10K_W1":{
+                "enabled":"FALSE",
+                "command":"create_bridge.py",
+                "args":"",
+                "args_list":["--mgr LF_MGR_IP --radio wiphy1 --upstream_port UPSTREAM_PORT --target_device sta0000 --debug",
+                    " --bridge_name br0"
+                ]
+            },
+            "CREATE_L3_STATIONS_ATH10K_W1":{
+                    "enabled":"FALSE",
+                    "load_db":"NONE",
+                    "command":"create_l3_stations.py",
+                    "args":"",
+                    "args_list":[
+                        " --mgr LF_MGR_IP --radio wiphy1 --num_stations 4 --upstream_port UPSTREAM_PORT",                    
+                        " use_ssid_idx=1 --ssid SSID_USED --passwd  SSID_PW_USED --security  SECURITY_USED "
+                    ]
+            },
+            "CREATE_L3_ATH10K_W1":{
+                "enabled":"FALSE",
+                "load_db":"NONE",
+                "command":"create_l3.py",
+                "args":"",
+                "args_list":[
+                    " --mgr LF_MGR_IP --endp_a 1.1.wlan30 --endp_b 1.1.wlan50 ",
+                    " --min_rate_a 1000000 --min_rate_b 1000000  "
+                ]
+            },
+            "CREATE_STATION_5G_ATH10K_W1":{
+                "enabled":"FALSE",
+                "load_db":"NONE",
+                "command":"create_station.py",
+                "args":"",
+                "args_list":[
+                    " --mgr LF_MGR_IP --radio 1.1.wiphy1 --start_id 200 --num_station 3 ",
+                    " use_ssid_idx=1 --ssid SSID_USED --passwd  SSID_PW_USED --security  SECURITY_USED ",
+                    " --no_pre_cleanup --clean "
+                ]
+            },
+            "LF_TEST_REPORT":{
+                "enabled":"FALSE",
+                "load_db":"NONE",
+                "timeout":"60",
+                "command":"lf_report_test.py",
+                "args":"",
+                "args_list":[" --mgr LF_MGR_IP "
+                ]
+            },
+            "LF_SNP_TEST":{
+                "enabled":"FALSE",
+                "load_db":"NONE",
+                "timeout":"60",
+                "command":"lf_snp_test.py",
+                "args":"",
+                "args_list":[" --help"
+                ]
+            },
+            "TESTGROUP":{
+                "enabled":"FALSE",
+                "load_db":"NONE",
+                "timeout":"60",
+                "command":"testgroup.py",
+                "args":"",
+                "args_list":[" --mgr LF_MGR_IP --group_name group1 --add_group --list_groups --debug"
+                ]
+            },
+            "CREATE_L4_5G_ATH10K_W1":{
+                "enabled":"FALSE",
+                "command":"create_l4.py",
+                "args":"",
+                "args_list":[
+                    " --mgr LF_MGR_IP --radio wiphy1 --num_stations 4 --upstream_port UPSTREAM_PORT",                    
+                    "  use_ssid_idx=1 --ssid SSID_USED --passwd SSID_PW_USED --security SECURITY_USED",
+                    " --debug"
+                ]
+            },
+            "TEST_STATUS_MSG":{
+                "enabled":"FALSE",
+                "command":"test_status_msg.py",
+                "args":"",
+                "args_list":["--mgr LF_MGR_IP --action run_test"
+                ]
+            },
+            "LF_QA":{
+                "enabled":"FALSE",
+                "timeout":"600",
+                "load_db":"skip",
+                "command":"./tools/lf_qa.py",
+                "args":"",
+                "args_list":[
+                    " --server TEST_SERVER --path REPORT_PATH --store --png --database DATABASE_SQLITE --test_suite  TEST_SUITE"
+                ]
+            },
+            "LF_INSPECT":{
+                "enabled":"FALSE",
+                "timeout":"600",
+                "load_db":"skip",
+                "command":"./tools/lf_inspect.py",
+                "args":"",
+                "args_list":[
+                    " --path REPORT_PATH --database DATABASE_SQLITE --test_suite  TEST_SUITE --db_index 1,0"
+                ]
+            }
+        },
+        "suite_quick":{
+            "LF_CHECK_HELP":{
+                "enabled":"FALSE",
+                "load_db":"skip",
+                "command":"lf_help_check.bash",
+                "args":"",
+                "args_list":[
+                    " "
+                ]
+            }
+        }
+    }
+}

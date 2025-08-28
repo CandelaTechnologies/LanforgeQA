@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# allow commands to be printed to the terminal
+set -x
+
+echo "Running RVR tests"
+./lf_check.py \
+--db_override ./tools/CT_US_008_RVR_PERF.db \
+--json_rig ./ct_rig_json/ct_us_008_rig_TP_BE19000.json \
+--json_dut ./ct_dut_json/ct_008_TP_BE19000_dut.json \
+--json_test \
+./ct_tests_json/ct_us_008/ct_functional/ct_funct_008.json:funct_tests \
+--path /home/lanforge/html-reports/ct_us_008 \
+--log_level debug 
+# --production
+
+

@@ -1,0 +1,5 @@
+./lf_check.py \
+ --json_rig ./lf_test_gen/ct_id_104_rig.json \
+ --json_dut ./lf_test_gen/ct_id_ax88u_dut.json \
+ --json_test ./ct_tests_json/ct_us_001_ap_auto.json:suite_ap \
+ --db_override ./tools/ap_auto.db

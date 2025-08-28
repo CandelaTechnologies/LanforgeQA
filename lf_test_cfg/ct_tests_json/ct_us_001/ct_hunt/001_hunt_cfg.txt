@@ -1,0 +1,94 @@
+__saved_at_ms: 1743963166799
+pre_post_anon: 0
+pre_post_inline: 0
+do_pre_post: 1
+anonymize_ap: 0
+show_events: 1
+show_log: 0
+log_stdout: 0
+port_sorting: 2
+kpi_id: Hunt
+get_csv_cb: 0
+auto_save: 0
+rpt_path: 
+rpt_path_make_subdir: 1
+bg: 0xE0ECF8
+dut_info_override: 
+dut_info_cmd: 
+test_rig: 
+test_tag: 
+rpt_name: 
+rpt_dir_prefix_textfield: 
+show_scan: 1
+auto_helper: 0
+allow_11w: 0
+use_mcs_histograms: 1
+use_mlo_histograms: 1
+disable_mlo: 0
+extra_tx_status: 0
+extra_rx_status: 0
+txs_all_status: 0
+sae_pwe: 2
+skip_ac: 0
+skip_be: 0
+skip_ax: 0
+skip_2: 0
+skip_6: 0
+skip_mlo: 0
+skip_5: 0
+skip_5b: 1
+skip_dual: 0
+skip_tri: 1
+skip_tri_5b: 1
+skip_rebuild: 0
+udp_gro: 0
+multi_cx: 3
+udp_burst: 0
+payload_pattern: 0
+sndbuf_tcp: 0
+sndbuf_udp: 0
+rcvbuf_tcp: 0
+rcvbuf_udp: 0
+show_per_loop_totals: 1
+clear_ports_too: 0
+show_log_scale: 0
+show_adv_lat_graph: 0
+realtime_per_port: 0
+realtime_per_cx: 0
+selected_dut: ASUSRT-AX88U
+duration: 15000
+traffic_port: 1.1.wlan7
+upstream_port: 1.1.eth2
+path_loss: 10
+speed: 85%
+speed2: 0Kbps
+min_rssi_bound: -150
+max_rssi_bound: 0
+pkts: 256;512
+traffic_types: UDP
+directions: DUT Transmit;DUT Receive
+attenuator: 0
+attenuator2: 0
+attenuator_mod: 255
+attenuator_mod2: 255
+attenuations: 0..+50..950
+attenuations2: 0..+50..950
+chamber: 0
+tt_deg: 0..+45..359
+cust_pkt_sz: 
+show_3s: 0
+show_ll_graphs: 1
+show_gp_graphs: 1
+show_1m: 1
+pause_iter: 0
+show_realtime: 1
+operator: Autobot
+mconn: 1
+mpkt: 1000
+cutoff_percentage: 20000
+pkt_loss_thresh: 10000
+txspeed_adjust: 1000000
+overdrive: 100000
+tos: 0
+loop_iterations: 1
+

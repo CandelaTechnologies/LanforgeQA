@@ -1,0 +1,232 @@
+add_text_blob Plugin-Settings Scale [BLANK]
+add_text_blob Plugin-Settings Scale __saved_at_ms: 1746112798994
+add_text_blob Plugin-Settings Scale pre_post_anon: 0
+add_text_blob Plugin-Settings Scale pre_post_inline: 0
+add_text_blob Plugin-Settings Scale do_pre_post: 1
+add_text_blob Plugin-Settings Scale anonymize_ap: 0
+add_text_blob Plugin-Settings Scale show_events: 1
+add_text_blob Plugin-Settings Scale show_log: 0
+add_text_blob Plugin-Settings Scale log_stdout: 0
+add_text_blob Plugin-Settings Scale port_sorting: 2
+add_text_blob Plugin-Settings Scale kpi_id: Scale
+add_text_blob Plugin-Settings Scale get_csv_cb: 0
+add_text_blob Plugin-Settings Scale auto_save: 1
+add_text_blob Plugin-Settings Scale rpt_path:
+add_text_blob Plugin-Settings Scale rpt_path_make_subdir: 1
+add_text_blob Plugin-Settings Scale bg: 0xE0ECF8
+add_text_blob Plugin-Settings Scale dut_info_override:
+add_text_blob Plugin-Settings Scale dut_info_cmd:
+add_text_blob Plugin-Settings Scale test_rig: CT-US-001
+add_text_blob Plugin-Settings Scale test_tag: SCALE_001
+add_text_blob Plugin-Settings Scale rpt_name:
+add_text_blob Plugin-Settings Scale rpt_dir_prefix_textfield:
+add_text_blob Plugin-Settings Scale show_scan: 1
+add_text_blob Plugin-Settings Scale auto_helper: 1
+add_text_blob Plugin-Settings Scale allow_11w: 0
+add_text_blob Plugin-Settings Scale use_mcs_histograms: 1
+add_text_blob Plugin-Settings Scale use_mlo_histograms: 1
+add_text_blob Plugin-Settings Scale disable_mlo: 0
+add_text_blob Plugin-Settings Scale extra_tx_status: 0
+add_text_blob Plugin-Settings Scale extra_rx_status: 0
+add_text_blob Plugin-Settings Scale txs_all_status: 0
+add_text_blob Plugin-Settings Scale sae_pwe: 2
+add_text_blob Plugin-Settings Scale skip_ac: 0
+add_text_blob Plugin-Settings Scale skip_be: 0
+add_text_blob Plugin-Settings Scale skip_ax: 0
+add_text_blob Plugin-Settings Scale skip_2: 0
+add_text_blob Plugin-Settings Scale skip_6: 0
+add_text_blob Plugin-Settings Scale skip_mlo: 0
+add_text_blob Plugin-Settings Scale skip_5: 0
+add_text_blob Plugin-Settings Scale skip_5b: 1
+add_text_blob Plugin-Settings Scale skip_dual: 0
+add_text_blob Plugin-Settings Scale skip_tri: 1
+add_text_blob Plugin-Settings Scale skip_tri_5b: 1
+add_text_blob Plugin-Settings Scale skip_rebuild: 0
+add_text_blob Plugin-Settings Scale udp_gro: 0
+add_text_blob Plugin-Settings Scale multi_cx: 1
+add_text_blob Plugin-Settings Scale udp_burst: 0
+add_text_blob Plugin-Settings Scale payload_pattern: 0
+add_text_blob Plugin-Settings Scale sndbuf_tcp: 0
+add_text_blob Plugin-Settings Scale sndbuf_udp: 0
+add_text_blob Plugin-Settings Scale rcvbuf_tcp: 0
+add_text_blob Plugin-Settings Scale rcvbuf_udp: 0
+add_text_blob Plugin-Settings Scale show_per_loop_totals: 1
+add_text_blob Plugin-Settings Scale clear_ports_too: 0
+add_text_blob Plugin-Settings Scale show_log_scale: 0
+add_text_blob Plugin-Settings Scale show_adv_lat_graph: 0
+add_text_blob Plugin-Settings Scale realtime_per_port: 0
+add_text_blob Plugin-Settings Scale realtime_per_cx: 0
+add_text_blob Plugin-Settings Scale sts-0-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-name: morning
+add_text_blob Plugin-Settings Scale sts-0-duration: 600000
+add_text_blob Plugin-Settings Scale sts-0-is_active: 1
+add_text_blob Plugin-Settings Scale sts-0-0-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-0-name: student-2
+add_text_blob Plugin-Settings Scale sts-0-0-profile: STA-AC
+add_text_blob Plugin-Settings Scale sts-0-0-amount: 15
+add_text_blob Plugin-Settings Scale sts-0-0-location: Spread-Campus
+add_text_blob Plugin-Settings Scale sts-0-0-ssid: ASUS_2C
+add_text_blob Plugin-Settings Scale sts-0-0-band: 0
+add_text_blob Plugin-Settings Scale sts-0-0-radio_assignment: Unique Profile
+add_text_blob Plugin-Settings Scale sts-0-0-bind_bssid: 0
+add_text_blob Plugin-Settings Scale sts-0-0-0-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-0-0-name: dl-tcp
+add_text_blob Plugin-Settings Scale sts-0-0-0-upstream_port: 1.1.2 eth2
+add_text_blob Plugin-Settings Scale sts-0-0-0-action: TCP Layer-3 Traffic
+add_text_blob Plugin-Settings Scale sts-0-0-0-concurrent: 1
+add_text_blob Plugin-Settings Scale sts-0-0-0-sniff_packets: 0
+add_text_blob Plugin-Settings Scale sts-0-0-0-min_duration: 480000
+add_text_blob Plugin-Settings Scale sts-0-0-0-max_duration: Same
+add_text_blob Plugin-Settings Scale sts-0-0-0-min_speed_u: 56000
+add_text_blob Plugin-Settings Scale sts-0-0-0-max_speed_u: 0
+add_text_blob Plugin-Settings Scale sts-0-0-0-min_speed_d: 1544000
+add_text_blob Plugin-Settings Scale sts-0-0-0-max_speed_d: 0
+add_text_blob Plugin-Settings Scale sts-0-0-0-url:
+add_text_blob Plugin-Settings Scale sts-0-0-0-destination_url: /dev/null
+add_text_blob Plugin-Settings Scale sts-0-0-0-destination: Any
+add_text_blob Plugin-Settings Scale sts-0-0-0-urls_per_ten:
+add_text_blob Plugin-Settings Scale sts-0-0-0-repeat_count:
+add_text_blob Plugin-Settings Scale sts-0-0-0-pf_metric: 950000
+add_text_blob Plugin-Settings Scale sts-0-0-0-ul_dl: Download
+add_text_blob Plugin-Settings Scale sts-0-0-0-reset_timer_max: 0
+add_text_blob Plugin-Settings Scale sts-0-0-0-reset_timer_min: 0
+add_text_blob Plugin-Settings Scale sts-0-0-0-max_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-0-0-min_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-0-1-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-0-1-name: ping
+add_text_blob Plugin-Settings Scale sts-0-0-1-upstream_port: 1.1.2 eth2
+add_text_blob Plugin-Settings Scale sts-0-0-1-action: Ping a Target
+add_text_blob Plugin-Settings Scale sts-0-0-1-concurrent: 1
+add_text_blob Plugin-Settings Scale sts-0-0-1-sniff_packets: 0
+add_text_blob Plugin-Settings Scale sts-0-0-1-min_duration: 480000
+add_text_blob Plugin-Settings Scale sts-0-0-1-max_duration: Same
+add_text_blob Plugin-Settings Scale sts-0-0-1-min_speed_u: 56000
+add_text_blob Plugin-Settings Scale sts-0-0-1-max_speed_u: 0
+add_text_blob Plugin-Settings Scale sts-0-0-1-min_speed_d: 1544000
+add_text_blob Plugin-Settings Scale sts-0-0-1-max_speed_d: 0
+add_text_blob Plugin-Settings Scale sts-0-0-1-url: 192.168.50.247
+add_text_blob Plugin-Settings Scale sts-0-0-1-destination_url: /dev/null
+add_text_blob Plugin-Settings Scale sts-0-0-1-destination: Any
+add_text_blob Plugin-Settings Scale sts-0-0-1-urls_per_ten:
+add_text_blob Plugin-Settings Scale sts-0-0-1-repeat_count:
+add_text_blob Plugin-Settings Scale sts-0-0-1-pf_metric: 950000
+add_text_blob Plugin-Settings Scale sts-0-0-1-ul_dl: Download
+add_text_blob Plugin-Settings Scale sts-0-0-1-reset_timer_max: 0
+add_text_blob Plugin-Settings Scale sts-0-0-1-reset_timer_min: 0
+add_text_blob Plugin-Settings Scale sts-0-0-1-max_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-0-1-min_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-0-2-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-0-2-name: voip
+add_text_blob Plugin-Settings Scale sts-0-0-2-upstream_port: 1.1.2 eth2
+add_text_blob Plugin-Settings Scale sts-0-0-2-action: VoIP Traffic
+add_text_blob Plugin-Settings Scale sts-0-0-2-concurrent: 1
+add_text_blob Plugin-Settings Scale sts-0-0-2-sniff_packets: 0
+add_text_blob Plugin-Settings Scale sts-0-0-2-min_duration: 480000
+add_text_blob Plugin-Settings Scale sts-0-0-2-max_duration: Same
+add_text_blob Plugin-Settings Scale sts-0-0-2-min_speed_u: 56000
+add_text_blob Plugin-Settings Scale sts-0-0-2-max_speed_u: 0
+add_text_blob Plugin-Settings Scale sts-0-0-2-min_speed_d: 1544000
+add_text_blob Plugin-Settings Scale sts-0-0-2-max_speed_d: 0
+add_text_blob Plugin-Settings Scale sts-0-0-2-url: 192.168.50.247
+add_text_blob Plugin-Settings Scale sts-0-0-2-destination_url: /dev/null
+add_text_blob Plugin-Settings Scale sts-0-0-2-destination: Any
+add_text_blob Plugin-Settings Scale sts-0-0-2-urls_per_ten:
+add_text_blob Plugin-Settings Scale sts-0-0-2-repeat_count:
+add_text_blob Plugin-Settings Scale sts-0-0-2-pf_metric: 950000
+add_text_blob Plugin-Settings Scale sts-0-0-2-ul_dl: Download
+add_text_blob Plugin-Settings Scale sts-0-0-2-reset_timer_max: 0
+add_text_blob Plugin-Settings Scale sts-0-0-2-reset_timer_min: 0
+add_text_blob Plugin-Settings Scale sts-0-0-2-max_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-0-2-min_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-1-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-1-name: student-5
+add_text_blob Plugin-Settings Scale sts-0-1-profile: STA-AUTO
+add_text_blob Plugin-Settings Scale sts-0-1-amount: 15
+add_text_blob Plugin-Settings Scale sts-0-1-location: Spread-Campus
+add_text_blob Plugin-Settings Scale sts-0-1-ssid: ASUS_2C_5G-1
+add_text_blob Plugin-Settings Scale sts-0-1-band: 1
+add_text_blob Plugin-Settings Scale sts-0-1-radio_assignment: Unique Profile
+add_text_blob Plugin-Settings Scale sts-0-1-bind_bssid: 0
+add_text_blob Plugin-Settings Scale sts-0-1-0-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-1-0-name: dl-tcp
+add_text_blob Plugin-Settings Scale sts-0-1-0-upstream_port: 1.1.2 eth2
+add_text_blob Plugin-Settings Scale sts-0-1-0-action: TCP Layer-3 Traffic
+add_text_blob Plugin-Settings Scale sts-0-1-0-concurrent: 1
+add_text_blob Plugin-Settings Scale sts-0-1-0-sniff_packets: 0
+add_text_blob Plugin-Settings Scale sts-0-1-0-min_duration: 480000
+add_text_blob Plugin-Settings Scale sts-0-1-0-max_duration: Same
+add_text_blob Plugin-Settings Scale sts-0-1-0-min_speed_u: 56000
+add_text_blob Plugin-Settings Scale sts-0-1-0-max_speed_u: 0
+add_text_blob Plugin-Settings Scale sts-0-1-0-min_speed_d: 1544000
+add_text_blob Plugin-Settings Scale sts-0-1-0-max_speed_d: 0
+add_text_blob Plugin-Settings Scale sts-0-1-0-url:
+add_text_blob Plugin-Settings Scale sts-0-1-0-destination_url: /dev/null
+add_text_blob Plugin-Settings Scale sts-0-1-0-destination: Any
+add_text_blob Plugin-Settings Scale sts-0-1-0-urls_per_ten:
+add_text_blob Plugin-Settings Scale sts-0-1-0-repeat_count:
+add_text_blob Plugin-Settings Scale sts-0-1-0-pf_metric: 950000
+add_text_blob Plugin-Settings Scale sts-0-1-0-ul_dl: Download
+add_text_blob Plugin-Settings Scale sts-0-1-0-reset_timer_max: 0
+add_text_blob Plugin-Settings Scale sts-0-1-0-reset_timer_min: 0
+add_text_blob Plugin-Settings Scale sts-0-1-0-max_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-1-0-min_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-1-1-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-1-1-name: ping
+add_text_blob Plugin-Settings Scale sts-0-1-1-upstream_port: 1.1.2 eth2
+add_text_blob Plugin-Settings Scale sts-0-1-1-action: Ping a Target
+add_text_blob Plugin-Settings Scale sts-0-1-1-concurrent: 1
+add_text_blob Plugin-Settings Scale sts-0-1-1-sniff_packets: 0
+add_text_blob Plugin-Settings Scale sts-0-1-1-min_duration: 480000
+add_text_blob Plugin-Settings Scale sts-0-1-1-max_duration: Same
+add_text_blob Plugin-Settings Scale sts-0-1-1-min_speed_u: 56000
+add_text_blob Plugin-Settings Scale sts-0-1-1-max_speed_u: 0
+add_text_blob Plugin-Settings Scale sts-0-1-1-min_speed_d: 1544000
+add_text_blob Plugin-Settings Scale sts-0-1-1-max_speed_d: 0
+add_text_blob Plugin-Settings Scale sts-0-1-1-url: 192.168.50.247
+add_text_blob Plugin-Settings Scale sts-0-1-1-destination_url: /dev/null
+add_text_blob Plugin-Settings Scale sts-0-1-1-destination: Any
+add_text_blob Plugin-Settings Scale sts-0-1-1-urls_per_ten:
+add_text_blob Plugin-Settings Scale sts-0-1-1-repeat_count:
+add_text_blob Plugin-Settings Scale sts-0-1-1-pf_metric: 950000
+add_text_blob Plugin-Settings Scale sts-0-1-1-ul_dl: Download
+add_text_blob Plugin-Settings Scale sts-0-1-1-reset_timer_max: 0
+add_text_blob Plugin-Settings Scale sts-0-1-1-reset_timer_min: 0
+add_text_blob Plugin-Settings Scale sts-0-1-1-max_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-1-1-min_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-1-2-expanded: 1
+add_text_blob Plugin-Settings Scale sts-0-1-2-name: voip
+add_text_blob Plugin-Settings Scale sts-0-1-2-upstream_port: 1.1.2 eth2
+add_text_blob Plugin-Settings Scale sts-0-1-2-action: VoIP Traffic
+add_text_blob Plugin-Settings Scale sts-0-1-2-concurrent: 1
+add_text_blob Plugin-Settings Scale sts-0-1-2-sniff_packets: 0
+add_text_blob Plugin-Settings Scale sts-0-1-2-min_duration: 480000
+add_text_blob Plugin-Settings Scale sts-0-1-2-max_duration: Same
+add_text_blob Plugin-Settings Scale sts-0-1-2-min_speed_u: 56000
+add_text_blob Plugin-Settings Scale sts-0-1-2-max_speed_u: 0
+add_text_blob Plugin-Settings Scale sts-0-1-2-min_speed_d: 1544000
+add_text_blob Plugin-Settings Scale sts-0-1-2-max_speed_d: 0
+add_text_blob Plugin-Settings Scale sts-0-1-2-url: 192.168.50.247
+add_text_blob Plugin-Settings Scale sts-0-1-2-destination_url: /dev/null
+add_text_blob Plugin-Settings Scale sts-0-1-2-destination: Any
+add_text_blob Plugin-Settings Scale sts-0-1-2-urls_per_ten:
+add_text_blob Plugin-Settings Scale sts-0-1-2-repeat_count:
+add_text_blob Plugin-Settings Scale sts-0-1-2-pf_metric: 950000
+add_text_blob Plugin-Settings Scale sts-0-1-2-ul_dl: Download
+add_text_blob Plugin-Settings Scale sts-0-1-2-reset_timer_max: 0
+add_text_blob Plugin-Settings Scale sts-0-1-2-reset_timer_min: 0
+add_text_blob Plugin-Settings Scale sts-0-1-2-max_station_reset:
+add_text_blob Plugin-Settings Scale sts-0-1-2-min_station_reset:
+add_text_blob Plugin-Settings Scale operator: Autobot
+add_text_blob Plugin-Settings Scale start_time: 9
+add_text_blob Plugin-Settings Scale show_dut_totals: 1
+add_text_blob Plugin-Settings Scale num_loops: 0
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy0: -1
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy1: -1
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy2: -1
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy4: -1
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy5: -1
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy6: -1
+add_text_blob Plugin-Settings Scale radio_freq-1.1.wiphy7: -1
+[lanforge@ct523c-3b7b DFLT]$ 
+
+

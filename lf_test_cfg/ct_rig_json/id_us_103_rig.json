@@ -1,0 +1,23 @@
+{
+    "ct_us_001":{
+        "Notes":[
+            "This json file describes LANforge system and test run configuration"
+        ]  
+    },
+    "test_rig_parameters":{
+        "TEST_BED": "ID-US-103",
+        "TEST_RIG": "ID-US-103",
+        "DATABASE_SQLITE": "./tools/delete_8_22.db",
+        "LF_MGR_IP": "192.168.0.103",
+        "LF_MGR_PORT": "8080",
+        "LF_MGR_USER": "lanforge",
+        "LF_MGR_PASS": "lanforge",
+        "UPSTREAM_ALIAS": "eth2",
+        "UPSTREAM_PORT":"1.1.eth2",
+        "TEST_TIMEOUT": 600,
+        "EMAIL_LIST_PRODUCTION": "chuck.rekiere@candelatech.com",
+        "EMAIL_LIST_TEST": "chuck.rekiere@candelatech.com",
+        "EMAIL_TITLE_TXT": "ID-US-103 (192.168.0.103)",
+        "EMAIL_TXT": "ID-US-103 (192.168.0.103)"
+    }
+}

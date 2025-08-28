@@ -1,0 +1,22 @@
+{
+    "id_AX88U_dut":{
+        "Notes":[
+            "This json file describes the device undertest as input to ./lf_check.py",
+            "The variables that are capitalize are used for configuration",
+            "The dut related configuration is contained in this file"
+        ]  
+    },
+    "test_dut":{
+        "DUT_SET_NAME": "DUT_NAME ASUSRT-AX88U",
+        "USE_DUT_NAME": "ASUSRT-AX88U",
+        "DUT_HW": "A1.1",
+        "DUT_SW": "3.0.0.4.384",
+        "DUT_MODEL": "ASUS-AX6000",
+        "DUT_SERIAL": "M1A1B1",
+        "wireless_network_dict":{
+            "ssid_idx=0":{"ssid_idx":"0","SSID_USED":"ax88u_2g","SSID_PW_USED":"lf_ax88u_2g","BSSID_TO_USE":"f0:2f:74:c7:a2:00","SECURITY_USED":"wpa2"},
+            "ssid_idx=1":{"ssid_idx":"1","SSID_USED":"ax88u_5g","SSID_PW_USED":"lf_ax88u_5g","BSSID_TO_USE":"f0:2f:74:c7:a2:04","SECURITY_USED":"wpa2"}
+        }
+    }
+}
+			
