@@ -2,8 +2,8 @@
 
 # update the QA json files
 
-cp ~/git/lf_test_cfg/LanforgeQA/*.bash  ~/git/lanforge-scripts/py-scripts/tools
-cp -r ~/git/lf_test_cfg/LanforgeQA/ct_dut_json ~/git/lanforge-scripts/py-scripts/tools
-cp -r ~/git/lf_test_cfg/LanforgeQA/ct_rig_json ~/git/lanforge-scripts/py-scripts/tools
-cp -r ~/git/lf_test_cfg/LanforgeQA/ct_tests_json ~/git/lanforge-scripts/py-scripts/tools
+cp ~/git/LanforgeQA/lf_test_cfg/*.bash  ~/git/lanforge-scripts/py-scripts/tools
+cp -r ~/git/LanforgeQA/lf_test_cfg/ct_dut_json ~/git/lanforge-scripts/py-scripts/tools
+cp -r ~/git/LanforgeQA/lf_test_cfg/ct_rig_json ~/git/lanforge-scripts/py-scripts/tools
+cp -r ~/git/LanforgeQA/lf_test_cfg/ct_tests_json ~/git/lanforge-scripts/py-scripts/tools
 
