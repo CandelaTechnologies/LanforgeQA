@@ -1,0 +1,135 @@
+103
+./lf_update.py \
+--mgr 192.168.50.103 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+
+001 - 192.168.100.116
+./lf_update.py \
+--mgr 192.168.100.116 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+002 - 192.168.101.18
+./lf_update.py \
+--mgr 192.168.101.18 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+004 - 192.168.100.194
+./lf_update.py \
+--mgr 192.168.100.194 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+005-1 192.168.100.132
+./lf_update.py \
+--mgr 192.168.100.132 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+
+005-2 - 192.168.101.91
+./lf_update.py \
+--mgr 192.168.101.91 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+007 - 192.168.102.197
+./lf_update.py \
+--mgr 192.168.102.197 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+008-1 192.168.101.137
+./lf_update.py \
+--mgr 192.168.101.137 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+008-2 192.168.101.117
+./lf_update.py \
+--mgr 192.168.101.117 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+008-3 192.168.102.212
+./lf_update.py \
+--mgr 192.168.102.212 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+009 192.168.100.221
+./lf_update.py \
+--mgr 192.168.100.221 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--log_level info
+
+
