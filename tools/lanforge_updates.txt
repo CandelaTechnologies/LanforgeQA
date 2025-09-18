@@ -22,7 +22,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 002 - 192.168.101.18
@@ -36,7 +36,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 004 - 192.168.100.194
@@ -50,7 +50,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 005-1 192.168.100.132
@@ -64,7 +64,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 
@@ -79,7 +79,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 007 - 192.168.102.197
@@ -93,7 +93,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 008-1 192.168.101.137
@@ -107,7 +107,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 008-2 192.168.101.117
@@ -121,7 +121,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 008-3 192.168.102.212
@@ -135,7 +135,7 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
 
 009 192.168.100.221
@@ -149,5 +149,5 @@
 --lfver 5.5.1 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 300 \
+--root_timeout 600 \
 --log_level info
