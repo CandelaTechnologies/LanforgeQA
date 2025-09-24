@@ -170,3 +170,16 @@
 --log_level info
 
 
+Warehouse 192.168.88.40
+./lf_update.py \
+--mgr 192.168.88.40 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.1 \
+--kver 6.15.6+ \
+--user_timeout 10 \
+--root_timeout 600 \
+--log_level info
