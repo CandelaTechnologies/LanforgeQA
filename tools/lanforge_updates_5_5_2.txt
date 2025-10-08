@@ -172,7 +172,7 @@
 #########################
 ct-us-003 192.168.100.181
 #########################
-ct-us-003-1 192.168.100.181
+ct-us-003-1 192.168.100.181 (APU2)
 ./lf_update.py \
 --mgr 192.168.100.181 \
 --root_user root \
@@ -183,10 +183,10 @@ ct-us-003-1 192.168.100.181
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 1320 \
+--root_timeout 1800 \
 --log_level info
 
-ct-us-003-2 192.168.100.152
+ct-us-003-2 192.168.100.152 (APU2)
 ./lf_update.py \
 --mgr 192.168.100.152 \
 --root_user root \
@@ -197,10 +197,10 @@ ct-us-003-2 192.168.100.152
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 1320 \
+--root_timeout 1800 \
 --log_level info
 
-ct-us-003-3 192.168.100.192
+ct-us-003-3 192.168.100.192 (APU2)
 ./lf_update.py \
 --mgr 192.168.100.192 \
 --root_user root \
@@ -211,10 +211,10 @@ ct-us-003-3 192.168.100.192
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 1320 \
+--root_timeout 1800 \
 --log_level info
 
-ct-us-003-4 192.168.102.52
+ct-us-003-4 192.168.102.52 (Noah2)
 ./lf_update.py \
 --mgr 192.168.102.52 \
 --root_user root \
@@ -225,10 +225,10 @@ ct-us-003-4 192.168.102.52
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 1320 \
+--root_timeout 720 \
 --log_level info
 
-ct-us-003-5 192.168.102.133
+ct-us-003-5 192.168.102.133  (Noah2)
 ./lf_update.py \
 --mgr 192.168.102.133 \
 --root_user root \
@@ -239,7 +239,7 @@ ct-us-003-5 192.168.102.133
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 1320 \
+--root_timeout 720 \
 --log_level info
 
 
