@@ -10,7 +10,7 @@
         "DUT_SET_NAME": "DUT_NAME TP-Link_BE19000",
         "USE_DUT_NAME": "TP-Link_BE19000",
         "DUT_HW":"'Archer BE800 v1.20'",
-        "DUT_SW":"1.2.4 Build 20250414 rel.18315(5553)",
+        "DUT_SW":"'1.2.4 Build 20250414 rel.18315(5553)'",
         "DUT_MODEL":"'Archer BE800 v1.20'",
         "DUT_SERIAL":"serial_1.1",
         "UPSTREAM_PORT":"1.2.eth2",
