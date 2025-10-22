@@ -1,5 +1,6 @@
 103
 ./lf_update.py \
+--tb_name CT-ID-103 \
 --mgr 192.168.50.103 \
 --root_user root \
 --root_password lanforge \
@@ -15,6 +16,7 @@
 
 192.168.50.26 AT7
 ./lf_update.py \
+--tb_name CT-ID-26 \
 --mgr 192.168.50.26 \
 --root_user root \
 --root_password lanforge \
@@ -29,6 +31,7 @@
 
 104
 ./lf_update.py \
+--tb_name CT-ID-104 \
 --mgr 192.168.50.104 \
 --root_user root \
 --root_password lanforge \
@@ -45,6 +48,7 @@
 
 001 - 192.168.100.116
 ./lf_update.py \
+--tb_name CT-US-001 \
 --mgr 192.168.100.116 \
 --root_user root \
 --root_password lanforge \
@@ -59,6 +63,7 @@
 
 002 - 192.168.101.18
 ./lf_update.py \
+--tb_name CT-US-002 \
 --mgr 192.168.101.18 \
 --root_user root \
 --root_password lanforge \
@@ -73,6 +78,7 @@
 
 004 - 192.168.100.194
 ./lf_update.py \
+--tb_name CT-US-004 \
 --mgr 192.168.100.194 \
 --root_user root \
 --root_password lanforge \
@@ -87,6 +93,7 @@
 
 005-1 192.168.100.132
 ./lf_update.py \
+--tb_name CT-US-005-1 \
 --mgr 192.168.100.132 \
 --root_user root \
 --root_password lanforge \
@@ -102,6 +109,7 @@
 
 005-2 - 192.168.101.91
 ./lf_update.py \
+--tb_name CT-US-005-2 \
 --mgr 192.168.101.91 \
 --root_user root \
 --root_password lanforge \
@@ -116,6 +124,7 @@
 
 007 - 192.168.102.197
 ./lf_update.py \
+--tb_name CT-US-007 \
 --mgr 192.168.102.197 \
 --root_user root \
 --root_password lanforge \
@@ -130,6 +139,7 @@
 
 008-1 192.168.101.137
 ./lf_update.py \
+--tb_name CT-US-008-1 \
 --mgr 192.168.101.137 \
 --root_user root \
 --root_password lanforge \
@@ -144,6 +154,7 @@
 
 008-2 192.168.101.117
 ./lf_update.py \
+--tb_name CT-US-008-2 \
 --mgr 192.168.101.117 \
 --root_user root \
 --root_password lanforge \
@@ -158,6 +169,7 @@
 
 008-3 192.168.102.212
 ./lf_update.py \
+--tb_name CT-US-008-3 \
 --mgr 192.168.102.212 \
 --root_user root \
 --root_password lanforge \
@@ -172,6 +184,7 @@
 
 009 192.168.100.221
 ./lf_update.py \
+--tb_name CT-US-009 \
 --mgr 192.168.100.221 \
 --root_user root \
 --root_password lanforge \
@@ -186,6 +199,7 @@
 
 Warehouse 192.168.88.40
 ./lf_update.py \
+--tb_name CT-US-Warehouse \
 --mgr 192.168.88.40 \
 --root_user root \
 --root_password lanforge \
@@ -203,6 +217,7 @@ ct-us-003 192.168.100.181
 #########################
 ct-us-003-1 192.168.100.181 (APU2)
 ./lf_update.py \
+--tb_name CT-US-003-APU2-1 \
 --mgr 192.168.100.181 \
 --root_user root \
 --root_password lanforge \
@@ -217,6 +232,7 @@ ct-us-003-1 192.168.100.181 (APU2)
 
 ct-us-003-2 192.168.100.152 (APU2)
 ./lf_update.py \
+--tb_name CT-US-003-APU2-2 \
 --mgr 192.168.100.152 \
 --root_user root \
 --root_password lanforge \
@@ -231,6 +247,7 @@ ct-us-003-2 192.168.100.152 (APU2)
 
 ct-us-003-3 192.168.100.192 (APU2)
 ./lf_update.py \
+--tb_name CT-US-003-APU2-3 \
 --mgr 192.168.100.192 \
 --root_user root \
 --root_password lanforge \
@@ -245,6 +262,7 @@ ct-us-003-3 192.168.100.192 (APU2)
 
 ct-us-003-4 192.168.102.52 (Noah2)
 ./lf_update.py \
+--tb_name CT-US-003-NOAH2-4 \
 --mgr 192.168.102.52 \
 --root_user root \
 --root_password lanforge \
@@ -259,6 +277,7 @@ ct-us-003-4 192.168.102.52 (Noah2)
 
 ct-us-003-5 192.168.102.133  (Noah2)
 ./lf_update.py \
+--tb_name CT-US-003-NOAH2-5 \
 --mgr 192.168.102.133 \
 --root_user root \
 --root_password lanforge \
@@ -274,6 +293,7 @@ ct-us-003-5 192.168.102.133  (Noah2)
 
 Warehouse 192.168.88.40
 ./lf_update.py \
+--tb_name CT-US-Warehouse \
 --mgr 192.168.88.40 \
 --root_user root \
 --root_password lanforge \
