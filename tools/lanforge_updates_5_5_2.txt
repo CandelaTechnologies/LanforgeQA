@@ -1,3 +1,30 @@
+Update All
+# this did not work 
+./lf_update_lab.py \
+--update_module lf_update \
+--tb_name CT-US-001=192.168.100.116 \
+--tb_name CT-US-002=192.168.101.18 \
+--tb_name CT-US-004=192.168.100.194 \
+--tb_name CT-US-005-1=192.168.100.132 \
+--tb_name CT-US-005-2=192.168.101.91 \
+--tb_name CT-US-007=192.168.102.197 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--log_level info \
+--lfver 5.5.2 \
+--kver 6.15.6+ \
+--user_timeout 10 \
+--root_timeout 800 \
+--log_level debug
+
+
+
+
+
+
 103
 ./lf_update.py \
 --tb_name CT-ID-103 \
@@ -10,7 +37,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 
@@ -26,7 +53,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 104
@@ -41,7 +68,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 
@@ -58,7 +85,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 002 - 192.168.101.18
@@ -73,7 +100,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 004 - 192.168.100.194
@@ -88,7 +115,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 005-1 192.168.100.132
@@ -103,7 +130,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 
@@ -119,7 +146,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 007 - 192.168.102.197
@@ -134,7 +161,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 008-1 192.168.101.137
@@ -149,7 +176,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 008-2 192.168.101.117
@@ -164,7 +191,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 008-3 192.168.102.212
@@ -179,7 +206,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 009 192.168.100.221
@@ -194,7 +221,7 @@
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 Warehouse 192.168.88.40
@@ -209,7 +236,7 @@ Warehouse 192.168.88.40
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 #########################
@@ -272,7 +299,7 @@ ct-us-003-4 192.168.102.52 (Noah2)
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 ct-us-003-5 192.168.102.133  (Noah2)
@@ -287,7 +314,7 @@ ct-us-003-5 192.168.102.133  (Noah2)
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 25 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
 
 
@@ -303,5 +330,7 @@ Warehouse 192.168.88.40
 --lfver 5.5.2 \
 --kver 6.15.6+ \
 --user_timeout 10 \
---root_timeout 720 \
+--root_timeout 800 \
 --log_level info
+
+
