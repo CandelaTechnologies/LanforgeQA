@@ -13,7 +13,7 @@
         "DUT_SW":"'1.2.4 Build 20250414 rel.18315(5553)'",
         "DUT_MODEL":"'Archer BE800 v1.20'",
         "DUT_SERIAL":"serial_1.1",
-        "UPSTREAM_PORT":"1.2.eth2",
+        "UPSTREAM_PORT":"1.1.eth2",
         "UPSTREAM_ALIAS":"eth2",
         "DATABASE_SQLITE":"ct_008_tp_link_db.db",
         "wireless_network_dict":{
