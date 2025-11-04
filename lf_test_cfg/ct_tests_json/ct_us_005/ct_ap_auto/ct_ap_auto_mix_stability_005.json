@@ -92,8 +92,6 @@
                   " --raw_line 'reset_duration_min: 5000'",
                   " --raw_line 'reset_duration_max: 10000'",
                   " --raw_line 'minimum_port_up_duration_ms: 5000'",
-                  " --pull_report",
-                  " --local_lf_report_dir REPORT_PATH",
                   " --test_tag 'AP_AUTO_MIX_STABILITY'",
                   " --test_rig LANforge",
                   " --set DUT_NAME axe16000",
