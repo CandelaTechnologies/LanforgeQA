@@ -82,8 +82,6 @@
                   " --set 'skip_6' 0",
                   " --verbosity 11",
                   " --raw_line 'cx_psk_thresh: 500'",
-                  " --pull_report",
-                  " --local_lf_report_dir REPORT_PATH",
                   " --test_tag 'AP_AUTO_BASIC_CX'",
                   " --test_rig LANforge",
                   " --set DUT_NAME axe16000",
