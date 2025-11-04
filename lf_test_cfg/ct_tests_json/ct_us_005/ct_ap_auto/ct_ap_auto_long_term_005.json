@@ -86,8 +86,6 @@
                   " --raw_line 'dur20: 5'",
                   " --raw_line 'lt_sta_count: 4'",
                   " --raw_line 'lt_dur: 120'",
-                  " --pull_report",
-                  " --local_lf_report_dir REPORT_PATH",
                   " --test_tag 'AP_AUTO_LONG_TERM'",
                   " --test_rig LANforge",
                   " --set DUT_NAME axe16000",
