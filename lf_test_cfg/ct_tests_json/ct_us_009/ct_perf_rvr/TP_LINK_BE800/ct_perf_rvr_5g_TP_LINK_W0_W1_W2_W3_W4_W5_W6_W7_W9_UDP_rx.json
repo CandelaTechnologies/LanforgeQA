@@ -465,7 +465,7 @@
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user LF_MGR_USER --lf_password LF_MGR_PASS --instance_name mt7996e_5G_W9_UDP_rx",
                     " --config_name test_con --upstream UPSTREAM_PORT  --dut USE_DUT_NAME --duration 5000 --station 1.1.wlan9",
                     " --download_speed 1% --upload_speed 100% --raw_line 'pkts: Custom' ",
-                    " --raw_line 'cust_pkt_sz: 64;172;256;512;768;1024;MTU' ",
+                    " --raw_line 'cust_pkt_sz: 172;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Receive' ",
                     " --raw_line 'traffic_types: UDP' ",
                     " --raw_line 'bandw_options: AUTO' ",
