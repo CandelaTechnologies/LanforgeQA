@@ -60,6 +60,7 @@
                     " --raw_line 'attenuator_mod: 0xf'  ",
                     " --raw_line 'mconn: 10' ",
                     " --raw_line 'multi_cx: 10' ",
+                    " --raw_line 'disable_mlo: 1'",
                     " --test_rig TEST_RIG ",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
