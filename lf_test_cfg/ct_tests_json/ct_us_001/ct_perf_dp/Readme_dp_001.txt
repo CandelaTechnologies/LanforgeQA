@@ -1,11 +1,11 @@
-This Readme.txt is to assist in running the lf_check.py test suites on the various test setups 
+This Readme.txt is to assist in running the lf_check.py test suites on the various test setups
 
 To run lf_check.py change to lanforge-scripts/py-scripts/tools
 
-The format for the command is 
+The format for the command is
 ./lf_check.py --json_rig <rig json> --json_dut <dut json>  --json_tests <test json>:<test suite>,<test json>:<test suite> --path /home/lanforge/html-report/<directory>  --log_level debug
 
-For a production run ad --production to email to a wider audiance 
+For a production run ad --production to email to a wider audiance
 
 
 

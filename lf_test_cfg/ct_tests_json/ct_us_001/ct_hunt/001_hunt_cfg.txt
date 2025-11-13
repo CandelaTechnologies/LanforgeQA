@@ -10,21 +10,21 @@ port_sorting: 2
 kpi_id: Hunt
 get_csv_cb: 0
 auto_save: 0
-rpt_path: 
+rpt_path:
 rpt_path_make_subdir: 1
 bg: 0xE0ECF8
-dut_info_override: 
-dut_info_cmd: 
-test_rig: 
-test_tag: 
-rpt_name: 
-rpt_dir_prefix_textfield: 
+dut_info_override:
+dut_info_cmd:
+test_rig:
+test_tag:
+rpt_name:
+rpt_dir_prefix_textfield:
 show_scan: 1
 auto_helper: 0
 allow_11w: 0
 use_mcs_histograms: 1
 use_mlo_histograms: 1
-disable_mlo: 0
+disable_mlo: 1
 extra_tx_status: 0
 extra_rx_status: 0
 txs_all_status: 0
@@ -75,7 +75,7 @@ attenuations: 0..+50..950
 attenuations2: 0..+50..950
 chamber: 0
 tt_deg: 0..+45..359
-cust_pkt_sz: 
+cust_pkt_sz:
 show_3s: 0
 show_ll_graphs: 1
 show_gp_graphs: 1
@@ -91,4 +91,3 @@ txspeed_adjust: 1000000
 overdrive: 100000
 tos: 0
 loop_iterations: 1
-
