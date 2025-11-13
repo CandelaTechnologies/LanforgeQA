@@ -9,9 +9,9 @@
         ]
     },
     "test_suites":{
-    
+
         "ct_perf_dp_5g_W6_W10_UDP_rx":{
-    
+
             "CC_DUT_mt7925e_5G_W6_UDP_rx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -53,11 +53,12 @@
                     " --raw_line 'directions: DUT Receive' ",
                     " --raw_line 'traffic_types: UDP' ",
                     " --raw_line 'bandw_options: AUTO' ",
-                    " --raw_line 'spatial_streams: AUTO' ",                    
+                    " --raw_line 'spatial_streams: AUTO' ",
                     " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'mt7925e_5G_W6_UDP_rx'",
                     " ",
                     " ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
                     " --test_rig TEST_RIG ",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -140,4 +141,3 @@
         }
     }
 }
-    

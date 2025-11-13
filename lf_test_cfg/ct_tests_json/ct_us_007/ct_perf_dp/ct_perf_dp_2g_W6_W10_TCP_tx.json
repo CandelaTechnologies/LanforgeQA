@@ -9,9 +9,9 @@
         ]
     },
     "test_suites":{
-    
+
         "ct_perf_dp_2g_W6_W10_TCP_tx":{
-    
+
             "CC_DUT_mt7925e_2G_W6_TCP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -59,6 +59,7 @@
                     " ",
                     " ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
                     " --test_rig TEST_RIG ",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -106,7 +107,7 @@
                     " --raw_line 'directions: DUT Transmit' ",
                     " --raw_line 'traffic_types: TCP' ",
                     " --raw_line 'bandw_options: AUTO' ",
-                    " --raw_line 'spatial_streams: AUTO' ",   
+                    " --raw_line 'spatial_streams: AUTO' ",
                     " --raw_line 'mconn: 10' ",
                     " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'BE200_2G_W10_TCP_tx'",
                     " ",
@@ -141,4 +142,3 @@
         }
     }
 }
-    

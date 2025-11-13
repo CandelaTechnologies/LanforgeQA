@@ -9,9 +9,9 @@
         ]
     },
     "test_suites":{
-    
+
         "ct_perf_dp_6g_W6_W10_UDP_tx":{
-    
+
             "CC_DUT_mt7925e_6G_W6_UDP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -59,6 +59,7 @@
                     " ",
                     " ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
                     " --test_rig TEST_RIG ",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -141,4 +142,3 @@
         }
     }
 }
-    
