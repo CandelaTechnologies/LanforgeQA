@@ -2,7 +2,7 @@
     "ct_perf_dp_2g_002_rx":{
         "Notes":[
             "This json file describes tests to be run by LANforge system performance 007, note ssid_idx=0 is for Radio-1, ssid_idx_1 is for Radio-1"
-        ]  
+        ]
     },
     "test_suites":{
         "dp_perf_2g_W0_W2_W3_W4_W5_W6_W7_rx":{
@@ -47,6 +47,7 @@
                     " --raw_line 'directions: DUT Receive' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'DP_ATH10K_9984_2G_W0_RX' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME"
                 ]
@@ -352,7 +353,7 @@
                     " "
                 ]
             }
-        }         
+        }
 
     }
 }
