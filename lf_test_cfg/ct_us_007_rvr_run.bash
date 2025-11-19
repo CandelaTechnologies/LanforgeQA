@@ -5,7 +5,7 @@ set -x
 
 echo "Running RVR tests"
 ./lf_check.py \
---db_override ./tools/CT_US_007_RVR_PERF.db \
+--db_override ./tools/CT_US_007_RVR_PERF_2025.db \
 --json_rig ./ct_rig_json/ct_us_007_rig.json \
 --json_dut ./ct_dut_json/ct_TPLINK_CE22_10_Gbps_eth3.json \
 --json_test \
