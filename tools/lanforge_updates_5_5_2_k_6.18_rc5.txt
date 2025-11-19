@@ -174,7 +174,7 @@ Update All
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.18.0-rc5+ \
+--kver 6.15.6+ \
 --user_timeout 10 \
 --root_timeout 800 \
 --log_level info
@@ -189,7 +189,7 @@ Update All
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.18.0-rc5+ \
+--kver 6.15.6+ \
 --user_timeout 10 \
 --root_timeout 800 \
 --log_level info
@@ -204,7 +204,7 @@ Update All
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.18.0-rc5+ \
+--kver 6.15.6+ \
 --user_timeout 10 \
 --root_timeout 800 \
 --log_level info
