@@ -44,8 +44,8 @@ echo "Updates to CT-US-003-2 (APU2) 192.168.100.152"; \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
 --kver 6.15.6+ \
---user_timeout 10 \
---root_timeout 720 \
+--user_timeout 25 \
+--root_timeout 1800 \
 --log_level info \
 > /tmp/CT-US-003-2.log &
 
@@ -62,8 +62,8 @@ echo "Updates to CT-US-003-3 (APU2) 192.168.100.192"; \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
 --kver 6.15.6+ \
---user_timeout 10 \
---root_timeout 720 \
+--user_timeout 25 \
+--root_timeout 1800 \
 --log_level info \
 > /tmp/CT-US-003-3.log &
 
@@ -79,7 +79,7 @@ echo "Updates to CT-US-003-4 (Noah2) 192.168.102.52"; \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
 --kver 6.15.6+ \
---user_timeout 10 \
+--user_timeout 20 \
 --root_timeout 720 \
 --log_level info \
 > /tmp/CT-US-003-4.log &
@@ -96,7 +96,7 @@ echo "Updates to CT-US-003-5 (Noah2) 192.168.102.133"; \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
 --kver 6.15.6+ \
---user_timeout 10 \
+--user_timeout 20 \
 --root_timeout 720 \
 --log_level info \
 > /tmp/CT-US-003-5.log &
