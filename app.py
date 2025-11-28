@@ -1,103 +1,83 @@
-# app.py - Advanced Argparse Generator with Inline # Comments
+# app.py - With Download Button + # Comment Help + Persistent File
 import ast
 import os
 import subprocess
 import sys
-from flask import Flask, request, render_template_string, jsonify
+from flask import Flask, request, render_template_string, send_file, jsonify
+from io import BytesIO
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "uploads"
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 PERSISTENT_FILE = os.path.join(app.config['UPLOAD_FOLDER'], "current_script.py")
 
-# ------------------- Extract Help from # Comments -------------------
+# ------------------- Help Extraction from # Comments -------------------
 def extract_help_from_comments(source_lines, node):
-    """Extract help text from # comments next to parameters and following lines."""
     helps = {}
     current_param = None
     current_help = []
 
-    # Find the parameter lines within the function
     for i, arg in enumerate(node.args.args):
         if arg.arg in ('self', 'cls'):
             continue
-
         param_name = arg.arg
-        line_no = arg.lineno - 1  # 0-indexed
+        line_no = arg.lineno - 1
 
-        # Look at the line where parameter is declared
-        if line_no < len(source_lines):
-            line = source_lines[line_no]
-            comment = line.split('#', 1)[-1].strip() if '#' in line else ""
-            if comment:
-                current_help = [comment]
-                current_param = param_name
-            else:
-                current_help = []
-                current_param = None
+        if line_no >= len(source_lines):
+            continue
+        line = source_lines[line_no]
+        comment = line.split('#', 1)[-1].strip() if '#' in line else ""
+        if comment:
+            current_help = [comment]
+            current_param = param_name
+        else:
+            current_help = []
+            current_param = None
 
-        # Look at next lines until next parameter or def end
-        next_param_line = node.args.args[i+1].lineno - 1 if i+1 < len(node.args.args) else node.end_lineno
-        for j in range(line_no + 1, next_param_line):
+        next_line = node.args.args[i+1].lineno - 1 if i+1 < len(node.args.args) else node.end_lineno
+        for j in range(line_no + 1, next_line):
             if j >= len(source_lines):
                 break
-            next_line = source_lines[j].strip()
-            if next_line.startswith('#'):
-                comment = next_line[1:].strip()
-                if current_param == param_name:
-                    current_help.append(comment)
+            next_line_text = source_lines[j].strip()
+            if next_line_text.startswith('#'):
+                current_help.append(next_line_text[1:].strip())
             else:
-                break  # stop at first non-comment line
+                break
 
         if current_help:
             helps[param_name] = "\n".join(current_help)
 
     return helps
 
-# ------------------- Fallback to Docstring -------------------
-def extract_help_from_docstring(docstring):
+def extract_help_from_docstring(doc):
     helps = {}
-    if not docstring:
-        return helps
+    if not doc: return helps
     in_args = False
-    for line in docstring.split('\n'):
+    for line in doc.split('\n'):
         line = line.strip()
-        if line in ("Args:", "Arguments:"):
-            in_args = True
-            continue
-        if in_args and ':' in line:
-            if not any(line.startswith(x) for x in ["Returns:", "Raises:"]):
-                param, desc = line.split(':', 1)
-                param = param.strip().split()[0]
-                helps[param] = desc.strip()
-        elif in_args and line:
-            in_args = False
+        if line in ("Args:", "Arguments:"): in_args = True; continue
+        if in_args and ':' in line and not any(line.startswith(x) for x in ["Returns:", "Raises:"]):
+            param, desc = line.split(':', 1)
+            helps[param.strip().split()[0]] = desc.strip()
+        elif in_args and line: in_args = False
     return helps
 
-# ------------------- AST Visitors -------------------
-class FuncVisitor(ast.NodeVisitor):
-    def __init__(self):
-        self.functions = []
-    def visit_FunctionDef(self, node):
-        args = [a.arg for a in node.args.args if a.arg not in ('self', 'cls')]
-        self.functions.append({"name": node.name, "args": args, "node": node})
-        self.generic_visit(node)
-
-# ------------------- Build Parser Code -------------------
+# ------------------- Build Parser -------------------
 def build_parser_code(func_node, source_lines):
-    # 1. Try inline # comments first
     helps = extract_help_from_comments(source_lines, func_node)
-    
-    # 2. Fallback to docstring
     if not helps:
-        doc = ast.get_docstring(func_node) or ""
-        helps = extract_help_from_docstring(doc)
+        helps = extract_help_from_docstring(ast.get_docstring(func_node) or "")
 
     lines = [
+        "#!/usr/bin/env python3",
+        '"""Auto-generated argparse parser"""',
         "import argparse",
         "import sys",
         "",
-        f"parser = argparse.ArgumentParser(description='Auto-generated for {func_node.name}()')",
+        f"def parse_args():",
+        "    parser = argparse.ArgumentParser(",
+        f"        description='Auto-generated parser for {func_node.name}()'",
+        "    )",
         ""
     ]
 
@@ -105,8 +85,7 @@ def build_parser_code(func_node, source_lines):
 
     for i, arg in enumerate(func_node.args.args):
         name = arg.arg
-        if name in ("self", "cls"):
-            continue
+        if name in ("self", "cls"): continue
 
         ann = ast.unparse(arg.annotation) if arg.annotation else None
         typ = "str"
@@ -121,7 +100,7 @@ def build_parser_code(func_node, source_lines):
         help_text = helps.get(name, "").replace("'", "\\'").replace('"', '\\"')
         short = name[0]
 
-        arg_line = f"parser.add_argument('--{name}', '-{short}'"
+        arg_line = f"    parser.add_argument('--{name}', '-{short}'"
 
         if typ and action != "store_true":
             arg_line += f", type={typ}"
@@ -129,9 +108,9 @@ def build_parser_code(func_node, source_lines):
             arg_line += f", action='{action}'"
 
         if help_text:
-            arg_line += f", help='{help_text}'"
+            arg_line += f", help=\"{help_text}\""
         else:
-            arg_line += ", help=''"
+            arg_line += f", help=''{''}"
 
         if i >= default_start and func_node.args.defaults:
             default = ast.unparse(func_node.args.defaults[i - default_start])
@@ -142,34 +121,51 @@ def build_parser_code(func_node, source_lines):
         arg_line += ")"
         lines.append(arg_line)
 
-    lines += ["", "args = parser.parse_args()", "print(args)"]
+    lines += [
+        "",
+        "    args = parser.parse_args()",
+        "    return args",
+        "",
+        "if __name__ == '__main__':",
+        "    args = parse_args()",
+        "    print('Parsed args:', args)",
+    ]
     return "\n".join(lines)
 
-# ------------------- HTML Template (same beautiful GUI) -------------------
+# ------------------- HTML with Download Button -------------------
 HTML = """<!DOCTYPE html>
-<html><head><title>Argparse Generator (# Comments Supported)</title>
-<style>
-    body{font-family:system-ui;background:#f0f4f8;margin:0;padding:20px;}
-    .container{max-width:1000px;margin:0 auto;background:white;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.1);overflow:hidden;}
-    header{background:#9b59b6;color:white;padding:25px;text-align:center;}
-    h1{margin:0;font-size:28px;}
-    .content{padding:30px;}
-    .upload-box{border:3px dashed #9b59b6;padding:30px;border-radius:12px;background:#f8f3ff;text-align:center;}
-    input,button{margin:10px 0;padding:12px;font-size:16px;border-radius:8px;width:100%;border:1px solid #ddd;}
-    button{background:#9b59b6;color:white;border:none;cursor:pointer;font-weight:bold;}
-    button:hover{background:#8e44ad;}
-    .btn-help{background:#27ae60;}
-    .btn-help:hover{background:#219a52;}
-    .functions{max-height:300px;overflow-y:auto;background:#f8f9fa;padding:15px;border-radius:8px;margin:20px 0;}
-    .func-item{padding:12px;margin:8px 0;background:white;border:1px solid #ddd;border-radius:8px;cursor:pointer;}
-    .func-item:hover{background:#e8daef;border-color:#9b59b6;}
-    pre{background:#2c3e50;color:#f1c40f;padding:20px;border-radius:8px;overflow-x:auto;}
-    .status{padding:12px;margin:10px 0;border-radius:8px;}
-    .success{background:#d5f4e0;color:#1e7e34;}
-    .error{background:#fce4e4;color:#c53030;}
-</style></head><body>
+<html>
+<head>
+    <title>Argparse Generator + Download</title>
+    <meta charset="utf-8">
+    <style>
+        body {font-family: system-ui; background: #f5f7fa; margin:0; padding:20px;}
+        .container {max-width: 1100px; margin: auto; background:white; border-radius:16px; box-shadow:0 10px 40px rgba(0,0,0,0.1); overflow:hidden;}
+        header {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; padding:30px; text-align:center;}
+        h1 {margin:0; font-size:32px;}
+        .content {padding:30px;}
+        .upload-box {border:3px dashed #764ba2; padding:30px; border-radius:12px; background:#f8f4ff; text-align:center;}
+        input, button {padding:14px; margin:10px 0; font-size:16px; border-radius:10px; width:100%; border:1px solid #ddd;}
+        button {background:#667eea; color:white; border:none; cursor:pointer; font-weight:bold;}
+        button:hover {background:#5a6fd8;}
+        .btn-success {background:#27ae60;}
+        .btn-success:hover {background:#219a52;}
+        .btn-download {background:#e74c3c;}
+        .btn-download:hover {background:#c0392b;}
+        .functions {max-height:320px; overflow-y:auto; background:#f9f9ff; padding:15px; border-radius:10px; margin:20px 0;}
+        .func-item {padding:12px; margin:8px 0; background:white; border:1px solid #ddd; border-radius:10px; cursor:pointer; transition:0.2s;}
+        .func-item:hover {background:#e8e6ff; border-color:#667eea; transform:scale(1.02);}
+        pre {background:#2c3e50; color:#1abc9c; padding:20px; border-radius:10px; overflow-x:auto; font-size:14px;}
+        .result-actions {display:flex; gap:15px; margin:20px 0;}
+        .status {padding:15px; border-radius:10px; margin:15px 0;}
+        .success {background:#d4edda; color:#155724;}
+        .error {background:#f8d7da; color:#721c24;}
+        footer {text-align:center; padding:20px; color:#95a5a6; font-size:14px;}
+    </style>
+</head>
+<body>
 <div class="container">
-<header><h1>Argparse Generator</h1><p>Supports # comments &amp; docstrings</p></header>
+<header><h1>Argparse Generator</h1><p>Download ready-to-use parser.py</p></header>
 <div class="content">
 
 {% if message %}<div class="status success">{{ message }}</div>{% endif %}
@@ -179,7 +175,7 @@ HTML = """<!DOCTYPE html>
     <div class="upload-box">
         <h3>Upload Python File (saved permanently)</h3>
         <input type="file" name="file" accept=".py">
-        <button type="submit" name="action" value="upload">Upload &amp; Save</button>
+        <button type="submit" name="action" value="upload">Upload & Save</button>
     </div>
 </form>
 
@@ -189,27 +185,43 @@ HTML = """<!DOCTYPE html>
 {% for f in functions %}
 <div class="func-item" onclick="document.getElementById('method').value='{{ f.name }}'">
     <strong>{{ f.name }}()</strong><br>
-    <small>{{ f.args|join(', ') or 'no arguments' }}</small>
+    <small>{{ f.args|join(', ') or 'no args' }}</small>
 </div>
 {% endfor %}
 </div>
 
 <form method="post">
-    <input type="text" id="method" name="method" placeholder="Function name" value="{{ selected|default('') }}" required>
+    <input type="text" id="method" name="method" placeholder="Enter function name" value="{{ selected|default('') }}" required>
     <br><br>
-    <button type="submit" name="action" value="generate">Generate Code</button>
-    <button type="submit" class="btn-help" name="action" value="help">Show --help</button>
+    <button type="submit" name="action" value="generate">Generate Parser</button>
+    <button type="submit" class="btn-success" name="action" value="help">Show --help</button>
 </form>
 {% endif %}
 
-{% if result %}
-<h3>{{ "Generated Parser Code" if not is_help else "--help Output" }}</h3>
+{% if result and not is_help %}
+<h3>Generated Parser Code</h3>
+<div class="result-actions">
+    <form method="post">
+        <input type="hidden" name="method" value="{{ selected }}">
+        <button type="submit" name="action" value="download" class="btn-download">
+            Download as parser_{{ selected }}.py
+        </button>
+    </form>
+</div>
+<pre>{{ result }}</pre>
+{% elif result and is_help %}
+<h3>Terminal --help Output</h3>
 <pre>{{ result }}</pre>
 {% endif %}
 
 </div>
+<footer>
+    File: <code>{{ "current_script.py" if file_exists else "none" }}</code> • 
+    Functions found: {{ functions|length if functions else 0 }}
+</footer>
 </div>
-</body></html>"""
+</body>
+</html>"""
 
 # ------------------- Routes -------------------
 @app.route("/", methods=["GET", "POST"])
@@ -220,50 +232,67 @@ def index():
     if file_exists:
         with open(PERSISTENT_FILE, "r", encoding="utf-8") as f:
             source = f.read()
-            source_lines = source.splitlines()
             tree = ast.parse(source)
-            visitor = FuncVisitor()
-            visitor.visit(tree)
-            functions = [{"name": f["name"], "args": f["args"]} for f in visitor.functions]
+            visitor = type('v', (), {'functions': []})()
+            def visit(node):
+                if isinstance(node, ast.FunctionDef):
+                    args = [a.arg for a in node.args.args if a.arg not in ('self', 'cls')]
+                    visitor.functions.append({"name": node.name, "args": args})
+                for child in ast.iter_child_nodes(node):
+                    visit(child)
+            visit(tree)
+            functions = visitor.functions
 
     if request.method == "POST":
         action = request.form.get("action")
 
         if action == "upload":
-            if "file" not in request.files or not request.files["file"].filename.endswith(".py"):
+            file = request.files["file"]
+            if not file or not file.filename.endswith(".py"):
                 return render_template_string(HTML, error="Invalid file", functions=functions)
-            request.files["file"].save(PERSISTENT_FILE)
-            return render_template_string(HTML, message="File saved!", functions=functions)
+            file.save(PERSISTENT_FILE)
+            return render_template_string(HTML, message="File uploaded & saved!", functions=functions, file_exists=True)
 
-        method = request.form.get("method")
+        method = request.form.get("method", "").strip()
         if not method or not file_exists:
-            return render_template_string(HTML, error="No file or method", functions=functions)
+            return render_template_string(HTML, error="No method or file", functions=functions)
 
         with open(PERSISTENT_FILE, "r", encoding="utf-8") as f:
             source = f.read()
             source_lines = source.splitlines()
 
         tree = ast.parse(source)
-        visitor = FuncVisitor()
-        visitor.visit(tree)
-        func_node = next((f["node"] for f in visitor.functions if f["name"] == method), None)
+        func_node = None
+        for node in ast.walk(tree):
+            if isinstance(node, ast.FunctionDef) and node.name == method:
+                func_node = node
+                break
 
         if not func_node:
             return render_template_string(HTML, error=f"Function '{method}' not found", functions=functions, selected=method)
 
         code = build_parser_code(func_node, source_lines)
 
+        if action == "download":
+            buffer = BytesIO(code.encode('utf-8'))
+            return send_file(
+                buffer,
+                as_attachment=True,
+                download_name=f"parser_{method}.py",
+                mimetype="text/x-python"
+            )
+
         if action == "help":
             result = subprocess.run([sys.executable, "-c", code, "--help"], capture_output=True, text=True, timeout=10)
             output = result.stdout or result.stderr
-            return render_template_string(HTML, result=output, is_help=True, functions=functions, selected=method)
+            return render_template_string(HTML, result=output, is_help=True, functions=functions, selected=method, file_exists=True)
 
-        return render_template_string(HTML, result=code, functions=functions, selected=method)
+        return render_template_string(HTML, result=code, functions=functions, selected=method, file_exists=True)
 
-    return render_template_string(HTML, functions=functions)
+    return render_template_string(HTML, functions=functions, file_exists=file_exists)
 
 # ------------------- Run -------------------
 if __name__ == "__main__":
-    print("Argparse Generator with # Comment Support")
+    print("Argparse Generator with DOWNLOAD button!")
     print("http://localhost:5000")
     app.run(host="0.0.0.0", port=5000, debug=False)
