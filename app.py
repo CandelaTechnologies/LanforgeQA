@@ -1,62 +1,103 @@
-# app.py
+# app.py - Advanced Argparse Generator with Inline # Comments
 import ast
-import sys
 import os
-import tempfile
 import subprocess
-from flask import Flask, request, render_template_string, Response
+import sys
+from flask import Flask, request, render_template_string, jsonify
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5MB max file size
+app.config['UPLOAD_FOLDER'] = "uploads"
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+PERSISTENT_FILE = os.path.join(app.config['UPLOAD_FOLDER'], "current_script.py")
 
-# ------------------- Parsing Helpers -------------------
-def parse_docstring(docstring):
-    if not docstring:
-        return {}
+# ------------------- Extract Help from # Comments -------------------
+def extract_help_from_comments(source_lines, node):
+    """Extract help text from # comments next to parameters and following lines."""
     helps = {}
+    current_param = None
+    current_help = []
+
+    # Find the parameter lines within the function
+    for i, arg in enumerate(node.args.args):
+        if arg.arg in ('self', 'cls'):
+            continue
+
+        param_name = arg.arg
+        line_no = arg.lineno - 1  # 0-indexed
+
+        # Look at the line where parameter is declared
+        if line_no < len(source_lines):
+            line = source_lines[line_no]
+            comment = line.split('#', 1)[-1].strip() if '#' in line else ""
+            if comment:
+                current_help = [comment]
+                current_param = param_name
+            else:
+                current_help = []
+                current_param = None
+
+        # Look at next lines until next parameter or def end
+        next_param_line = node.args.args[i+1].lineno - 1 if i+1 < len(node.args.args) else node.end_lineno
+        for j in range(line_no + 1, next_param_line):
+            if j >= len(source_lines):
+                break
+            next_line = source_lines[j].strip()
+            if next_line.startswith('#'):
+                comment = next_line[1:].strip()
+                if current_param == param_name:
+                    current_help.append(comment)
+            else:
+                break  # stop at first non-comment line
+
+        if current_help:
+            helps[param_name] = "\n".join(current_help)
+
+    return helps
+
+# ------------------- Fallback to Docstring -------------------
+def extract_help_from_docstring(docstring):
+    helps = {}
+    if not docstring:
+        return helps
     in_args = False
     for line in docstring.split('\n'):
         line = line.strip()
         if line in ("Args:", "Arguments:"):
             in_args = True
             continue
-        if in_args and ':' in line and not line.startswith(("Returns:", "Raises:", "Example:")):
-            param_part, desc = line.split(':', 1)
-            param = param_part.strip().split()[0]
-            helps[param] = desc.strip()
-        elif in_args and line and not line[0].isspace():
+        if in_args and ':' in line:
+            if not any(line.startswith(x) for x in ["Returns:", "Raises:"]):
+                param, desc = line.split(':', 1)
+                param = param.strip().split()[0]
+                helps[param] = desc.strip()
+        elif in_args and line:
             in_args = False
     return helps
 
-def get_type_action(ann):
-    if not ann:
-        return "str", None
-    a = ann.lower()
-    if a == "str":           return "str", None
-    if a == "int":           return "int", None
-    if a == "float":         return "float", None
-    if a == "bool":          return None, "store_true"
-    if "list" in a:          return "str", "append"
-    return "str", None
-
-class FuncFinder(ast.NodeVisitor):
-    def __init__(self, name):
-        self.name = name
-        self.node = None
+# ------------------- AST Visitors -------------------
+class FuncVisitor(ast.NodeVisitor):
+    def __init__(self):
+        self.functions = []
     def visit_FunctionDef(self, node):
-        if node.name == self.name and self.node is None:
-            self.node = node
+        args = [a.arg for a in node.args.args if a.arg not in ('self', 'cls')]
+        self.functions.append({"name": node.name, "args": args, "node": node})
         self.generic_visit(node)
 
-def build_parser_code(func_node):
-    doc = ast.get_docstring(func_node) or ""
-    helps = parse_docstring(doc)
+# ------------------- Build Parser Code -------------------
+def build_parser_code(func_node, source_lines):
+    # 1. Try inline # comments first
+    helps = extract_help_from_comments(source_lines, func_node)
+    
+    # 2. Fallback to docstring
+    if not helps:
+        doc = ast.get_docstring(func_node) or ""
+        helps = extract_help_from_docstring(doc)
 
     lines = [
         "import argparse",
         "import sys",
         "",
-        "parser = argparse.ArgumentParser(description='Auto-generated parser for {}')".format(func_node.name),
+        f"parser = argparse.ArgumentParser(description='Auto-generated for {func_node.name}()')",
         ""
     ]
 
@@ -68,156 +109,161 @@ def build_parser_code(func_node):
             continue
 
         ann = ast.unparse(arg.annotation) if arg.annotation else None
-        typ, action = get_type_action(ann)
-        help_text = helps.get(name, "").replace("'", "\\'")
+        typ = "str"
+        action = None
+        if ann:
+            a = ann.lower()
+            if "int" in a: typ = "int"
+            elif "float" in a: typ = "float"
+            elif "bool" in a: typ = None; action = "store_true"
+            elif "list" in a: typ = "str"; action = "append"
 
-        arg_line = f"parser.add_argument('--{name}', '-{name[0]}'"
+        help_text = helps.get(name, "").replace("'", "\\'").replace('"', '\\"')
+        short = name[0]
+
+        arg_line = f"parser.add_argument('--{name}', '-{short}'"
 
         if typ and action != "store_true":
             arg_line += f", type={typ}"
         if action:
             arg_line += f", action='{action}'"
 
-        arg_line += f", help='{help_text}'" if help_text else ", help=''"
+        if help_text:
+            arg_line += f", help='{help_text}'"
+        else:
+            arg_line += ", help=''"
 
         if i >= default_start and func_node.args.defaults:
-            default_val = ast.unparse(func_node.args.defaults[i - default_start])
-            arg_line += f", default={default_val}"
+            default = ast.unparse(func_node.args.defaults[i - default_start])
+            arg_line += f", default={default}"
         else:
             arg_line += ", required=True"
 
         arg_line += ")"
         lines.append(arg_line)
 
-    lines += [
-        "",
-        "args = parser.parse_args()",
-        "print(args)"
-    ]
+    lines += ["", "args = parser.parse_args()", "print(args)"]
     return "\n".join(lines)
 
-# ------------------- HTML GUI Template -------------------
-HTML_TEMPLATE = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Argparse Generator</title>
-    <style>
-        body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; background: #f7f9fc; }
-        h1 { color: #2c3e50; text-align: center; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        input, button, textarea { margin: 10px 0; width: 100%; padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #ddd; }
-        input[type="file"] { padding: 8px; }
-        button { background: #3498db; color: white; cursor: pointer; font-weight: bold; }
-        button:hover { background: #2980b9; }
-        button#showHelp { background: #27ae60; }
-        button#showHelp:hover { background: #219a52; }
-        textarea { height: 400px; font-family: 'Courier New', monospace; background: #2c3e50; color: #f1c40f; }
-        .buttons { display: flex; gap: 10px; }
-        .result { margin-top: 20px; }
-        pre { background: #2c3e50; color: #f1c40f; padding: 15px; border-radius: 8px; overflow-x: auto; }
-        .footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 14px; }
-    </style>
-</head>
-<body>
-    <h1>Argparse Generator from Function</h1>
-    <div class="card">
-        <form id="uploadForm" method="post" enctype="multipart/form-data">
-            <label><strong>1. Upload your Python file (.py)</strong></label>
-            <input type="file" name="file" accept=".py" required>
+# ------------------- HTML Template (same beautiful GUI) -------------------
+HTML = """<!DOCTYPE html>
+<html><head><title>Argparse Generator (# Comments Supported)</title>
+<style>
+    body{font-family:system-ui;background:#f0f4f8;margin:0;padding:20px;}
+    .container{max-width:1000px;margin:0 auto;background:white;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.1);overflow:hidden;}
+    header{background:#9b59b6;color:white;padding:25px;text-align:center;}
+    h1{margin:0;font-size:28px;}
+    .content{padding:30px;}
+    .upload-box{border:3px dashed #9b59b6;padding:30px;border-radius:12px;background:#f8f3ff;text-align:center;}
+    input,button{margin:10px 0;padding:12px;font-size:16px;border-radius:8px;width:100%;border:1px solid #ddd;}
+    button{background:#9b59b6;color:white;border:none;cursor:pointer;font-weight:bold;}
+    button:hover{background:#8e44ad;}
+    .btn-help{background:#27ae60;}
+    .btn-help:hover{background:#219a52;}
+    .functions{max-height:300px;overflow-y:auto;background:#f8f9fa;padding:15px;border-radius:8px;margin:20px 0;}
+    .func-item{padding:12px;margin:8px 0;background:white;border:1px solid #ddd;border-radius:8px;cursor:pointer;}
+    .func-item:hover{background:#e8daef;border-color:#9b59b6;}
+    pre{background:#2c3e50;color:#f1c40f;padding:20px;border-radius:8px;overflow-x:auto;}
+    .status{padding:12px;margin:10px 0;border-radius:8px;}
+    .success{background:#d5f4e0;color:#1e7e34;}
+    .error{background:#fce4e4;color:#c53030;}
+</style></head><body>
+<div class="container">
+<header><h1>Argparse Generator</h1><p>Supports # comments &amp; docstrings</p></header>
+<div class="content">
 
-            <label><strong>2. Function / Method name</strong></label>
-            <input type="text" name="method" placeholder="e.g. train_model" required>
+{% if message %}<div class="status success">{{ message }}</div>{% endif %}
+{% if error %}<div class="status error">{{ error }}</div>{% endif %}
 
-            <div class="buttons">
-                <button type="submit" name="action" value="generate">Generate Parser Code</button>
-                <button type="submit" id="showHelp" name="action" value="help">Show --help Output</button>
-            </div>
-        </form>
-
-        {% if result %}
-        <div class="result">
-            <h3>
-                {% if is_help %}--help Output{% else %}Generated argparse Code{% endif %}
-            </h3>
-            <pre>{{ result }}</pre>
-        </div>
-        {% endif %}
-
-        {% if error %}
-        <div class="result" style="color: #e74c3c;">
-            <h3>Error</h3>
-            <pre>{{ error }}</pre>
-        </div>
-        {% endif %}
+<form method="post" enctype="multipart/form-data">
+    <div class="upload-box">
+        <h3>Upload Python File (saved permanently)</h3>
+        <input type="file" name="file" accept=".py">
+        <button type="submit" name="action" value="upload">Upload &amp; Save</button>
     </div>
+</form>
 
-    <div class="footer">
-        Auto-generates argparse from type hints & docstrings • Supports str, int, float, bool, list
-    </div>
-</body>
-</html>
-"""
+{% if functions %}
+<h3>Select Function:</h3>
+<div class="functions">
+{% for f in functions %}
+<div class="func-item" onclick="document.getElementById('method').value='{{ f.name }}'">
+    <strong>{{ f.name }}()</strong><br>
+    <small>{{ f.args|join(', ') or 'no arguments' }}</small>
+</div>
+{% endfor %}
+</div>
+
+<form method="post">
+    <input type="text" id="method" name="method" placeholder="Function name" value="{{ selected|default('') }}" required>
+    <br><br>
+    <button type="submit" name="action" value="generate">Generate Code</button>
+    <button type="submit" class="btn-help" name="action" value="help">Show --help</button>
+</form>
+{% endif %}
+
+{% if result %}
+<h3>{{ "Generated Parser Code" if not is_help else "--help Output" }}</h3>
+<pre>{{ result }}</pre>
+{% endif %}
+
+</div>
+</div>
+</body></html>"""
 
 # ------------------- Routes -------------------
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "GET":
-        return render_template_string(HTML_TEMPLATE)
+    file_exists = os.path.exists(PERSISTENT_FILE)
+    functions = []
 
-    if "file" not in request.files:
-        return render_template_string(HTML_TEMPLATE, error="No file uploaded")
-
-    file = request.files["file"]
-    method_name = request.form.get("method", "").strip()
-    action = request.form.get("action")
-
-    if not file.filename.endswith(".py"):
-        return render_template_string(HTML_TEMPLATE, error="Please upload a .py file")
-
-    if not method_name:
-        return render_template_string(HTML_TEMPLATE, error="Function/method name is required")
-
-    fd, path = tempfile.mkstemp(suffix=".py")
-    os.close(fd)
-    try:
-        file.save(path)
-        with open(path, "r", encoding="utf-8") as f:
+    if file_exists:
+        with open(PERSISTENT_FILE, "r", encoding="utf-8") as f:
             source = f.read()
+            source_lines = source.splitlines()
+            tree = ast.parse(source)
+            visitor = FuncVisitor()
+            visitor.visit(tree)
+            functions = [{"name": f["name"], "args": f["args"]} for f in visitor.functions]
+
+    if request.method == "POST":
+        action = request.form.get("action")
+
+        if action == "upload":
+            if "file" not in request.files or not request.files["file"].filename.endswith(".py"):
+                return render_template_string(HTML, error="Invalid file", functions=functions)
+            request.files["file"].save(PERSISTENT_FILE)
+            return render_template_string(HTML, message="File saved!", functions=functions)
+
+        method = request.form.get("method")
+        if not method or not file_exists:
+            return render_template_string(HTML, error="No file or method", functions=functions)
+
+        with open(PERSISTENT_FILE, "r", encoding="utf-8") as f:
+            source = f.read()
+            source_lines = source.splitlines()
 
         tree = ast.parse(source)
-        finder = FuncFinder(method_name)
-        finder.visit(tree)
+        visitor = FuncVisitor()
+        visitor.visit(tree)
+        func_node = next((f["node"] for f in visitor.functions if f["name"] == method), None)
 
-        if not finder.node:
-            return render_template_string(HTML_TEMPLATE, error=f"Function '{method_name}' not found")
+        if not func_node:
+            return render_template_string(HTML, error=f"Function '{method}' not found", functions=functions, selected=method)
 
-        code = build_parser_code(finder.node)
+        code = build_parser_code(func_node, source_lines)
 
         if action == "help":
-            result = subprocess.run(
-                [sys.executable, "-c", code, "--help"],
-                capture_output=True,
-                text=True,
-                timeout=10
-            )
-            output = result.stdout or result.stderr or "No output"
-            return render_template_string(HTML_TEMPLATE, result=output, is_help=True)
+            result = subprocess.run([sys.executable, "-c", code, "--help"], capture_output=True, text=True, timeout=10)
+            output = result.stdout or result.stderr
+            return render_template_string(HTML, result=output, is_help=True, functions=functions, selected=method)
 
-        return render_template_string(HTML_TEMPLATE, result=code)
+        return render_template_string(HTML, result=code, functions=functions, selected=method)
 
-    except Exception as e:
-        return render_template_string(HTML_TEMPLATE, error=str(e))
-    finally:
-        try:
-            os.unlink(path)
-        except:
-            pass
+    return render_template_string(HTML, functions=functions)
 
 # ------------------- Run -------------------
 if __name__ == "__main__":
-    print("Argparse Generator GUI is running!")
-    print("Open your browser → http://localhost:5000")
+    print("Argparse Generator with # Comment Support")
+    print("http://localhost:5000")
     app.run(host="0.0.0.0", port=5000, debug=False)
