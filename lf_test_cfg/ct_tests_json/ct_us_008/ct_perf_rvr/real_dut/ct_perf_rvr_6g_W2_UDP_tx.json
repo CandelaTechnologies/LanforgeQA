@@ -61,6 +61,8 @@
                     " --raw_line 'mconn: 10' ",
                     " --raw_line 'multi_cx: 10' ",
                     " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
+
                     " --test_rig TEST_RIG ",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
