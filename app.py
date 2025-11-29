@@ -1,4 +1,4 @@
-# app.py - Generates Class Wrapper + parse_args() + Download
+# app.py - Final Version: parse_args() AFTER class
 import ast
 import os
 import subprocess
@@ -37,29 +37,58 @@ def extract_help_from_comments(source_lines, node):
             helps[param] = "\n".join(comment_lines)
     return helps
 
-# ------------------- Build Full Parser + Class -------------------
-def build_full_script(func_node, source_lines, original_func_name):
+# ------------------- Build Final Script: Class First, Then parse_args() -------------------
+def build_full_script(func_node, source_lines, func_name):
     helps = extract_help_from_comments(source_lines, func_node)
-    doc = ast.get_docstring(func_node) or ""
     if not helps:
-        # fallback to docstring
+        doc = ast.get_docstring(func_node) or ""
         for line in doc.split('\n'):
-            if ': ' in line and not line.strip().startswith(('Returns:', 'Raises:')):
-                parts = line.split(': ', 1)
+            line = line.strip()
+            if ':' in line and not any(line.startswith(x) for x in ["Returns:", "Raises:"]):
+                parts = line.split(':', 1)
                 if len(parts) == 2:
                     param = parts[0].strip().split()[-1]
                     helps[param] = parts[1].strip()
 
-    class_name = "".join(word.capitalize() for word in original_func_name.split('_'))
-    params = [arg.arg for arg in func_node.args.args if arg.arg not in ('self', 'cls')]
+    class_name = "".join(word.capitalize() for word in func_name.split('_'))
+    params = [a.arg for a in func_node.args.args if a.arg not in ('self', 'cls')]
 
     lines = [
         "#!/usr/bin/env python3",
-        '"""Auto-generated wrapper for ' + original_func_name + '()"""',
+        f'"""Auto-generated wrapper for {func_name}()"""',
         "import argparse",
         "",
+        "",
+        f"class {class_name}:",
+        f"    \"\"\"Parameter holder and caller for {func_name}()\"\"\"",
+        "",
+        "    def __init__(self, **kwargs):",
+        "        \"\"\"Initialize with parsed arguments\"\"\"",
+        "        for key, value in kwargs.items():",
+        "            setattr(self, key, value)",
+        "",
+        f"    def run(self):",
+        f"        \"\"\"Execute the original {func_name}() function\"\"\"",
+        "        from current_script import " + func_name,
+        "",
+        "        " + func_name + "("
+    ]
+
+    # Add function call parameters
+    for i, param in enumerate(params):
+        lines.append(f"            {param}=self.{param}," + ("" if i == len(params)-1 else ""))
+    if params:
+        lines[-1] = lines[-1].rstrip(",")
+    lines.append("        )")
+
+    lines += [
+        "",
+        "",
         "def parse_args():",
-        "    parser = argparse.ArgumentParser(description=\"" + func_node.name + " wrapper\")",
+        f"    \"\"\"Parse command-line arguments for {func_name}()\"\"\"",
+        "    parser = argparse.ArgumentParser(",
+        f"        description='{func_name}() - auto-generated wrapper'",
+        "    )",
         ""
     ]
 
@@ -80,7 +109,7 @@ def build_full_script(func_node, source_lines, original_func_name):
             elif "list" in a: typ = "str"; action = "append"
 
         help_text = helps.get(name, "").replace('"', '\\"')
-        short = name[0] if name[0] not in "h" else name[1] if len(name)>1 else "x"
+        short = name[0] if name[0] not in "h" else name[1] if len(name) > 1 else "x"
 
         line = f"    parser.add_argument('--{name}', '-{short}'"
         if typ and action != "store_true": line += f", type={typ}"
@@ -100,64 +129,44 @@ def build_full_script(func_node, source_lines, original_func_name):
         "    return parser.parse_args()",
         "",
         "",
-        f"class {class_name}:",
-        "    \"\"\"Wrapper class that holds parameters and can call the original function\"\"\"",
-        "",
-        "    def __init__(self, **kwargs):",
-        "        for key, value in kwargs.items():",
-        "            setattr(self, key, value)",
-        "",
-        f"    def {original_func_name}(self):",
-        "        \"\"\"Call the original function with self. parameters\"\"\"",
-        "        from current_script import " + original_func_name + "  # your original file",
-        ""
-    ]
-
-    call_lines = ["        " + original_func_name + "("]
-    for param in params:
-        call_lines.append(f"            {param}=self.{param},")
-    call_lines[-1] = call_lines[-1].rstrip(",") + ")"
-    lines.extend(call_lines)
-    lines.append("")
-
-    lines += [
-        "",
         "if __name__ == '__main__':",
         "    args = parse_args()",
         f"    runner = {class_name}(**vars(args))",
-        f"    runner.{original_func_name}()",
-        "    print('Done!')",
+        "    runner.run()",
+        "    print('Execution completed.')",
     ]
 
     return "\n".join(lines)
 
-# ------------------- HTML (same great UI + Download) -------------------
+# ------------------- HTML UI (unchanged, beautiful as always) -------------------
 HTML = """<!DOCTYPE html>
 <html><head><title>Argparse + Class Wrapper Generator</title>
+<meta charset="utf-8">
 <style>
     body{font-family:system-ui;background:#f8fafc;margin:0;padding:20px;}
-    .container{max-width:1100px;margin:auto;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.1);overflow:hidden;}
-    header{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;padding:35px;text-align:center;}
-    h1{margin:0;font-size:34px;}
-    .content{padding:35px;}
-    .upload-box{border:3px dashed #8b5cf6;padding:35px;border-radius:14px;background:#f6f4ff;text-align:center;}
-    input,button{padding:14px;margin:10px 0;font-size:16px;border-radius:10px;width:100%;border:1px solid #ddd;}
-    button{background:#6366f1;color:white;border:none;cursor:pointer;font-weight:bold;transition:0.3s;}
-    button:hover{background:#4f46e5;}
+    .container{max-width:1100px;margin:auto;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);overflow:hidden;}
+    header{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:white;padding:40px;text-align:center;}
+    h1{margin:0;font-size:36px;}
+    .content{padding:40px;}
+    .upload-box{border:3px dashed #8b5cf6;padding:40px;border-radius:16px;background:#f6f4ff;text-align:center;}
+    input,button{padding:16px;margin:12px 0;font-size:17px;border-radius:12px;width:100%;border:1px solid #ddd;}
+    button{background:#3b82f6;color:white;border:none;cursor:pointer;font-weight:bold;transition:0.3s;}
+    button:hover{background:#2563eb;}
     .btn-success{background:#10b981;}
+    .btn-success:hover{background:#16a34a;}
     .btn-download{background:#ef4444;}
     .btn-download:hover{background:#dc2626;}
-    .functions{background:#f1f5f9;padding:20px;border-radius:12px;max-height:350px;overflow-y:auto;margin:20px 0;}
-    .func-item{padding:15px;background:white;border-radius:10px;margin:10px 0;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:0.3s;}
-    .func-item:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.1);}
-    pre{background:#1e293b;color:#a5b4fc;padding:25px;border-radius:12px;overflow-x:auto;font-size:14px;}
-    .status{padding:15px;border-radius:10px;margin:15px 0;}
+    .functions{background:#f1f5f9;padding:25px;border-radius:14px;max-height:400px;overflow-y:auto;margin:25px 0;}
+    .func-item{padding:18px;background:white;border-radius:12px;margin:12px 0;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.08);transition:0.3s;}
+    .func-item:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,0.15);}
+    pre{background:#1e293b;color:#c4b5fd;padding:28px;border-radius:14px;overflow-x:auto;font-size:15px;line-height:1.6;}
+    .status{padding:16px;border-radius:12px;margin:16px 0;font-weight:600;}
     .success{background:#dcfce7;color:#166534;}
     .error{background:#fee2e2;color:#991b1b;}
 </style></head>
 <body>
 <div class="container">
-<header><h1>Argparse + Class Wrapper</h1><p>Generates parse_args() + smart class that calls your function</p></header>
+<header><h1>Smart Wrapper Generator</h1><p>Class first • parse_args() after • Ready to run</p></header>
 <div class="content">
 
 {% if message %}<div class="status success">{{ message }}</div>{% endif %}
@@ -165,14 +174,14 @@ HTML = """<!DOCTYPE html>
 
 <form method="post" enctype="multipart/form-data">
     <div class="upload-box">
-        <h3>Upload Your Python File</h3>
+        <h3>Upload Your Python File (saved permanently)</h3>
         <input type="file" name="file" accept=".py" required>
-        <button type="submit" name="action" value="upload">Upload & Save Permanently</button>
+        <button type="submit" name="action" value="upload">Upload & Save</button>
     </div>
 </form>
 
 {% if functions %}
-<h3>Select Function to Wrap:</h3>
+<h3>Select Function:</h3>
 <div class="functions">
 {% for f in functions %}
 <div class="func-item" onclick="document.getElementById('method').value='{{ f.name }}'">
@@ -183,7 +192,7 @@ HTML = """<!DOCTYPE html>
 </div>
 
 <form method="post">
-    <input type="text" id="method" name="method" placeholder="Function name" value="{{ selected|default('') }}" required>
+    <input type="text" id="method" name="method" placeholder="Enter function name" value="{{ selected|default('') }}" required>
     <br><br>
     <button type="submit" name="action" value="generate">Generate Full Wrapper</button>
     <button type="submit" class="btn-success" name="action" value="help">Show --help</button>
@@ -199,7 +208,7 @@ HTML = """<!DOCTYPE html>
         </button>
     </form>
 </div>
-<h3>{% if is_help %}--help Output{% else %}Generated Wrapper Script{% endif %}</h3>
+<h3>{% if is_help %}Terminal --help Output{% else %}Generated Wrapper Script{% endif %}</h3>
 <pre>{{ result }}</pre>
 {% endif %}
 
@@ -228,13 +237,13 @@ def index():
         if action == "upload":
             file = request.files["file"]
             if not file or not file.filename.endswith(".py"):
-                return render_template_string(HTML, error="Please upload a .py file", functions=functions)
+                return render_template_string(HTML, error="Please upload a valid .py file", functions=functions)
             file.save(PERSISTENT_FILE)
-            return render_template_string(HTML, message="File saved permanently!", functions=functions, file_exists=True)
+            return render_template_string(HTML, message="File uploaded and saved!", functions=functions, file_exists=True)
 
         method_name = request.form.get("method")
         if not method_name or not file_exists:
-            return render_template_string(HTML, error="Missing function or file", functions=functions)
+            return render_template_string(HTML, error="Missing function name or file", functions=functions)
 
         with open(PERSISTENT_FILE, "r", encoding="utf-8") as f:
             source = f.read()
@@ -254,17 +263,24 @@ def index():
 
         if action == "download":
             buffer = BytesIO(code.encode('utf-8'))
-            return send_file(buffer, as_attachment=True, download_name=f"wrapper_{method_name}.py", mimetype="text/x-python")
+            return send_file(
+                buffer,
+                as_attachment=True,
+                download_name=f"wrapper_{method_name}.py",
+                mimetype="text/x-python"
+            )
 
         if action == "help":
-            result = subprocess.run([sys.executable, "-c", code, "--help"], capture_output=True, text=True)
-            return render_template_string(HTML, result=result.stdout or result.stderr, is_help=True, functions=functions, selected=method_name)
+            result = subprocess.run([sys.executable, "-c", code, "--help"], capture_output=True, text=True, timeout=10)
+            output = result.stdout or result.stderr
+            return render_template_string(HTML, result=output, is_help=True, functions=functions, selected=method_name, file_exists=True)
 
         return render_template_string(HTML, result=code, functions=functions, selected=method_name, file_exists=True)
 
     return render_template_string(HTML, functions=functions, file_exists=file_exists)
 
+# ------------------- Run -------------------
 if __name__ == "__main__":
-    print("Smart Argparse + Class Wrapper Generator Running!")
-    print("http://localhost:5000")
+    print("Final Version: Class first → parse_args() after")
+    print("Open: http://localhost:5000")
     app.run(host="0.0.0.0", port=5000, debug=False)
