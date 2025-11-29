@@ -53,6 +53,7 @@
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,470'",
                     " --raw_line 'attenuator_mod: 0xf'  ",
                     " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG ",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -123,6 +124,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -192,6 +195,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -261,6 +266,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -330,6 +337,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -399,6 +408,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -468,6 +479,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -537,6 +550,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -606,6 +621,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -675,6 +692,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -744,6 +763,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -813,6 +834,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -882,6 +905,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -951,6 +976,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -1020,6 +1047,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -1089,6 +1118,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,490,500' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
@@ -1158,6 +1189,8 @@
                     " --raw_line 'attenuator: ATTENUATOR_1' ",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440' ",
                     " --raw_line 'attenuator_mod: 0xf'  ",
+                    " --raw_line 'disable_mlo: 1'",
+                    " --raw_line 'path_loss: 0'",
                     " --test_rig TEST_RIG",
                     " --set DUT_SET_NAME",
                     " --verbosity 11"
