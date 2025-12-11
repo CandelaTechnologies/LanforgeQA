@@ -1,5 +1,5 @@
 Update All
-# this did not work 
+# Updates Lab
 ./lf_update_lab.py \
 --update_module lf_update \
 --tb_name CT-US-001=192.168.100.116 \
@@ -8,6 +8,8 @@ Update All
 --tb_name CT-US-005-1=192.168.100.132 \
 --tb_name CT-US-005-2=192.168.101.91 \
 --tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-009=192.168.100.221 \
+--tb_name CT-US-WAREHOUSE=192.168.88.40 \
 --root_user root \
 --root_password lanforge \
 --user lanforge \
@@ -16,12 +18,35 @@ Update All
 --log_level info \
 --lfver 5.5.2 \
 --kver 6.15.6+ \
---user_timeout 20 \
---root_timeout 1000 \
+--user_timeout 25 \
+--root_timeout 2000 \
 --log_level debug
 
 
+--tb_name CT-US-008-1=192.168.101.137 \
+--tb_name CT-US-008-2=192.168.101.117 \
+--tb_name CT-US-008-3=192.168.102.212 \
 
+
+# Updates Lab 003
+./lf_update_lab.py \
+--update_module lf_update \
+--tb_name CT-US-003-1=192.168.100.181 \
+--tb_name CT-US-003-2=192.168.100.152 \
+--tb_name CT-US-003-3=192.168.100.192 \
+--tb_name CT-US-003-4=192.168.102.52 \
+--tb_name CT-US-003-5=192.168.100.133 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--log_level info \
+--lfver 5.5.2 \
+--kver 6.15.6+ \
+--user_timeout 25 \
+--root_timeout 2000 \
+--log_level debug
 
 
 
@@ -332,5 +357,3 @@ Warehouse 192.168.88.40
 --user_timeout 20 \
 --root_timeout 1000 \
 --log_level info
-
-
