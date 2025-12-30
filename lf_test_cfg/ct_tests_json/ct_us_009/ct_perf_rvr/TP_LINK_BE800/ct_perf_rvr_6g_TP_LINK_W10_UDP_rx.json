@@ -10,7 +10,7 @@
     },
     "test_suites":{
 
-        "ct_perf_rvr_6g_W0_W1_W2_W3_W4_W5_W6_W7_W10_UDP_rx":{
+        "ct_perf_rvr_6g_W10_UDP_rx":{
 
             "CC_DUT_mt7996e_6G_W10_UDP_rx":{
                 "enabled":"TRUE",
