@@ -221,7 +221,7 @@ Update All
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.15.6+ \
+--kver 6.18.0+ \
 --user_timeout 20 \
 --root_timeout 2000 \
 --log_level info
@@ -236,7 +236,7 @@ Update All
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.15.6+ \
+--kver 6.18.0+ \
 --user_timeout 20 \
 --root_timeout 2000 \
 --log_level info
@@ -251,7 +251,7 @@ Update All
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.15.6+ \
+--kver 6.18.0+ \
 --user_timeout 20 \
 --root_timeout 2000 \
 --log_level info
