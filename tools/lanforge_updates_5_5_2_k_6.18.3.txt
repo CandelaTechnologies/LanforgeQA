@@ -1,0 +1,405 @@
+Update All
+# Major testbeds
+./lf_update_lab.py \
+--update_module lf_update \
+--tb_name CT-US-001=192.168.100.116 \
+--tb_name CT-US-002=192.168.101.18 \
+--tb_name CT-US-004=192.168.100.194 \
+--tb_name CT-US-005-1=192.168.100.132 \
+--tb_name CT-US-005-2=192.168.101.91 \
+--tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-009=192.168.100.221 \
+--tb_name WAREHOUSE=192.168.88.40 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--log_level info \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level debug
+
+
+# update all without 008
+./lf_update_lab.py \
+--update_module lf_update \
+--tb_name CT-US-001=192.168.100.116 \
+--tb_name CT-US-002=192.168.101.18 \
+--tb_name CT-US-004=192.168.100.194 \
+--tb_name CT-US-005-1=192.168.100.132 \
+--tb_name CT-US-005-2=192.168.101.91 \
+--tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-009=192.168.100.221 \
+--tb_name WAREHOUSE=192.168.88.40 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--log_level info \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level debug
+
+
+
+
+# update 007,008-1,008-2, 008-3, WAREHOUSE
+./lf_update_lab.py \
+--update_module lf_update \
+--tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-008-1=192.168.101.136 \
+--tb_name CT-US-008-2=192.168.101.117 \
+--tb_name CT-US-008-2=192.168.102.212 \
+--tb_name CT-US-009=192.168.100.221 \
+--tb_name WAREHOUSE=192.168.88.40 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--log_level info \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level debug
+
+# 003 testbeds
+./lf_update_lab.py \
+--update_module lf_update \
+--tb_name CT-US-003-APU2-1=192.168.100.181 \
+--tb_name CT-US-003-APU2-2=192.168.100.152 \
+--tb_name CT-US-003-APU2-3=192.168.100.192 \
+--tb_name CT-US-003-NOAH2-4=192.168.102.52 \
+--tb_name CT-US-003-NOAH2-5=192.168.102.133 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--log_level info \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level debug
+
+
+
+
+
+
+
+103
+./lf_update.py \
+--tb_name CT-ID-103 \
+--mgr 192.168.50.103 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+
+192.168.50.26 AT7
+./lf_update.py \
+--tb_name CT-ID-26 \
+--mgr 192.168.50.26 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+104
+./lf_update.py \
+--tb_name CT-ID-104 \
+--mgr 192.168.50.104 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+
+
+001 - 192.168.100.116
+./lf_update.py \
+--tb_name CT-US-001 \
+--mgr 192.168.100.116 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+002 - 192.168.101.18
+./lf_update.py \
+--tb_name CT-US-002 \
+--mgr 192.168.101.18 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+004 - 192.168.100.194
+./lf_update.py \
+--tb_name CT-US-004 \
+--mgr 192.168.100.194 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+005-1 192.168.100.132
+./lf_update.py \
+--tb_name CT-US-005-1 \
+--mgr 192.168.100.132 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+
+005-2 - 192.168.101.91
+./lf_update.py \
+--tb_name CT-US-005-2 \
+--mgr 192.168.101.91 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+007 - 192.168.102.197
+./lf_update.py \
+--tb_name CT-US-007 \
+--mgr 192.168.102.197 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+008-1 192.168.101.137
+./lf_update.py \
+--tb_name CT-US-008-1 \
+--mgr 192.168.101.137 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+008-2 192.168.101.117
+./lf_update.py \
+--tb_name CT-US-008-2 \
+--mgr 192.168.101.117 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+008-3 192.168.102.212
+./lf_update.py \
+--tb_name CT-US-008-3 \
+--mgr 192.168.102.212 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+009 192.168.100.221
+./lf_update.py \
+--tb_name CT-US-009 \
+--mgr 192.168.100.221 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+Warehouse 192.168.88.40
+./lf_update.py \
+--tb_name CT-US-Warehouse \
+--mgr 192.168.88.40 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+#########################
+ct-us-003 192.168.100.181
+#########################
+ct-us-003-1 192.168.100.181 (APU2)
+./lf_update.py \
+--tb_name CT-US-003-APU2-1 \
+--mgr 192.168.100.181 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 25 \
+--root_timeout 1800 \
+--log_level info
+
+ct-us-003-2 192.168.100.152 (APU2)
+./lf_update.py \
+--tb_name CT-US-003-APU2-2 \
+--mgr 192.168.100.152 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 25 \
+--root_timeout 1800 \
+--log_level info
+
+ct-us-003-3 192.168.100.192 (APU2)
+./lf_update.py \
+--tb_name CT-US-003-APU2-3 \
+--mgr 192.168.100.192 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 25 \
+--root_timeout 1800 \
+--log_level info
+
+ct-us-003-4 192.168.102.52 (Noah2)
+./lf_update.py \
+--tb_name CT-US-003-NOAH2-4 \
+--mgr 192.168.102.52 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 25 \
+--root_timeout 2000 \
+--log_level info
+
+ct-us-003-5 192.168.102.133  (Noah2)
+./lf_update.py \
+--tb_name CT-US-003-NOAH2-5 \
+--mgr 192.168.102.133 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 25 \
+--root_timeout 2000 \
+--log_level info
+
+
+Warehouse 192.168.88.40
+./lf_update.py \
+--tb_name CT-US-Warehouse \
+--mgr 192.168.88.40 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.3+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
