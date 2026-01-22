@@ -5,7 +5,7 @@
             "When doing a create_chamberview.py --create_scenario <name> ",
             "has no correlation to the --instance_name , instance name is used ",
             "as a unique identifier for tha chamber-view test run"
-        ]  
+        ]
     },
     "test_suites":{
         "funct_tests":{
@@ -68,12 +68,104 @@
                 "args":"",
                 "args_list":[
                     " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 15s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
-                    " use_ssid_idx=1 --radio 'radio==wiphy1,stations==4,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED wifi_mode==0 wifi_settings==wifi_settings enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",                     
+                    " use_ssid_idx=1 --radio 'radio==wiphy1,stations==4,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED wifi_mode==0 wifi_settings==wifi_settings enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
                     " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
                     " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_ATH10K_5G_W1'",
                     " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
                 ]
             },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_2G_ATH10K_STA_64_W3":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==36,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_2G_ATH10K_STA_64_W3'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_ATH10K_STA_64_W3":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==36,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_ATH10K_STA_64_W3'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_ATH9k_STA_36_W3":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==36,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_ATH9k_STA_36_W3'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_AX200_STA_1_W4":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_AX200_STA_1_W4'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_MT7921E_STA_4_W5":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==4,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_MT7921E_STA_4_W5'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_AX210_STA_1_W6":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==1,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_AX210_STA_1_W6'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+            "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_MT7915_STA_19_W7":{
+                "enabled":"TRUE",
+                "load_db":"NONE",
+                "command":"test_l3_longevity.py",
+                "args":"",
+                "args_list":[
+                    " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 60s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
+                    " use_ssid_idx=1 --radio 'radio==wiphy7,stations==19,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED,wifi_mode==0,wifi_settings==wifi_settings,enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
+                    " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
+                    " --test_rig TEST_RIG --test_tag 'TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_MT7915_STA_19_W7'",
+                    " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
+                ]
+            },
+
             "TEST_L3_LONGEVITY_ENABLE_FLAGS_5G_W4_W5_W6_W7":{
                 "enabled":"TRUE",
                 "load_db":"NONE",
@@ -162,7 +254,7 @@
                 "args":"",
                 "args_list":[
                     " --lfmgr LF_MGR_IP --local_lf_report_dir REPORT_PATH --test_duration 15s --polling_interval 5s --upstream_port UPSTREAM_PORT ",
-                    " use_ssid_idx=1 --radio 'radio==wiphy1,stations==4,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED wifi_mode==0 wifi_settings==wifi_settings enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",                     
+                    " use_ssid_idx=1 --radio 'radio==wiphy1,stations==4,ssid==SSID_USED,ssid_pw==SSID_PW_USED,security==SECURITY_USED wifi_mode==0 wifi_settings==wifi_settings enable_flags==(ht160_enable|wpa2_enable|80211u_enable|create_admin_down)'",
                     " --endp_type lf_udp --rates_are_totals --side_a_min_bps=20000 --side_b_min_bps=300000000",
                     " --test_rig TEST_RIG --test_tag 'TEST_L3_ENABLE_FLAGS_ATH10K_5G_W1'",
                     " --dut_model_num  USE_DUT_NAME --dut_sw_version DUT_SW --dut_hw_version DUT_HW --dut_serial_num DUT_SN"
@@ -344,7 +436,7 @@
                     "command":"create_l3_stations.py",
                     "args":"",
                     "args_list":[
-                        " --mgr LF_MGR_IP --radio wiphy1 --num_stations 4 --upstream_port UPSTREAM_PORT",                    
+                        " --mgr LF_MGR_IP --radio wiphy1 --num_stations 4 --upstream_port UPSTREAM_PORT",
                         " use_ssid_idx=1 --ssid SSID_USED --passwd  SSID_PW_USED --security  SECURITY_USED "
                     ]
             },
@@ -486,7 +578,7 @@
                 "command":"create_l4.py",
                 "args":"",
                 "args_list":[
-                    " --mgr LF_MGR_IP --radio wiphy1 --num_stations 4 --upstream_port UPSTREAM_PORT",                    
+                    " --mgr LF_MGR_IP --radio wiphy1 --num_stations 4 --upstream_port UPSTREAM_PORT",
                     "  use_ssid_idx=1 --ssid SSID_USED --passwd SSID_PW_USED --security SECURITY_USED",
                     " --debug"
                 ]
@@ -571,6 +663,6 @@
                     " "
                 ]
             }
-        }         
+        }
     }
 }
