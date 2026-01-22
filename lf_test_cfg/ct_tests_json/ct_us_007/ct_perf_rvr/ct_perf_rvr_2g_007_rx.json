@@ -81,7 +81,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_mt7915e_W0_rx":{
+        "ct_perf_rvr_2g_mt7915e_W0_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -153,7 +153,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_mt7915e_W1_rx":{
+        "ct_perf_rvr_2g_mt7915e_W1_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -224,7 +224,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_ax210_W2_rx":{
+        "ct_perf_rvr_2g_ax210_W2_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -295,7 +295,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_ax210_W3_rx":{
+        "ct_perf_rvr_2g_ax210_W3_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -366,7 +366,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_ax210_W4_rx":{
+        "ct_perf_rvr_2g_ax210_W4_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -437,7 +437,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_ax210_W5_rx":{
+        "ct_perf_rvr_2g_ax210_W5_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -508,7 +508,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_mt7925e_W6_rx":{
+        "ct_perf_rvr_2g_mt7925e_W6_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
@@ -579,7 +579,7 @@
                 ]
             }
         },
-        "rvr_perf_2g_mt7925e_W7_rx":{
+        "ct_perf_rvr_2g_mt7925e_W7_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",

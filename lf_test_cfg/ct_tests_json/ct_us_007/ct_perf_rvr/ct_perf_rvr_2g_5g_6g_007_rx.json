@@ -5,7 +5,7 @@
         ]
     },
     "test_suites":{
-        "rvr_perf_2g_5g_6g_ax210_W2_W3_W4_rx":{
+        "ct_perf_rvr_2g_5g_6g_ax210_W2_W3_W4_rx":{
             "CC_DUT":{
                 "enabled":"TRUE",
                 "load_db":"skip",
