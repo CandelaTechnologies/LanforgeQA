@@ -8,6 +8,9 @@ Update All
 --tb_name CT-US-005-1=192.168.100.132 \
 --tb_name CT-US-005-2=192.168.101.91 \
 --tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-008-1=192.168.101.136 \
+--tb_name CT-US-008-2=192.168.101.117 \
+--tb_name CT-US-008-2=192.168.102.212 \
 --tb_name CT-US-009=192.168.100.221 \
 --tb_name WAREHOUSE=192.168.88.40 \
 --root_user root \
