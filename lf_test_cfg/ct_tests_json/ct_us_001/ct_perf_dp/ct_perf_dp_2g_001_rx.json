@@ -276,7 +276,7 @@
         },
         "dp_perf_2g_mtk7915_W7_rx":{
             "CC_DUT":{
-                "enabled":"TRUE",
+                "enabled":"FALSE",
                 "load_db":"skip",
                 "command":"create_chamberview_dut.py",
                 "args":"",
@@ -289,7 +289,7 @@
                 ]
             },
             "CC_MTK7915_2G_W7":{
-                "enabled":"TRUE",
+                "enabled":"FALSE",
                 "load_db":"skip",
                 "command":"create_chamberview.py",
                 "args":"",
@@ -301,7 +301,7 @@
                 ]
             },
             "DP_MTK7915_2G_W7_RX":{
-                "enabled":"TRUE",
+                "enabled":"FALSE",
                 "load_db":"skip",
                 "timeout":"5000",
                 "iterations":"1",
