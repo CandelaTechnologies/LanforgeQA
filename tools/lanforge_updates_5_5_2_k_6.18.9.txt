@@ -7,23 +7,19 @@ Update All
 --user lanforge \
 --user_password lanforge \
 --mgr_ssh_port 22 \
---tb_name CT-US-001=192.168.100.116 \
---tb_name CT-US-002=192.168.101.18 \
---tb_name CT-US-004=192.168.100.194 \
---tb_name CT-US-005-1=192.168.100.132 \
---tb_name CT-US-005-2=192.168.101.91 \
 --tb_name CT-US-008-1=192.168.101.136 \
 --tb_name CT-US-008-2=192.168.101.117 \
 --tb_name CT-US-008-2=192.168.102.212 \
---tb_name CT-US-007=192.168.102.197 \
---tb_name CT-US-009=192.168.100.221 \
---tb_name WAREHOUSE=192.168.88.40 \
 --log_level info \
 --lfver 5.5.2 \
 --kver 6.18.9+ \
 --user_timeout 20 \
 --root_timeout 2000 \
 --log_level debug
+
+--tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-009=192.168.100.221 \
+--tb_name WAREHOUSE=192.168.88.40 \
 
 --tb_name CT-US-001=192.168.100.116 \
 --tb_name CT-US-002=192.168.101.18 \
@@ -97,7 +93,21 @@ Works ./lf_kinstall.pl --lfver 5.5.2 --kver 6.15.6+ --do_upgrade --build_path  p
 
 
 
-# update 007,008-1,008-2, 008-3, WAREHOUSE
+# update 007,008-1,008-2, 008-3, WAREHOUSE./lf_update.py \
+--tb_name CT-ID-103 \
+--mgr 192.168.50.103 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.9+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+
 ./lf_update_lab.py \
 (bike shed comment) one thought is to state the conclusion at the beginning , again in the middle and again at the end of the talk.   
 --update_module lf_update \
