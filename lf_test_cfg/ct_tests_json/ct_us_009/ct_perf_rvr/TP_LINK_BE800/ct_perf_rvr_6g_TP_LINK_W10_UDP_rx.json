@@ -56,7 +56,7 @@
                     " --raw_line 'spatial_streams: AUTO' ",
                     " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'mt7996e_6G_W10_UDP_rx'",
                     " --raw_line 'attenuator: ATTENUATOR_2'",
-                    " --raw_line 'attenuations: 0..+100..500'",
+                    " --raw_line 'attenuations: 0..+100..800'",
                     " --raw_line 'attenuator_mod: 0xf'  ",
                     " --raw_line 'disable_mlo: 1'",
                     " --raw_line 'path_loss: 0'",
