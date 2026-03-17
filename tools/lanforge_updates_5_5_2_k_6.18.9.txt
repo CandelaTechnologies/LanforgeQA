@@ -45,6 +45,15 @@ Update All
 --tb_name CT-US-009=192.168.100.221 \
 --tb_name WAREHOUSE=192.168.88.40 \
 
+--tb_name CT-US-001=1./ct_tests_json/ct_us_009/ct_perf_dp_testgroup/TP_LINK_BE800/ct_perf_dp_2g_TP_LINK_test_group_W8_TCP_rx.json:ct_perf_dp_2g_test_group_TCP_rx,\
+92.168.100.116 \
+--tb_name CT-US-002=192.168.101.18 \
+--tb_name CT-US-004=192.168.100.194 \
+--tb_name CT-US-005-1=192.168.100.132 \
+--tb_name CT-US-005-2=192.168.101.91 \
+--tb_name CT-US-007=192.168.102.197 \
+--tb_name CT-US-009=192.168.100.221 \
+--tb_name WAREHOUSE=192.168.88.40 \
 
 
 --tb_name CT-US-008-1=192.168.101.136 \
@@ -79,6 +88,26 @@ Works ./lf_kinstall.pl --lfver 5.5.2 --kver 6.15.6+ --do_upgrade --build_path  p
 
 ./lf_kinstall.pl --lfver 5.5.2 --kver 6.15.6+ --do_upgrade --build_path private/downloads/r5.5.2/builds/2026-02-03--0725.45/
 
+curl -o lf_kinstall_dev.pl www.candelatech.com/lf_kinstall_dev.txt; ./lf_kinstall_dev.pl --lfver 5.5.2 --kver 6.18.14+ --do_noaer 1 --do_upgrade
+
+
+
+./lf_create_vap_cv.py \
+--mgr 192.168.101.137 \
+--port 8080 \
+--lf_user lanforge\
+            --lf_password lanforge\
+            --delete_old_scenario\
+            --scenario_name at7_vap_chan\
+            --vap_radio 1.2.wiphy2\
+            --vap_channel 1e\
+            --vap_ssid at7_6g\
+            --vap_passwd hello123\
+            --vap_security wpa3\
+            --vap_bw 320\
+            --vap_upstream_port 1.1.eth2
+
+
 # update all without 008
 ./lf_update_lab.py \
 --update_module lf_update \
@@ -105,7 +134,8 @@ Works ./lf_kinstall.pl --lfver 5.5.2 --kver 6.15.6+ --do_upgrade --build_path  p
 
 
 
-# update 007,008-1,008-2, 008-3, WAREHOUSE./lf_update.py \
+# update 103
+./lf_update.py \
 --tb_name CT-ID-103 \
 --mgr 192.168.50.103 \
 --root_user root \
