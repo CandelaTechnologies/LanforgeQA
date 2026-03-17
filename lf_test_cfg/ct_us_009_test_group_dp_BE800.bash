@@ -12,6 +12,6 @@ echo "Running Wifi Capacity tests"
 ./ct_tests_json/ct_us_009/ct_perf_dp_testgroup/TP_LINK_BE800/ct_perf_dp_2g_TP_LINK_test_group_W8_TCP_rx.json:ct_perf_dp_2g_test_group_TCP_rx,\
 ./ct_tests_json/ct_us_009/ct_perf_dp_testgroup/TP_LINK_BE800/ct_perf_dp_2g_TP_LINK_test_group_W8_TCP_tx.json:ct_perf_dp_2g_test_group_TCP_tx,\
 ./ct_tests_json/ct_us_009/ct_perf_dp_testgroup/TP_LINK_BE800/ct_perf_dp_2g_TP_LINK_test_group_W8_UDP_rx.json:ct_perf_dp_2g_test_group_UDP_rx,\
-./ct_tests_json/ct_us_009/ct_perf_dp_testgroup/TP_LINK_BE800/ct_perf_dp_2g_TP_LINK_test_group_W8_UDP_tx.json:ct_perf_dp_2g_test_group_UDP_tx, \
+./ct_tests_json/ct_us_009/ct_perf_dp_testgroup/TP_LINK_BE800/ct_perf_dp_2g_TP_LINK_test_group_W8_UDP_tx.json:ct_perf_dp_2g_test_group_UDP_tx \
 --path /home/lanforge/html-reports/ct_us_009 \
 --log_level debug
