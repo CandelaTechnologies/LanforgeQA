@@ -7,6 +7,7 @@ Update All
 --user lanforge \
 --user_password lanforge \
 --mgr_ssh_port 22 \
+--tb_name CT-US-001=192.168.100.116 \
 --tb_name CT-US-002=192.168.101.18 \
 --tb_name CT-US-004=192.168.100.194 \
 --tb_name CT-US-005-1=192.168.100.132 \
