@@ -10,7 +10,7 @@
     },
     "test_suites":{
 
-        "ct_perf_dp_2g_test_group_UDP_tx":{
+        "ct_perf_dp_2G_test_group_UDP_tx":{
             "CC_mt7996e_2G_TESTGROUP_W8_UDP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",

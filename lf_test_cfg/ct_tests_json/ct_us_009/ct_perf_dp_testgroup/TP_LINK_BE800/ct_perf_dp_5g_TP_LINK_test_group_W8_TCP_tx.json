@@ -10,27 +10,27 @@
     },
     "test_suites":{
 
-        "ct_perf_dp_2G_test_group_TCP_rx":{
-            "CC_mt7996e_2G_TESTGROUP_W8_TCP_rx":{
+        "ct_perf_dp_5G_test_group_TCP_tx":{
+            "CC_mt7996e_5G_TESTGROUP_W8_TCP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview.py",
                 "args":"",
                 "args_list":[
                     " --lfmgr LF_MGR_IP --port LF_MGR_PORT --delete_scenario",
-                    " --create_scenario mt7996e_2G_W8_TCP_rx ",
-                    " --raw_line \"profile_link 1.1 STA-AUTO 1 'DUT: USE_DUT_NAME Radio-1' NA wiphy8,AUTO -1 NA\" ",
+                    " --create_scenario mt7996e_5G_W8_TCP_tx ",
+                    " --raw_line \"profile_link 1.1 STA-AUTO 1 'DUT: USE_DUT_NAME Radio-2' NA wiphy8,AUTO -1 NA\" ",
                     " --raw_line \"profile_link 1.1 upstream 1 'DUT: USE_DUT_NAME LAN'  NA UPSTREAM_ALIAS,AUTO -1 NA\""
                 ]
             },
-            "TG_MT7996_2G_TESTGROUP_W8_TCP_rx":{
+            "TG_MT7996_5G_TESTGROUP_W8_TCP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"testgroup.py",
                 "args":"",
                 "args_list":[
                     " --lfmgr LF_MGR_IP --port LF_MGR_PORT",
-                    " use_ssid_idx=0  --radio 1.1.wiphy8 --ssid SSID_USED --passwd SSID_PW_USED --security SECURITY_USED",
+                    " use_ssid_idx=1  --radio 1.1.wiphy8 --ssid SSID_USED --passwd SSID_PW_USED --security SECURITY_USED",
                     " --num_stations 34",
                     " --group_name group1",
                     " --add_group",
@@ -42,7 +42,7 @@
                 ]
             },
 
-            "CC_DUT_mt7996e_2G_TESTGROUP_W8_TCP_rx":{
+            "CC_DUT_mt7996e_5G_TESTGROUP_W8_TCP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview_dut.py",
@@ -56,7 +56,7 @@
                     " --dut_flag DHCPD-LAN"
                 ]
                 },
-            "DP_mt7996e_2G_TESTGROUP_W8_TCP_rx":{
+            "DP_mt7996e_5G_TESTGROUP_W8_TCP_tx":{
                 "enabled":"TRUE",
                 "timeout":"600",
                 "iterations":"1",
@@ -64,15 +64,15 @@
                 "command":"lf_dataplane_test.py",
                 "args":"",
                 "args_list":[
-                    " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user LF_MGR_USER --lf_password LF_MGR_PASS --instance_name mt7996e_2G_W8_TCP_rx",
+                    " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user LF_MGR_USER --lf_password LF_MGR_PASS --instance_name mt7996e_5G_W8_TCP_tx",
                     " --config_name test_con --upstream UPSTREAM_PORT  --dut USE_DUT_NAME --duration 5000 --station 1.1.wlan8",
-                    " --download_speed 1% --upload_speed 100% --raw_line 'pkts: Custom' ",
+                    " --download_speed 100% --upload_speed 1% --raw_line 'pkts: Custom' ",
                     " --raw_line 'cust_pkt_sz: MTU' ",
-                    " --raw_line 'directions: DUT Receive' ",
+                    " --raw_line 'directions: DUT Transmit' ",
                     " --raw_line 'traffic_types: TCP' ",
                     " --raw_line 'bandw_options: AUTO' ",
                     " --raw_line 'spatial_streams: AUTO' ",
-                    " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'mt7996e_2G_TESTGROUP_W8_TCP_rx'",
+                    " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'mt7996e_5G_TESTGROUP_W8_TCP_tx'",
                     " --raw_line 'attenuator: ATTENUATOR_2'",
                     " --raw_line 'attenuations: 0..+500..500'",
                     " --raw_line 'attenuator_mod: 0xf'  ",
