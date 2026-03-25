@@ -11,7 +11,7 @@
     "test_suites":{
 
         "ct_perf_dp_6G_test_group_UDP_rx":{
-            "CC_mt7996e_6G_TESTGROUP_W8_UDP_rx":{
+            "CC_mt7996e_6G_TESTGROUP_W10_UDP_rx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview.py",
@@ -23,7 +23,7 @@
                     " --raw_line \"profile_link 1.1 upstream 1 'DUT: USE_DUT_NAME LAN'  NA UPSTREAM_ALIAS,AUTO -1 NA\""
                 ]
             },
-            "TG_MT7996_6G_TESTGROUP_W8_UDP_rx":{
+            "TG_MT7996_6G_TESTGROUP_W10_UDP_rx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"testgroup.py",
@@ -42,7 +42,7 @@
                 ]
             },
 
-            "CC_DUT_mt7996e_6G_TESTGROUP_W8_UDP_rx":{
+            "CC_DUT_mt7996e_6G_TESTGROUP_W10_UDP_rx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview_dut.py",
@@ -56,7 +56,7 @@
                     " --dut_flag DHCPD-LAN"
                 ]
                 },
-            "DP_mt7996e_6G_TESTGROUP_W8_UDP_rx":{
+            "DP_mt7996e_6G_TESTGROUP_W10_UDP_rx":{
                 "enabled":"TRUE",
                 "timeout":"600",
                 "iterations":"1",
@@ -72,7 +72,7 @@
                     " --raw_line 'traffic_types: UDP' ",
                     " --raw_line 'bandw_options: AUTO' ",
                     " --raw_line 'spatial_streams: AUTO' ",
-                    " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'mt7996e_6G_TESTGROUP_W8_UDP_rx'",
+                    " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'mt7996e_6G_TESTGROUP_W10_UDP_rx'",
                     " --raw_line 'attenuator: ATTENUATOR_2'",
                     " --raw_line 'attenuations: 0..+500..500'",
                     " --raw_line 'attenuator_mod: 0xf'  ",
