@@ -14,6 +14,7 @@ Update All
 --tb_name CT-US-005-2=192.168.101.91 \
 --tb_name CT-US-007=192.168.102.197 \
 --tb_name CT-US-009=192.168.100.221 \
+--tb_name WAREHOUSE=192.168.88.40 \
 --log_level info \
 --lfver 5.5.3 \
 --kver 6.18.18+ \
@@ -56,7 +57,7 @@ Update All
 # commands
 ./create_chamberview_dut.py  --lfmgr 192.168.101.137 --port 8080 --dut_name VAP_AT7_MT7996 --ssid 'ssid_idx=0 ssid=at7_2g security=wpa3 password=hello123 bssid=00:00:00:00:00:00' --ssid 'ssid_idx=1 ssid=at7_5g security=wpa3 password=hello123 bssid=00:00:00:00:00:00' --ssid 'ssid_idx=2 ssid=at7_6g security=wpa3 password=hello123 bssid=00:00:00:00:00:00' --sw_version 2025032812917 --hw_version mtk7996e --serial_num DUT_SERIAL --model_num VAP_AT7_MT7996 --dut_flag DHCPD-LAN
 
-./create_chamberview.py  --lfmgr 192.168.101.137 --port 8080 --delete_scenario --create_scenario vap_mt7996e_5G_W1_TCP_rx  --raw_line "profile_link 1.2 STA-AUTO 1 'DUT: VAP_AT7_MT7996 Radio-2' NA wiphy1,AUTO -1 NA"  --raw_line "profile_link 1.2 upstream 1 'DUT: VAP_AT7_MT7996 LAN'  NA eth2,AUTO -1 NA"  --raw_line "profile_link 1.3 uplink-nat 1 'DUT: upstream LAN 192.168.0.1/24' NA eth1,AUTO -1 NA"  --raw_line "profile_link 1.3 at7_vap_2g 1 NA NA wiphy0,eth1 2437 NA"  --raw_line "profile_link 1.3 at7_vap_5g 1 NA NA wiphy1,eth1 5180 NA"  --raw_line "profile_link 1.3 at7_vap_6g 1 NA NA wiphy2,eth1 5955 NA"  --raw_line "chamber Chamber-1 410 324 NA 10.0"  --raw_line "chamber Chamber-0 430 156 NA 10.0"  --raw_line "dut VAP_AT7_MT7996 0 0"  --raw_line "resource 1.1 0 0" 
+./create_chamberview.py  --lfmgr 192.168.101.137 --port 8080 --delete_scenario --create_scenario vap_mt7996e_5G_W1_TCP_rx  --raw_line "profile_link 1.2 STA-AUTO 1 'DUT: VAP_AT7_MT7996 Radio-2' NA wiphy1,AUTO -1 NA"  --raw_line "profile_link 1.2 upstream 1 'DUT: VAP_AT7_MT7996 LAN'  NA eth2,AUTO -1 NA"  --raw_line "profile_link 1.3 uplink-nat 1 'DUT: upstream LAN 192.168.0.1/24' NA eth1,AUTO -1 NA"  --raw_line "profile_link 1.3 at7_vap_2g 1 NA NA wiphy0,eth1 2437 NA"  --raw_line "profile_link 1.3 at7_vap_5g 1 NA NA wiphy1,eth1 5180 NA"  --raw_line "profile_link 1.3 at7_vap_6g 1 NA NA wiphy2,eth1 5955 NA"  --raw_line "chamber Chamber-1 410 324 NA 10.0"  --raw_line "chamber Chamber-0 430 156 NA 10.0"  --raw_line "dut VAP_AT7_MT7996 0 0"  --raw_line "resource 1.1 0 0"
 
 ./lf_rvr_test.py  --mgr 192.168.101.137 --port 8080 --lf_user lanforge --lf_password lanforge --instance_name vap_mt7996e_5G_W1_TCP_rx --config_name test_con --upstream 1.2.eth1  --dut VAP_AT7_MT7996 --duration 5000 --station 1.2.wlan1 --download_speed 1% --upload_speed 100% --raw_line 'pkts: Custom'  --raw_line 'cust_pkt_sz: MTU'  --raw_line 'directions: DUT Receive'  --raw_line 'traffic_types: TCP'  --raw_line 'bandw_options: AUTO'  --raw_line 'spatial_streams: AUTO'  --pull_report --local_lf_report_dir /home/lanforge/html-reports/ct_us_008/2025-12-15-03-01-33_lf_check_ct_perf_vap_rvr_5g_W1_TCP_rx --test_tag 'vap_mt7996e_5G_W1_TCP_rx' --raw_line 'attenuator: 1.1.3591' --raw_line 'attenuations: 0..+100..300' --raw_line 'attenuator_mod: 0xf'   --raw_line 'mconn: 10'  --raw_line 'multi_cx: 10'  --raw_line 'disable_mlo: 1' --raw_line 'path_loss: 0' --test_rig LANforge  --set DUT_NAME VAP_AT7_MT7996 --verbosity 11
 
@@ -69,8 +70,8 @@ worked: ./lf_kinstall.pl --lfver 5.5.3 --kver 6.15.6+ --do_upgrade --build_path 
 
 
 Works  ./lf_kinstall.pl --lfver 5.5.3 --kver 6.15.6+ --do_upgrade --build_path private/downloads/r5.5.3/builds/2025-12-24--0634.51/
- Version: 5.5.3  Compiled on:  Tue Dec 23 05:49:51 PM PST 2025                          
-    By: greearb  On machine: Linux vb-deb12-arm64 6.1.0-34-arm64 aarch64 unknown    
+ Version: 5.5.3  Compiled on:  Tue Dec 23 05:49:51 PM PST 2025
+    By: greearb  On machine: Linux vb-deb12-arm64 6.1.0-34-arm64 aarch64 unknown
 
 
 Works ./lf_kinstall.pl --lfver 5.5.3 --kver 6.15.6+ --do_upgrade --build_path private/downloads/r5.5.3/builds/2026-01-15--1446.56/
@@ -127,7 +128,7 @@ curl -o lf_kinstall.pl www.candelatech.com/lf_kinstall.txt; ./lf_kinstall.pl --l
 
 
 ./lf_update_lab.py \
-(bike shed comment) one thought is to state the conclusion at the beginning , again in the middle and again at the end of the talk.   
+(bike shed comment) one thought is to state the conclusion at the beginning , again in the middle and again at the end of the talk.
 --update_module lf_update \
 --tb_name CT-US-007=192.168.102.197 \
 --tb_name CT-US-008-1=192.168.101.137 \
