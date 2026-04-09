@@ -27,12 +27,12 @@
                 "args":"",
                 "args_list":[
                     " --lfmgr LF_MGR_IP --port LF_MGR_PORT --delete_scenario",
-                    " --create_scenario BE200_6G_W10_UDP_rx ",
+                    " --create_scenario BE200_6G_W10_UDP_tx ",
                     " --raw_line \"profile_link 1.1 STA-AUTO 1 'DUT: USE_DUT_NAME Radio-3' NA wiphy10,AUTO -1 NA\" ",
                     " --raw_line \"profile_link 1.1 upstream 1 'DUT: USE_DUT_NAME LAN'  NA UPSTREAM_ALIAS,AUTO -1 NA\""
                 ]
             },
-            "RVR_BE200_6G_W10_UDP_rx":{
+            "RVR_BE200_6G_W10_UDP_tx":{
                 "enabled":"TRUE",
                 "timeout":"600",
                 "iterations":"1",
@@ -40,15 +40,15 @@
                 "command":"lf_rvr_test.py",
                 "args":"",
                 "args_list":[
-                    " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user LF_MGR_USER --lf_password LF_MGR_PASS --instance_name BE200_6G_W10_UDP_rx",
+                    " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user LF_MGR_USER --lf_password LF_MGR_PASS --instance_name BE200_6G_W10_UDP_tx",
                     " --config_name test_con --upstream UPSTREAM_PORT  --dut USE_DUT_NAME --duration 5000 --station 1.1.wlan10",
-                    " --download_speed 0% --upload_speed 85% --raw_line 'pkts: Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: Custom' ",
                     " --raw_line 'cust_pkt_sz: 172;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Receive' ",
                     " --raw_line 'traffic_types: UDP' ",
                     " --raw_line 'bandw_options: AUTO' ",
                     " --raw_line 'spatial_streams: AUTO' ",
-                    " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'BE200_6G_W10_UDP_rx'",
+                    " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'BE200_6G_W10_UDP_tx'",
                     " --raw_line 'attenuator: ATTENUATOR_1'",
                     " --raw_line 'attenuations: 000,100,200,300,400,410,420,430,440,470'",
                     " --raw_line 'attenuator_mod: 0xf'  ",
@@ -194,7 +194,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_MT7915_6G_W0_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan0",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_MT7915_6G_W0_TX' ",
@@ -266,7 +266,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_MT7915_6G_W1_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan1",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_MT7915_6G_W1_TX' ",
@@ -338,7 +338,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_AX210_6G_W2_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan2",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_AX210_6G_W2_TX' ",
@@ -410,7 +410,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_AX210_6G_W3_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan3",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_AX210_6G_W3_TX' ",
@@ -482,7 +482,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_AX210_6G_W4_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan4",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_AX210_6G_W4_TX' ",
@@ -554,7 +554,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_AX210_6G_W5_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan5",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_AX210_6G_W5_TX' ",
@@ -626,7 +626,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_MT7925e_6G_W6_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan6",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_MT7925e_6G_W6_TX' ",
@@ -698,7 +698,7 @@
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user lanforge --lf_password lanforge --instance_name RVR_MT7925e_6G_W7_TX",
                     " --config_name test_con --upstream UPSTREAM_PORT --dut USE_DUT_NAME --duration 20s --station 1.1.wlan7",
-                    " --download_speed 85% --upload_speed 0 --raw_line 'pkts: 60;Custom' ",
+                    " --download_speed 85% --upload_speed 0% --raw_line 'pkts: 60;Custom' ",
                     " --raw_line 'cust_pkt_sz: 88;256;512;768;1024;MTU' ",
                     " --raw_line 'directions: DUT Transmit' --raw_line 'traffic_types: UDP' --raw_line 'bandw_options: AUTO'",
                     " --raw_line 'spatial_streams: AUTO' --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'RVR_MT7925e_6G_W7_TX' ",
