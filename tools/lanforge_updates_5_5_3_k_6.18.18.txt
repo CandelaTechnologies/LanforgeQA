@@ -127,6 +127,20 @@ curl -o lf_kinstall.pl www.candelatech.com/lf_kinstall.txt; ./lf_kinstall.pl --l
 --root_timeout 2000 \
 --log_level info
 
+./lf_update.py \
+--tb_name CT-ID-104 \
+--mgr 192.168.50.104 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.3 \
+--kver 6.18.18+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
 
 ./lf_update_lab.py \
 (bike shed comment) one thought is to state the conclusion at the beginning , again in the middle and again at the end of the talk.
