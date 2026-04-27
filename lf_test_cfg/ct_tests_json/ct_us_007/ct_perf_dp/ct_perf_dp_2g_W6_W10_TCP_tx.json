@@ -10,7 +10,7 @@
     },
     "test_suites":{
 
-        "ct_perf_dp_2g_W6_W10_TCP_tx":{
+        "ct_perf_dp_2g_mt7925e_BE200_W6_W10_TCP_tx":{
 
             "CC_DUT_mt7925e_2G_W6_TCP_tx":{
                 "enabled":"TRUE",

@@ -12,7 +12,7 @@
 
         "ct_perf_dp_2g_W6_W10_UDP_tx":{
 
-            "CC_DUT_mt7925e_2G_W6_UDP_tx":{
+            "CC_DUT_mt7925e_2G_mt7925e_BE200_W6_UDP_tx":{
                 "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview_dut.py",
