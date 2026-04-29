@@ -276,7 +276,7 @@
         },
         "dp_perf_5g_mtk7915_W7_rx":{
             "CC_DUT":{
-                "enabled":"FALSE",
+                "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview_dut.py",
                 "args":"",
@@ -289,7 +289,7 @@
                 ]
             },
             "CC_MTK7915_5G_W7":{
-                "enabled":"FALSE",
+                "enabled":"TRUE",
                 "load_db":"skip",
                 "command":"create_chamberview.py",
                 "args":"",
@@ -301,7 +301,7 @@
                 ]
             },
             "DP_MTK7915_5G_W7_RX":{
-                "enabled":"FALSE",
+                "enabled":"TRUE",
                 "load_db":"skip",
                 "timeout":"5000",
                 "iterations":"1",
