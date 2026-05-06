@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Argparse Web Runner</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+        .container { max-width: 1150px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        .form-group { margin: 18px 0; padding: 14px; border: 1px solid #eee; border-radius: 6px; background: #fafafa; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="number"] { width: 100%; padding: 8px; box-sizing: border-box; margin-bottom: 8px; }
+        .checkbox-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        button { padding: 12px 20px; font-size: 16px; margin: 6px 8px 6px 0; cursor: pointer; border: none; border-radius: 6px; }
+        .primary-btn { background-color: #007bff; color: white; }
+        .primary-btn:hover { background-color: #0056b3; }
+        .secondary-btn { background-color: #6c757d; color: white; }
+        .secondary-btn:hover { background-color: #545b62; }
+        .tool-btn { background-color: #28a745; color: white; }
+        .tool-btn:hover { background-color: #218838; }
+
+        .action-buttons { background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 25px 0 35px 0; border: 1px solid #e0e0e0; }
+        .saved-forms { background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 25px 0; border: 1px solid #b3d4ff; }
+        .command-box { background: #f0f0f0; padding: 15px; border: 2px dashed #007bff; border-radius: 6px; font-family: monospace; white-space: pre-wrap; word-break: break-all; margin: 20px 0; }
+        pre { background: #f8f8f8; padding: 15px; border-radius: 6px; overflow: auto; }
+        small { color: #555; display: block; margin-top: 4px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Argparse Web Runner</h1>
+
+    {% if not script_path %}
+    <h2>Upload Python Script</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="script" accept=".py" required>
+        <br><br>
+        <button type="submit">Upload & Analyze Script</button>
+    </form>
+
+    {% else %}
+    <p><strong>Script:</strong> {{ filename }}</p>
+    <p><strong>Path:</strong> {{ script_path }}</p>
+
+    <div class="action-buttons">
+        <h2>Actions</h2>
+        <button type="button" onclick="submitForm('run')" class="primary-btn">▶ Run Script</button>
+        <button type="button" onclick="submitForm('generate')" class="primary-btn">📋 Generate Command Only</button>
+        
+        <button type="button" onclick="clearAllEntries()" class="secondary-btn">🗑️ Clear Entries</button>
+        <button type="button" onclick="clearSavedForm()" class="secondary-btn">Clear Saved Form</button>
+
+        <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #ddd;">
+            <button type="button" onclick="saveCurrentFormAs()" class="tool-btn">💾 Save Form As...</button>
+            
+            <form method="post" enctype="multipart/form-data" style="display: inline; margin-left: 20px;">
+                <input type="file" name="load_form" accept=".json">
+                <button type="submit" name="load_form_submit" value="1" class="tool-btn">📂 Load JSON File</button>
+            </form>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="/?new_script=1" class="secondary-btn" style="text-decoration: none; padding: 12px 20px; display: inline-block;">
+                ← Upload Different Script
+            </a>
+        </div>
+    </div>
+
+    <!-- Saved Forms -->
+    {% if saved_forms_list %}
+    <div class="saved-forms">
+        <h2>Saved Forms</h2>
+        <ul>
+        {% for form in saved_forms_list %}
+            <li>
+                <strong>{{ form }}</strong>
+                <form method="post" style="display:inline;">
+                    <input type="hidden" name="load_saved_form" value="{{ form }}">
+                    <button type="submit" class="secondary-btn" style="padding: 6px 12px; font-size: 14px;">Load</button>
+                </form>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Generated Command -->
+    {% if generated_command %}
+    <h2>Generated Command</h2>
+    <div class="command-box" id="cmdBox">{{ generated_command }}</div>
+    <button onclick="copyCommand()" class="secondary-btn">Copy to Clipboard</button>
+    <br><br>
+    {% endif %}
+
+    <h2>Select Parameters to Include</h2>
+
+    <div style="margin-bottom: 15px;">
+        <button type="button" onclick="toggleAll(true)" class="secondary-btn">Select All</button>
+        <button type="button" onclick="toggleAll(false)" class="secondary-btn">Deselect All</button>
+    </div>
+
+    <form method="post" id="paramsForm">
+        <input type="hidden" name="script_path" value="{{ script_path }}">
+
+        {% for action in actions %}
+        <div class="form-group">
+            <div class="checkbox-row">
+                <input type="checkbox" 
+                       name="selected_params" 
+                       value="{{ action.dest }}" 
+                       id="chk_{{ action.dest }}"
+                       {% if saved_form and action.dest in saved_form.get('selected_params', []) %}checked{% endif %}>
+                <label for="chk_{{ action.dest }}">
+                    {{ action.option_strings|join(' / ') or '--' + action.dest }}
+                </label>
+            </div>
+
+            {% if action.field_type == 'checkbox' %}
+                <input type="checkbox" name="{{ action.dest }}" value="true"
+                       {% if saved_form and saved_form.get('values', {}).get(action.dest) %}checked{% endif %}>
+            {% elif action.field_type == 'number' %}
+                <input type="number" name="{{ action.dest }}" 
+                       value="{{ saved_form.get('values', {}).get(action.dest, action.default or '') }}">
+            {% else %}
+                <input type="text" name="{{ action.dest }}" 
+                       value="{{ saved_form.get('values', {}).get(action.dest, action.default or '') }}"
+                       placeholder="{{ action.help[:80] if action.help else '' }}">
+            {% endif %}
+
+            {% if action.help %}
+                <small>{{ action.help }}</small>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </form>
+
+    {% if output %}
+    <h2>Executed Command</h2>
+    <div class="command-box">{{ output.command }}</div>
+    <h2>Standard Output</h2>
+    <pre>{{ output.stdout or 'No output' }}</pre>
+    {% if output.stderr %}
+    <h2>Standard Error</h2>
+    <pre style="color: red;">{{ output.stderr }}</pre>
+    {% endif %}
+    <p><strong>Return Code:</strong> {{ output.returncode }}</p>
+    {% endif %}
+
+    {% endif %}
+</div>
+
+<script>
+function toggleAll(select) {
+    document.querySelectorAll('input[name="selected_params"]').forEach(chk => chk.checked = select);
+}
+
+function clearAllEntries() {
+    document.querySelectorAll('input[type="text"], input[type="number"]').forEach(i => i.value = '');
+    document.querySelectorAll('input[type="checkbox"][name]:not([name="selected_params"])').forEach(chk => chk.checked = false);
+}
+
+function clearSavedForm() {
+    if (confirm("Clear all saved form data?")) {
+        window.location.href = "/?clear_saved=1";
+    }
+}
+
+function saveCurrentFormAs() {
+    const name = prompt("Enter filename (e.g. test1.json):", "my_form.json");
+    if (!name) return;
+
+    const paramsForm = document.getElementById('paramsForm');
+    if (!paramsForm) return;
+
+    const form = document.createElement('form');
+    form.method = "POST";
+    form.action = "/";
+
+    const sp = document.createElement('input');
+    sp.type = "hidden";
+    sp.name = "script_path";
+    sp.value = "{{ script_path | safe }}";
+    form.appendChild(sp);
+
+    const custom = document.createElement('input');
+    custom.type = "hidden";
+    custom.name = "custom_form_name";
+    custom.value = name;
+    form.appendChild(custom);
+
+    const saveBtn = document.createElement('input');
+    saveBtn.type = "hidden";
+    saveBtn.name = "save_form_as";
+    saveBtn.value = "1";
+    form.appendChild(saveBtn);
+
+    const allInputs = paramsForm.querySelectorAll('input');
+    allInputs.forEach(input => {
+        if (input.name === 'script_path') return;
+
+        const clone = document.createElement('input');
+        clone.type = "hidden";
+        clone.name = input.name;
+        clone.value = (input.type === "checkbox") ? (input.checked ? "true" : "") : (input.value || "");
+        form.appendChild(clone);
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
+function submitForm(actionType) {
+    const paramsForm = document.getElementById('paramsForm');
+    if (!paramsForm) return;
+
+    const form = document.createElement('form');
+    form.method = "POST";
+    form.action = "/";
+
+    const sp = document.createElement('input');
+    sp.type = "hidden";
+    sp.name = "script_path";
+    sp.value = "{{ script_path | safe }}";
+    form.appendChild(sp);
+
+    const at = document.createElement('input');
+    at.type = "hidden";
+    at.name = "action_type";
+    at.value = actionType;
+    form.appendChild(at);
+
+    // Only include checked parameters
+    const checked = paramsForm.querySelectorAll('input[name="selected_params"]:checked');
+    checked.forEach(chk => {
+        const name = chk.value;
+        const sel = document.createElement('input');
+        sel.type = "hidden";
+        sel.name = "selected_params";
+        sel.value = name;
+        form.appendChild(sel);
+
+        const valField = paramsForm.querySelector(`input[name="${name}"]`);
+        if (valField) {
+            const val = document.createElement('input');
+            val.type = "hidden";
+            val.name = name;
+            val.value = valField.value.trim();
+            form.appendChild(val);
+        }
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
+function copyCommand() {
+    const text = document.getElementById('cmdBox').innerText;
+    navigator.clipboard.writeText(text).then(() => alert('✅ Command copied!'));
+}
+</script>
+</body>
+</html>
