@@ -197,7 +197,6 @@ function saveCurrentFormAs() {
     const allInputs = paramsForm.querySelectorAll('input');
     allInputs.forEach(input => {
         if (input.name === 'script_path') return;
-
         const clone = document.createElement('input');
         clone.type = "hidden";
         clone.name = input.name;
@@ -229,7 +228,7 @@ function submitForm(actionType) {
     at.value = actionType;
     form.appendChild(at);
 
-    // Only include checked parameters
+    // Send only checked parameters
     const checked = paramsForm.querySelectorAll('input[name="selected_params"]:checked');
     checked.forEach(chk => {
         const name = chk.value;
