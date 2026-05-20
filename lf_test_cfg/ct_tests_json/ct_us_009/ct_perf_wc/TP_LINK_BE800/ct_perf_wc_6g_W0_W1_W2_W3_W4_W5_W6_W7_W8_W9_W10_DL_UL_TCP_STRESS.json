@@ -51,13 +51,13 @@
             "WC_MTK7996_BE200_6G_W0_W1_W2_W3_W4_W5_W6_W7_W8_W9_W10_DL_UL_TCP_DL_UL_TCP_STRESS":{
                 "enabled":"TRUE",
                 "timeout":"600",
-                "iterations":"1",
+                "iterations":"2",
                 "load_db":"skip",
                 "command":"lf_wifi_capacity_test.py",
                 "args":"",
                 "args_list":[
                     " --mgr LF_MGR_IP --port LF_MGR_PORT --lf_user LF_MGR_USER --lf_password LF_MGR_PASS --instance_name BE200_6G_W0_DL_UL_TCP_UDP",
-                    " --upstream UPSTREAM_PORT --batch_size 116 --loop_iter 1 --protocol 'TCP' --duration 20000",
+                    " --upstream UPSTREAM_PORT --batch_size 116 --loop_iter 1 --protocol 'TCP' --duration 30000",
                     " --pull_report --local_lf_report_dir REPORT_PATH --test_tag 'BE200_6G_W0_DL_UL_TCP_UDP'",
                     " --test_rig TEST_RIG ",
                     " --upload_rate '10G'",
