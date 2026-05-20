@@ -264,7 +264,7 @@ curl -o lf_kinstall.pl www.candelatech.com/lf_kinstall.txt; ./lf_kinstall.pl --l
 --root_timeout 2000 \
 --log_level info
 
-004 - 192.168.100.194
+004 - 192.168.100.194  // 6.18.18+
 ./lf_update.py \
 --tb_name CT-US-004 \
 --mgr 192.168.100.194 \
@@ -274,10 +274,27 @@ curl -o lf_kinstall.pl www.candelatech.com/lf_kinstall.txt; ./lf_kinstall.pl --l
 --user_password lanforge \
 --mgr_ssh_port 22 \
 --lfver 5.5.2 \
---kver 6.18.26+ \
+--kver 6.18.18+ \
 --user_timeout 20 \
 --root_timeout 2000 \
 --log_level info
+
+004 - 192.168.100.194  // 6.18.26+
+./lf_update.py \
+--tb_name CT-US-004 \
+--mgr 192.168.100.194 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.2 \
+--kver 6.18.18+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
+
 
 005-1 192.168.100.132
 ./lf_update.py \
@@ -399,6 +416,21 @@ Warehouse 192.168.88.40
 --user_timeout 20 \
 --root_timeout 2000 \
 --log_level info
+
+./lf_update.py \
+--tb_name CT-US-Warehouse \
+--mgr 192.168.88.61 \
+--root_user root \
+--root_password lanforge \
+--user lanforge \
+--user_password lanforge \
+--mgr_ssh_port 22 \
+--lfver 5.5.3 \
+--kver 6.18.26+ \
+--user_timeout 20 \
+--root_timeout 2000 \
+--log_level info
+
 
 #########################
 ct-us-003 192.168.100.181
