@@ -51,7 +51,7 @@
             "WC_MTK7996_BE200_6G_W0_W1_W2_W3_W4_W5_W6_W7_W8_W9_W10_DL_UL_TCP_DL_UL_TCP_STRESS":{
                 "enabled":"TRUE",
                 "timeout":"600",
-                "iterations":"2",
+                "iterations":"3",
                 "load_db":"skip",
                 "command":"lf_wifi_capacity_test.py",
                 "args":"",
