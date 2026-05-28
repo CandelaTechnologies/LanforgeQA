@@ -81,6 +81,7 @@
                   " --set 'skip_dual' 1",
                   " --set 'skip_tri' 1",
                   " --set 'skip_tri_5b' 1",
+                  " --raw_line 'skip_mlo: 1'",
                   " --verbosity 11",
                   " --raw_line 'cx_psk_thresh: 500'",
                   " --raw_line 'dur20: 5'",
