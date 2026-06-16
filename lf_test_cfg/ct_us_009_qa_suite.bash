@@ -6,6 +6,9 @@ set -x
 echo "Running Functional tests against ASUS BE96U"
 ./ct_us_009_func_ASUS_BE96U.bash
 
+echo "Running Dataplane testgroup against BE800"
+./ct_us_009_test_group_dp_BE800.bash
+
 echo "Running Dataplane against BE800"
 ./ct_us_009_dp_BE800.bash
 
@@ -14,3 +17,5 @@ echo "Running Wifi Capacity Tests"
 
 echo "Running RvR BE800"
 ./ct_us_009_rvr_BE800.bash
+
+
