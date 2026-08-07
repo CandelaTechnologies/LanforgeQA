@@ -1,0 +1,4773 @@
+{
+    "host": "192.168.101.137",
+    "port": 8080,
+    "version": "5.5.2",
+    "exchanges": [
+        {
+            "uri": "/resource/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpPort$JsonResponse",
+                "uri": "port/:shelf_id",
+                "candela.lanforge.HttpPort": {
+                    "duration": "0"
+                },
+                "interfaces": [
+                    {
+                        "1.1.eth0": {
+                            "_links": "/port/1/1/0",
+                            "alias": "eth0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.01.0"
+                        }
+                    },
+                    {
+                        "1.1.eth1": {
+                            "_links": "/port/1/1/1",
+                            "alias": "eth1",
+                            "down": true,
+                            "phantom": false,
+                            "port": "1.01.1"
+                        }
+                    },
+                    {
+                        "1.1.eth2": {
+                            "_links": "/port/1/1/2",
+                            "alias": "eth2",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.01.2"
+                        }
+                    },
+                    {
+                        "1.1.eth3": {
+                            "_links": "/port/1/1/3",
+                            "alias": "eth3",
+                            "down": true,
+                            "phantom": false,
+                            "port": "1.01.3"
+                        }
+                    },
+                    {
+                        "1.2.lan4": {
+                            "_links": "/port/1/2/0",
+                            "alias": "lan4",
+                            "down": false,
+                            "phantom": true,
+                            "port": "1.02.0"
+                        }
+                    },
+                    {
+                        "1.3.lan4": {
+                            "_links": "/port/1/3/0",
+                            "alias": "lan4",
+                            "down": false,
+                            "phantom": true,
+                            "port": "1.03.0"
+                        }
+                    },
+                    {
+                        "1.4.wiphy0": {
+                            "_links": "/port/1/4/1",
+                            "alias": "wiphy0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.04.1"
+                        }
+                    },
+                    {
+                        "1.4.wlan0": {
+                            "_links": "/port/1/4/0",
+                            "alias": "wlan0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.04.0"
+                        }
+                    },
+                    {
+                        "1.7.wiphy0": {
+                            "_links": "/port/1/7/1",
+                            "alias": "wiphy0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.07.1"
+                        }
+                    },
+                    {
+                        "1.7.wlan0": {
+                            "_links": "/port/1/7/0",
+                            "alias": "wlan0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.07.0"
+                        }
+                    },
+                    {
+                        "1.10.wiphy0": {
+                            "_links": "/port/1/10/1",
+                            "alias": "wiphy0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.10.1"
+                        }
+                    },
+                    {
+                        "1.10.wlan0": {
+                            "_links": "/port/1/10/0",
+                            "alias": "wlan0",
+                            "down": false,
+                            "phantom": false,
+                            "port": "1.10.0"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/2",
+            "method": "GET",
+            "status": 404,
+            "reason": "Not Found",
+            "content": null
+        },
+        {
+            "uri": "/shelf/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 2456,
+                    "bps-tx-3s": 49728,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4003",
+                    "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.101.137",
+                    "ctrl-port": "4004",
+                    "device type": "Linux",
+                    "df-boot": "1525",
+                    "df-home": "65535",
+                    "df-root": "28907",
+                    "eid": "1.1",
+                    "entity id": "NA",
+                    "free mem": 25886440,
+                    "free swap": 12582904,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "ct523c-21cb",
+                    "hw version": "Linux/x86-64",
+                    "kernel": "6.18.38+",
+                    "load": 0.44,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 32785884,
+                    "phantom": false,
+                    "ports": "0 1 2 3 4 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 612706330,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 12582904,
+                    "tx bytes": 5778227180,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/shelf/1/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 2456,
+                    "bps-tx-3s": 49728,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4003",
+                    "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.101.137",
+                    "ctrl-port": "4004",
+                    "device type": "Linux",
+                    "df-boot": "1525",
+                    "df-home": "65535",
+                    "df-root": "28907",
+                    "eid": "1.1",
+                    "entity id": "NA",
+                    "free mem": 25886440,
+                    "free swap": 12582904,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "ct523c-21cb",
+                    "hw version": "Linux/x86-64",
+                    "kernel": "6.18.38+",
+                    "load": 0.44,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 32785884,
+                    "phantom": false,
+                    "ports": "0 1 2 3 4 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 612706330,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 12582904,
+                    "tx bytes": 5778227180,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/resource/1/2",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 0,
+                    "bps-tx-3s": 0,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4001",
+                    "cpu": " (1800Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.102.23",
+                    "ctrl-port": "4002",
+                    "device type": "Linux",
+                    "df-boot": "82",
+                    "df-home": "35313",
+                    "df-root": "35313",
+                    "eid": "1.2",
+                    "entity id": "NA",
+                    "free mem": 17320,
+                    "free swap": 0,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "lf0355-at7-d230",
+                    "hw version": "Linux/ARM-64",
+                    "kernel": "6.18.38-at-ct",
+                    "load": 2.07,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 2031828,
+                    "phantom": true,
+                    "ports": "0 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 28755551,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 2999996,
+                    "tx bytes": 265208382,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/shelf/1/2",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 0,
+                    "bps-tx-3s": 0,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4001",
+                    "cpu": " (1800Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.102.23",
+                    "ctrl-port": "4002",
+                    "device type": "Linux",
+                    "df-boot": "82",
+                    "df-home": "35313",
+                    "df-root": "35313",
+                    "eid": "1.2",
+                    "entity id": "NA",
+                    "free mem": 17320,
+                    "free swap": 0,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "lf0355-at7-d230",
+                    "hw version": "Linux/ARM-64",
+                    "kernel": "6.18.38-at-ct",
+                    "load": 2.07,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 2031828,
+                    "phantom": true,
+                    "ports": "0 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 28755551,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 2999996,
+                    "tx bytes": 265208382,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/resource/1/list",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/1/list",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0",
+                            "bps-rx-3s": 2456,
+                            "bps-tx-3s": 49728,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4003",
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.101.137",
+                            "ctrl-port": "4004",
+                            "device type": "Linux",
+                            "df-boot": "1525",
+                            "df-home": "65535",
+                            "df-root": "28907",
+                            "eid": "1.1",
+                            "entity id": "NA",
+                            "free mem": 25886440,
+                            "free swap": 12582904,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "ct523c-21cb",
+                            "hw version": "Linux/x86-64",
+                            "kernel": "6.18.38+",
+                            "load": 0.44,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 32785884,
+                            "phantom": false,
+                            "ports": "0 1 2 3 4 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 612706330,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 12582904,
+                            "tx bytes": 5778227180,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.23",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "35313",
+                            "df-root": "35313",
+                            "eid": "1.2",
+                            "entity id": "NA",
+                            "free mem": 17320,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-d230",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.07,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 28755551,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 265208382,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.106",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "33964",
+                            "df-root": "33964",
+                            "eid": "1.3",
+                            "entity id": "NA",
+                            "free mem": 20400,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-89e0",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.27,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 7211735,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 367681944,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453",
+                            "bps-rx-3s": 986,
+                            "bps-tx-3s": 34136,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.96",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.4",
+                            "entity id": "NA",
+                            "free mem": 3077648,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243936,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39402049,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1667345710,
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "0.0.0.0",
+                            "ctrl-port": "0",
+                            "device type": "",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.6",
+                            "entity id": "NA",
+                            "free mem": 0,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "",
+                            "hw version": "",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 0,
+                            "phantom": true,
+                            "ports": "",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 0,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  ",
+                            "swap": 0,
+                            "tx bytes": 0,
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320",
+                            "bps-rx-3s": 989,
+                            "bps-tx-3s": 34240,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.117",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.7",
+                            "entity id": "NA",
+                            "free mem": 2915132,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243932,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39411186,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1626807901,
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427",
+                            "bps-rx-3s": 984,
+                            "bps-tx-3s": 35816,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.67",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.10",
+                            "entity id": "NA",
+                            "free mem": 1331116,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "SWDK6820",
+                            "hw version": "samsung SM-X110 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 3830472,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39479360,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1630951114,
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/1/all",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0",
+                            "bps-rx-3s": 2456,
+                            "bps-tx-3s": 49728,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4003",
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.101.137",
+                            "ctrl-port": "4004",
+                            "device type": "Linux",
+                            "df-boot": "1525",
+                            "df-home": "65535",
+                            "df-root": "28907",
+                            "eid": "1.1",
+                            "entity id": "NA",
+                            "free mem": 25886440,
+                            "free swap": 12582904,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "ct523c-21cb",
+                            "hw version": "Linux/x86-64",
+                            "kernel": "6.18.38+",
+                            "load": 0.44,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 32785884,
+                            "phantom": false,
+                            "ports": "0 1 2 3 4 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 612706330,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 12582904,
+                            "tx bytes": 5778227180,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.23",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "35313",
+                            "df-root": "35313",
+                            "eid": "1.2",
+                            "entity id": "NA",
+                            "free mem": 17320,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-d230",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.07,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 28755551,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 265208382,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.106",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "33964",
+                            "df-root": "33964",
+                            "eid": "1.3",
+                            "entity id": "NA",
+                            "free mem": 20400,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-89e0",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.27,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 7211735,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 367681944,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453",
+                            "bps-rx-3s": 986,
+                            "bps-tx-3s": 34136,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.96",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.4",
+                            "entity id": "NA",
+                            "free mem": 3077648,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243936,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39402049,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1667345710,
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "0.0.0.0",
+                            "ctrl-port": "0",
+                            "device type": "",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.6",
+                            "entity id": "NA",
+                            "free mem": 0,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "",
+                            "hw version": "",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 0,
+                            "phantom": true,
+                            "ports": "",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 0,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  ",
+                            "swap": 0,
+                            "tx bytes": 0,
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320",
+                            "bps-rx-3s": 989,
+                            "bps-tx-3s": 34240,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.117",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.7",
+                            "entity id": "NA",
+                            "free mem": 2915132,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243932,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39411186,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1626807901,
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427",
+                            "bps-rx-3s": 984,
+                            "bps-tx-3s": 35816,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.67",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.10",
+                            "entity id": "NA",
+                            "free mem": 1331116,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "SWDK6820",
+                            "hw version": "samsung SM-X110 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 3830472,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39479360,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1630951114,
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/all/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 2456,
+                    "bps-tx-3s": 49728,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4003",
+                    "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.101.137",
+                    "ctrl-port": "4004",
+                    "device type": "Linux",
+                    "df-boot": "1525",
+                    "df-home": "65535",
+                    "df-root": "28907",
+                    "eid": "1.1",
+                    "entity id": "NA",
+                    "free mem": 25886440,
+                    "free swap": 12582904,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "ct523c-21cb",
+                    "hw version": "Linux/x86-64",
+                    "kernel": "6.18.38+",
+                    "load": 0.44,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 32785884,
+                    "phantom": false,
+                    "ports": "0 1 2 3 4 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 612706330,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 12582904,
+                    "tx bytes": 5778227180,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/shelf/all/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 2456,
+                    "bps-tx-3s": 49728,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4003",
+                    "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.101.137",
+                    "ctrl-port": "4004",
+                    "device type": "Linux",
+                    "df-boot": "1525",
+                    "df-home": "65535",
+                    "df-root": "28907",
+                    "eid": "1.1",
+                    "entity id": "NA",
+                    "free mem": 25886440,
+                    "free swap": 12582904,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "ct523c-21cb",
+                    "hw version": "Linux/x86-64",
+                    "kernel": "6.18.38+",
+                    "load": 0.44,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 32785884,
+                    "phantom": false,
+                    "ports": "0 1 2 3 4 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 612706330,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 12582904,
+                    "tx bytes": 5778227180,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/resource/list/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "_links": "/resource/1/1",
+                    "entity id": "NA",
+                    "hostname": "ct523c-21cb"
+                }
+            }
+        },
+        {
+            "uri": "/shelf/list/1",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "_links": "/resource/1/1",
+                    "entity id": "NA",
+                    "hostname": "ct523c-21cb"
+                }
+            }
+        },
+        {
+            "uri": "/resource/all/all",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0",
+                            "bps-rx-3s": 2456,
+                            "bps-tx-3s": 49728,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4003",
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.101.137",
+                            "ctrl-port": "4004",
+                            "device type": "Linux",
+                            "df-boot": "1525",
+                            "df-home": "65535",
+                            "df-root": "28907",
+                            "eid": "1.1",
+                            "entity id": "NA",
+                            "free mem": 25886440,
+                            "free swap": 12582904,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "ct523c-21cb",
+                            "hw version": "Linux/x86-64",
+                            "kernel": "6.18.38+",
+                            "load": 0.44,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 32785884,
+                            "phantom": false,
+                            "ports": "0 1 2 3 4 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 612706330,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 12582904,
+                            "tx bytes": 5778227180,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.23",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "35313",
+                            "df-root": "35313",
+                            "eid": "1.2",
+                            "entity id": "NA",
+                            "free mem": 17320,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-d230",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.07,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 28755551,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 265208382,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.106",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "33964",
+                            "df-root": "33964",
+                            "eid": "1.3",
+                            "entity id": "NA",
+                            "free mem": 20400,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-89e0",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.27,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 7211735,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 367681944,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453",
+                            "bps-rx-3s": 986,
+                            "bps-tx-3s": 34136,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.96",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.4",
+                            "entity id": "NA",
+                            "free mem": 3077648,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243936,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39402049,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1667345710,
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "0.0.0.0",
+                            "ctrl-port": "0",
+                            "device type": "",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.6",
+                            "entity id": "NA",
+                            "free mem": 0,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "",
+                            "hw version": "",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 0,
+                            "phantom": true,
+                            "ports": "",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 0,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  ",
+                            "swap": 0,
+                            "tx bytes": 0,
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320",
+                            "bps-rx-3s": 989,
+                            "bps-tx-3s": 34240,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.117",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.7",
+                            "entity id": "NA",
+                            "free mem": 2915132,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243932,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39411186,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1626807901,
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427",
+                            "bps-rx-3s": 984,
+                            "bps-tx-3s": 35816,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.67",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.10",
+                            "entity id": "NA",
+                            "free mem": 1331116,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "SWDK6820",
+                            "hw version": "samsung SM-X110 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 3830472,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39479360,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1630951114,
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/all/all",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0",
+                            "bps-rx-3s": 2456,
+                            "bps-tx-3s": 49728,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4003",
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.101.137",
+                            "ctrl-port": "4004",
+                            "device type": "Linux",
+                            "df-boot": "1525",
+                            "df-home": "65535",
+                            "df-root": "28907",
+                            "eid": "1.1",
+                            "entity id": "NA",
+                            "free mem": 25886440,
+                            "free swap": 12582904,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "ct523c-21cb",
+                            "hw version": "Linux/x86-64",
+                            "kernel": "6.18.38+",
+                            "load": 0.44,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 32785884,
+                            "phantom": false,
+                            "ports": "0 1 2 3 4 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 612706330,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 12582904,
+                            "tx bytes": 5778227180,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.23",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "35313",
+                            "df-root": "35313",
+                            "eid": "1.2",
+                            "entity id": "NA",
+                            "free mem": 17320,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-d230",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.07,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 28755551,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 265208382,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.106",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "33964",
+                            "df-root": "33964",
+                            "eid": "1.3",
+                            "entity id": "NA",
+                            "free mem": 20400,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-89e0",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.27,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 7211735,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 367681944,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453",
+                            "bps-rx-3s": 986,
+                            "bps-tx-3s": 34136,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.96",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.4",
+                            "entity id": "NA",
+                            "free mem": 3077648,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243936,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39402049,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1667345710,
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "0.0.0.0",
+                            "ctrl-port": "0",
+                            "device type": "",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.6",
+                            "entity id": "NA",
+                            "free mem": 0,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "",
+                            "hw version": "",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 0,
+                            "phantom": true,
+                            "ports": "",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 0,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  ",
+                            "swap": 0,
+                            "tx bytes": 0,
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320",
+                            "bps-rx-3s": 989,
+                            "bps-tx-3s": 34240,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.117",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.7",
+                            "entity id": "NA",
+                            "free mem": 2915132,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243932,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39411186,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1626807901,
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427",
+                            "bps-rx-3s": 984,
+                            "bps-tx-3s": 35816,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.67",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.10",
+                            "entity id": "NA",
+                            "free mem": 1331116,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "SWDK6820",
+                            "hw version": "samsung SM-X110 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 3830472,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39479360,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1630951114,
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/all/list",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/all/list",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/list/all",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/list/all",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "_links": "/resource/1/1",
+                            "entity id": "NA",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "_links": "/resource/1/2",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "_links": "/resource/1/3",
+                            "entity id": "NA",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "_links": "/resource/1/4",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "_links": "/resource/1/6",
+                            "entity id": "NA",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "_links": "/resource/1/7",
+                            "entity id": "NA",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "_links": "/resource/1/10",
+                            "entity id": "NA",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/2/1",
+            "method": "GET",
+            "status": 404,
+            "reason": "Not Found",
+            "content": null
+        },
+        {
+            "uri": "/shelf/2/1",
+            "method": "GET",
+            "status": 404,
+            "reason": "Not Found",
+            "content": null
+        },
+        {
+            "uri": "/resource/1/100",
+            "method": "GET",
+            "status": 404,
+            "reason": "Not Found",
+            "content": null
+        },
+        {
+            "uri": "/shelf/1/100",
+            "method": "GET",
+            "status": 404,
+            "reason": "Not Found",
+            "content": null
+        },
+        {
+            "uri": "/resource/1/1?fields=eid",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resource": {
+                    "eid": "1.1"
+                }
+            }
+        },
+        {
+            "uri": "/shelf/1/1?fields=eid",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 2456,
+                    "bps-tx-3s": 49728,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4003",
+                    "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.101.137",
+                    "ctrl-port": "4004",
+                    "device type": "Linux",
+                    "df-boot": "1525",
+                    "df-home": "65535",
+                    "df-root": "28907",
+                    "eid": "1.1",
+                    "entity id": "NA",
+                    "free mem": 25886440,
+                    "free swap": 12582904,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "ct523c-21cb",
+                    "hw version": "Linux/x86-64",
+                    "kernel": "6.18.38+",
+                    "load": 0.44,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 32785884,
+                    "phantom": false,
+                    "ports": "0 1 2 3 4 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 612706330,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 12582904,
+                    "tx bytes": 5778227180,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/resource/1/1?fields=entity%20id",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "entity id": "NA"
+                }
+            }
+        },
+        {
+            "uri": "/shelf/1/1?fields=entity%20id",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resource": {
+                    "app-id": "0",
+                    "bps-rx-3s": 2456,
+                    "bps-tx-3s": 49728,
+                    "build date": "2026-07-16 10",
+                    "cli-port": "4003",
+                    "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                    "ct-kernel": true,
+                    "ctrl-ip": "192.168.101.137",
+                    "ctrl-port": "4004",
+                    "device type": "Linux",
+                    "df-boot": "1525",
+                    "df-home": "65535",
+                    "df-root": "28907",
+                    "eid": "1.1",
+                    "entity id": "NA",
+                    "free mem": 25886440,
+                    "free swap": 12582904,
+                    "gps": "0.0N 0.0E 0m",
+                    "hostname": "ct523c-21cb",
+                    "hw version": "Linux/x86-64",
+                    "kernel": "6.18.38+",
+                    "load": 0.44,
+                    "max if-up": 15,
+                    "max staged": 50,
+                    "mem": 32785884,
+                    "phantom": false,
+                    "ports": "0 1 2 3 4 ",
+                    "rf-path": "Line-of-Sight",
+                    "rx bytes": 612706330,
+                    "shelf": "1",
+                    "sta up": 12,
+                    "sw version": "  5.5.3  64bit",
+                    "swap": 12582904,
+                    "tx bytes": 5778227180,
+                    "user": ""
+                }
+            }
+        },
+        {
+            "uri": "/resource/1/list?fields=eid",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "eid": "1.1"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "eid": "1.2"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "eid": "1.3"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "eid": "1.4"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "eid": "1.6"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "eid": "1.7"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "eid": "1.10"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/1/list?fields=eid",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "eid": "1.1"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "eid": "1.2"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "eid": "1.3"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "eid": "1.4"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "eid": "1.6"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "eid": "1.7"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "eid": "1.10"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/list?fields=eid,hostname",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "eid": "1.1",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "eid": "1.2",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "eid": "1.3",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "eid": "1.4",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "eid": "1.6",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "eid": "1.7",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "eid": "1.10",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/1/list?fields=eid,hostname",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "eid": "1.1",
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "eid": "1.2",
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "eid": "1.3",
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "eid": "1.4",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "eid": "1.6",
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "eid": "1.7",
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "eid": "1.10",
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=app-id",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=bps-rx-3s",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "bps-rx-3s": 2456
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "bps-rx-3s": 0
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "bps-rx-3s": 0
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "bps-rx-3s": 986
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "bps-rx-3s": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "bps-rx-3s": 989
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "bps-rx-3s": 984
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=bps-tx-3s",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "bps-tx-3s": 49728
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "bps-tx-3s": 0
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "bps-tx-3s": 0
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "bps-tx-3s": 34136
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "bps-tx-3s": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "bps-tx-3s": 34240
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "bps-tx-3s": 35816
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=build%20date",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "build date": "2026-07-16 10"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "build date": "2026-07-16 10"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "build date": "2026-07-16 10"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "build date": "2026-06-29 20"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "build date": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "build date": "2026-06-29 20"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "build date": "2026-06-29 20"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=cli-port",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "cli-port": "4003"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "cli-port": "4001"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "cli-port": "4001"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "cli-port": "0"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "cli-port": "0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "cli-port": "0"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "cli-port": "0"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=cpu",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "cpu": " (1800Mhz)(x4)"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "cpu": " (1800Mhz)(x4)"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "cpu": " (0Mhz)(x7)"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "cpu": " (0Mhz)"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "cpu": " (0Mhz)(x7)"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "cpu": " (0Mhz)(x7)"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=ct-kernel",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "ct-kernel": true
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "ct-kernel": true
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "ct-kernel": true
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "ct-kernel": false
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "ct-kernel": false
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "ct-kernel": false
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "ct-kernel": false
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=ctrl-ip",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "ctrl-ip": "192.168.101.137"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "ctrl-ip": "192.168.102.23"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "ctrl-ip": "192.168.102.106"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "ctrl-ip": "192.168.0.96"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "ctrl-ip": "0.0.0.0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "ctrl-ip": "192.168.0.117"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "ctrl-ip": "192.168.0.67"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=ctrl-port",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "ctrl-port": "4004"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "ctrl-port": "4002"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "ctrl-port": "4002"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "ctrl-port": "0"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "ctrl-port": "0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "ctrl-port": "0"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "ctrl-port": "0"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=device%20type",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "device type": "Linux"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "device type": "Linux"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "device type": "Linux"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "device type": "Android"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "device type": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "device type": "Android"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "device type": "Android"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=df-boot",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "df-boot": "1525"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "df-boot": "82"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "df-boot": "82"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "df-boot": "0"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "df-boot": "0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "df-boot": "0"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "df-boot": "0"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=df-home",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "df-home": "65535"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "df-home": "35313"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "df-home": "33964"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "df-home": "0"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "df-home": "0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "df-home": "0"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "df-home": "0"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=df-root",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "df-root": "28907"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "df-root": "35313"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "df-root": "33964"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "df-root": "0"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "df-root": "0"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "df-root": "0"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "df-root": "0"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=eid",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "eid": "1.1"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "eid": "1.2"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "eid": "1.3"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "eid": "1.4"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "eid": "1.6"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "eid": "1.7"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "eid": "1.10"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=entity%20id",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "entity id": "NA"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "entity id": "NA"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "entity id": "NA"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "entity id": "NA"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "entity id": "NA"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "entity id": "NA"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "entity id": "NA"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=free%20mem",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "free mem": 25886440
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "free mem": 17320
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "free mem": 20400
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "free mem": 3077648
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "free mem": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "free mem": 2915132
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "free mem": 1331116
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=free%20swap",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "free swap": 12582904
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "free swap": 0
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "free swap": 0
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "free swap": 0
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "free swap": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "free swap": 0
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "free swap": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=gps",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "gps": "0.0N 0.0E 0m"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "gps": "0.0N 0.0E 0m"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "gps": "0.0N 0.0E 0m"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "gps": "0.0X 0.0X 0m"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "gps": "0.0N 0.0E 0m"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "gps": "0.0X 0.0X 0m"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "gps": "0.0X 0.0X 0m"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=hostname",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "hostname": "ct523c-21cb"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "hostname": "lf0355-at7-d230"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "hostname": "lf0355-at7-89e0"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "hostname": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "hostname": "21DK7920"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "hostname": "SWDK6820"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=hw%20version",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "hw version": "Linux/x86-64"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "hw version": "Linux/ARM-64"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "hw version": "Linux/ARM-64"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "hw version": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "hw version": "samsung SM-X110 r15 sdk: 35"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=kernel",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "kernel": "6.18.38+"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "kernel": "6.18.38-at-ct"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "kernel": "6.18.38-at-ct"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "kernel": ""
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "kernel": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "kernel": ""
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "kernel": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=load",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "load": 0.44
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "load": 2.07
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "load": 2.27
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "load": 0.0
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "load": 0.0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "load": 0.0
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "load": 0.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=max%20if-up",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "max if-up": 15
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "max if-up": 15
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "max if-up": 15
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "max if-up": 15
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "max if-up": 15
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "max if-up": 15
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "max if-up": 15
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=max%20staged",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "max staged": 50
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "max staged": 50
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "max staged": 50
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "max staged": 50
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "max staged": 50
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "max staged": 50
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "max staged": 50
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=mem",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "mem": 32785884
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "mem": 2031828
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "mem": 2031828
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "mem": 7243936
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "mem": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "mem": 7243932
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "mem": 3830472
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=phantom",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "phantom": false
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "phantom": true
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "phantom": true
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "phantom": false
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "phantom": true
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "phantom": false
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "phantom": false
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=ports",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "ports": "0 1 2 3 4 "
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "ports": "0 "
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "ports": "0 "
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "ports": "0 1 "
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "ports": ""
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "ports": "0 1 "
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "ports": "0 1 "
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=rf-path",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "rf-path": "Line-of-Sight"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=rx%20bytes",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "rx bytes": 612706330
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "rx bytes": 28755551
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "rx bytes": 7211735
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "rx bytes": 39402049
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "rx bytes": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "rx bytes": 39411186
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "rx bytes": 39479360
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=shelf",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "shelf": "1"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "shelf": "1"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "shelf": "1"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "shelf": "1"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "shelf": "1"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "shelf": "1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "shelf": "1"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=sta%20up",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "sta up": 12
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "sta up": 12
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "sta up": 12
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "sta up": 12
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "sta up": 12
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "sta up": 12
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "sta up": 12
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=sw%20version",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "sw version": "  5.5.3  64bit"
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "sw version": "  5.5.3  64bit"
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "sw version": "  5.5.3  64bit"
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "sw version": "  5.5.3"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "sw version": "  "
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "sw version": "  5.5.3"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "sw version": "  5.5.3"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=swap",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "swap": 12582904
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "swap": 2999996
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "swap": 2999996
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "swap": 0
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "swap": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "swap": 0
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "swap": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=tx%20bytes",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "tx bytes": 5778227180
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "tx bytes": 265208382
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "tx bytes": 367681944
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "tx bytes": 1667345710
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "tx bytes": 0
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "tx bytes": 1626807901
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "tx bytes": 1630951114
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=user",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "0"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/resource/1/all?fields=app-id,bps-rx-3s,bps-tx-3s,build%20date,cli-port,cpu,ct-kernel,ctrl-ip,ctrl-port,device%20type,df-boot,df-home,df-root,eid,entity%20id,free%20mem,free%20swap,gps,hostname,hw%20version,kernel,load,max%20if-up,max%20staged,mem,phantom,ports,rf-path,rx%20bytes,shelf,sta%20up,sw%20version,swap,tx%20bytes,user",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "resource/:shelf_id/:resource_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0",
+                            "bps-rx-3s": 2456,
+                            "bps-tx-3s": 49728,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4003",
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.101.137",
+                            "ctrl-port": "4004",
+                            "device type": "Linux",
+                            "df-boot": "1525",
+                            "df-home": "65535",
+                            "df-root": "28907",
+                            "eid": "1.1",
+                            "entity id": "NA",
+                            "free mem": 25886440,
+                            "free swap": 12582904,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "ct523c-21cb",
+                            "hw version": "Linux/x86-64",
+                            "kernel": "6.18.38+",
+                            "load": 0.44,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 32785884,
+                            "phantom": false,
+                            "ports": "0 1 2 3 4 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 612706330,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 12582904,
+                            "tx bytes": 5778227180,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.23",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "35313",
+                            "df-root": "35313",
+                            "eid": "1.2",
+                            "entity id": "NA",
+                            "free mem": 17320,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-d230",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.07,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 28755551,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 265208382,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.106",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "33964",
+                            "df-root": "33964",
+                            "eid": "1.3",
+                            "entity id": "NA",
+                            "free mem": 20400,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-89e0",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.27,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 7211735,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 367681944,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453",
+                            "bps-rx-3s": 986,
+                            "bps-tx-3s": 34136,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.96",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.4",
+                            "entity id": "NA",
+                            "free mem": 3077648,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243936,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39402049,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1667345710,
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "0.0.0.0",
+                            "ctrl-port": "0",
+                            "device type": "",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.6",
+                            "entity id": "NA",
+                            "free mem": 0,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "",
+                            "hw version": "",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 0,
+                            "phantom": true,
+                            "ports": "",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 0,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  ",
+                            "swap": 0,
+                            "tx bytes": 0,
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320",
+                            "bps-rx-3s": 989,
+                            "bps-tx-3s": 34240,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.117",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.7",
+                            "entity id": "NA",
+                            "free mem": 2915132,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243932,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39411186,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1626807901,
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427",
+                            "bps-rx-3s": 984,
+                            "bps-tx-3s": 35816,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.67",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.10",
+                            "entity id": "NA",
+                            "free mem": 1331116,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "SWDK6820",
+                            "hw version": "samsung SM-X110 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 3830472,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39479360,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1630951114,
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "uri": "/shelf/1/all?fields=app-id,bps-rx-3s,bps-tx-3s,build%20date,cli-port,cpu,ct-kernel,ctrl-ip,ctrl-port,device%20type,df-boot,df-home,df-root,eid,entity%20id,free%20mem,free%20swap,gps,hostname,hw%20version,kernel,load,max%20if-up,max%20staged,mem,phantom,ports,rf-path,rx%20bytes,shelf,sta%20up,sw%20version,swap,tx%20bytes,user",
+            "method": "GET",
+            "status": 200,
+            "reason": "OK",
+            "content": {
+                "handler": "candela.lanforge.HttpResource$JsonResponse",
+                "uri": "shelf/:shelf_id",
+                "candela.lanforge.HttpResource": {
+                    "duration": "1"
+                },
+                "resources": [
+                    {
+                        "1.1": {
+                            "app-id": "0",
+                            "bps-rx-3s": 2456,
+                            "bps-tx-3s": 49728,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4003",
+                            "cpu": "Intel(R) Core(TM) i7-7700T CPU (3600Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.101.137",
+                            "ctrl-port": "4004",
+                            "device type": "Linux",
+                            "df-boot": "1525",
+                            "df-home": "65535",
+                            "df-root": "28907",
+                            "eid": "1.1",
+                            "entity id": "NA",
+                            "free mem": 25886440,
+                            "free swap": 12582904,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "ct523c-21cb",
+                            "hw version": "Linux/x86-64",
+                            "kernel": "6.18.38+",
+                            "load": 0.44,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 32785884,
+                            "phantom": false,
+                            "ports": "0 1 2 3 4 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 612706330,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 12582904,
+                            "tx bytes": 5778227180,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.2": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.23",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "35313",
+                            "df-root": "35313",
+                            "eid": "1.2",
+                            "entity id": "NA",
+                            "free mem": 17320,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-d230",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.07,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 28755551,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 265208382,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.3": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "2026-07-16 10",
+                            "cli-port": "4001",
+                            "cpu": " (1800Mhz)(x4)",
+                            "ct-kernel": true,
+                            "ctrl-ip": "192.168.102.106",
+                            "ctrl-port": "4002",
+                            "device type": "Linux",
+                            "df-boot": "82",
+                            "df-home": "33964",
+                            "df-root": "33964",
+                            "eid": "1.3",
+                            "entity id": "NA",
+                            "free mem": 20400,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "lf0355-at7-89e0",
+                            "hw version": "Linux/ARM-64",
+                            "kernel": "6.18.38-at-ct",
+                            "load": 2.27,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 2031828,
+                            "phantom": true,
+                            "ports": "0 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 7211735,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3  64bit",
+                            "swap": 2999996,
+                            "tx bytes": 367681944,
+                            "user": ""
+                        }
+                    },
+                    {
+                        "1.4": {
+                            "app-id": "1994793453",
+                            "bps-rx-3s": 986,
+                            "bps-tx-3s": 34136,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.96",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.4",
+                            "entity id": "NA",
+                            "free mem": 3077648,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243936,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39402049,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1667345710,
+                            "user": "s23user2"
+                        }
+                    },
+                    {
+                        "1.6": {
+                            "app-id": "0",
+                            "bps-rx-3s": 0,
+                            "bps-tx-3s": 0,
+                            "build date": "",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "0.0.0.0",
+                            "ctrl-port": "0",
+                            "device type": "",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.6",
+                            "entity id": "NA",
+                            "free mem": 0,
+                            "free swap": 0,
+                            "gps": "0.0N 0.0E 0m",
+                            "hostname": "",
+                            "hw version": "",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 0,
+                            "phantom": true,
+                            "ports": "",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 0,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  ",
+                            "swap": 0,
+                            "tx bytes": 0,
+                            "user": "s24ultra"
+                        }
+                    },
+                    {
+                        "1.7": {
+                            "app-id": "1014813320",
+                            "bps-rx-3s": 989,
+                            "bps-tx-3s": 34240,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.117",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.7",
+                            "entity id": "NA",
+                            "free mem": 2915132,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "21DK7920",
+                            "hw version": "samsung SM-S911U1 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 7243932,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39411186,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1626807901,
+                            "user": "s23user1"
+                        }
+                    },
+                    {
+                        "1.10": {
+                            "app-id": "1512117427",
+                            "bps-rx-3s": 984,
+                            "bps-tx-3s": 35816,
+                            "build date": "2026-06-29 20",
+                            "cli-port": "0",
+                            "cpu": " (0Mhz)(x7)",
+                            "ct-kernel": false,
+                            "ctrl-ip": "192.168.0.67",
+                            "ctrl-port": "0",
+                            "device type": "Android",
+                            "df-boot": "0",
+                            "df-home": "0",
+                            "df-root": "0",
+                            "eid": "1.10",
+                            "entity id": "NA",
+                            "free mem": 1331116,
+                            "free swap": 0,
+                            "gps": "0.0X 0.0X 0m",
+                            "hostname": "SWDK6820",
+                            "hw version": "samsung SM-X110 r15 sdk: 35",
+                            "kernel": "",
+                            "load": 0.0,
+                            "max if-up": 15,
+                            "max staged": 50,
+                            "mem": 3830472,
+                            "phantom": false,
+                            "ports": "0 1 ",
+                            "rf-path": "Line-of-Sight",
+                            "rx bytes": 39479360,
+                            "shelf": "1",
+                            "sta up": 12,
+                            "sw version": "  5.5.3",
+                            "swap": 0,
+                            "tx bytes": 1630951114,
+                            "user": "tablet"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
